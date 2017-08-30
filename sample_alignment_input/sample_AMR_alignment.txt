@@ -1,0 +1,1268 @@
+# ::id bolt-eng-DF-170-181103-8881981_0040.1 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok It begins and ends with Romneycare .
+# ::alignments 0-1.1.1 1-1.1 2-1 3-1.2 4-1.1.2.r 5-1.1.2.2.1
+(a / and~e.2 
+      :op1 (b / begin-01~e.1 
+            :ARG1 (i / it~e.0) 
+            :ARG2~e.4 (t / thing :wiki "Massachusetts_health_care_reform" 
+                  :name (n / name :op1 "Romneycare"~e.5))) 
+      :op2 (e / end-01~e.3 
+            :ARG1 i 
+            :ARG2 t))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.2 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok If Obama never pushed Obaminationcare , then Romney would be running away with the nomination !
+# ::alignments 0-1.4.r 1-1.4.2.2.1 2-1.4.1 2-1.4.1.r 2-1.4.4 3-1.4 4-1.4.3.2.1 7-1.1.2.1 10-1 11-1.3 12-1.2.r 14-1.2
+(r / run-08~e.10 
+      :ARG0 (p2 / person :wiki "Mitt_Romney" 
+            :name (n2 / name :op1 "Romney"~e.7)) 
+      :ARG1~e.12 (n3 / nominate-01~e.14) 
+      :ARG2 (a / away~e.11) 
+      :condition~e.0 (p3 / push-04~e.3 :polarity~e.2 -~e.2 
+            :ARG0 (p / person :wiki "Barack_Obama" 
+                  :name (n / name :op1 "Obama"~e.1)) 
+            :ARG1 (t / thing :wiki "Patient_Protection_and_Affordable_Care_Act" 
+                  :name (n4 / name :op1 "Obaminationcare"~e.4)) 
+            :time (e / ever~e.2)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.3 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Funny he was considered the most conservative option in 2008 !
+# ::alignments 0-1 1-1.1.1.2 2-1.1.1.2.r 2-1.1.r 3-1.1 5-1.1.1.1.1 6-1.1.1.1 7-1.1.1 8-1.1.2.r 9-1.1.2.1
+(f / funny~e.0 
+      :domain~e.2 (c / consider-01~e.3 
+            :ARG1 (o / option~e.7 
+                  :mod (c2 / conservative~e.6 
+                        :degree (m / most~e.5)) 
+                  :domain~e.2 (h / he~e.1)) 
+            :time~e.8 (d / date-entity :year 2008~e.9)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.4 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Rush , Levin , Hannity , Savage etc all said Romney was the conservative candidate .
+# ::alignments 0-1.1.1.1.2.1 2-1.1.1.2.2.1 4-1.1.1.3.2.1 6-1.1.1.4.2.1 7-1.1.1.5 8-1.1 9-1 10-1.2.2.2.1 11-1.2.2.r 13-1.2.1 14-1.2
+(s / say-01~e.9 
+      :ARG0 (a / all~e.8 
+            :consist-of (a2 / and 
+                  :op1 (p2 / person :wiki "Rush_Limbaugh" 
+                        :name (n2 / name :op1 "Rush"~e.0)) 
+                  :op2 (p3 / person :wiki "Mark_Levin" 
+                        :name (n3 / name :op1 "Levin"~e.2)) 
+                  :op3 (p4 / person :wiki "Sean_Hannity" 
+                        :name (n4 / name :op1 "Hannity"~e.4)) 
+                  :op4 (p5 / person :wiki "Michael_Savage" 
+                        :name (n5 / name :op1 "Savage"~e.6)) 
+                  :op5 (e / et-cetera~e.7))) 
+      :ARG1 (c / candidate~e.14 
+            :mod (c2 / conservative~e.13) 
+            :domain~e.11 (p / person :wiki "Mitt_Romney" 
+                  :name (n / name :op1 "Romney"~e.10))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.5 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Fast forward to 2012 and now he is the liberal candidate .
+# ::alignments 3-1.1.1.1 4-1 5-1.2.3 6-1.2.2 7-1.2.2.r 9-1.2.1 10-1.2
+(a / and~e.4 
+      :op1 (f / fastforward-01 
+            :ARG4 (d / date-entity :year 2012~e.3)) 
+      :op2 (c / candidate~e.10 
+            :ARG1-of (l / liberal-02~e.9) 
+            :domain~e.7 (h / he~e.6) 
+            :time (n / now~e.5)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.6 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Nothing change , EXCEPT the passing of Obaminationcare !
+# ::alignments 0-1.1 1-1 3-1.2 5-1.2.1 6-1.2.1.1.r 7-1.2.1.1.2.1
+(c / change-01~e.1 
+      :ARG1 (n / nothing~e.0) 
+      :ARG2-of (e / except-01~e.3 
+            :ARG1 (p / pass-01~e.5 
+                  :ARG2~e.6 (l / law :wiki "Patient_Protection_and_Affordable_Care_Act" 
+                        :name (n2 / name :op1 "Obaminationcare"~e.7)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.7 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok I think you draw the wrong interpretation of 2008 .
+# ::alignments 0-1.1 1-1 2-1.2.1 3-1.2 5-1.2.2.3 6-1.2.2 7-1.2.2.2.r 8-1.2.2.2.1
+(t / think-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (d2 / draw-02~e.3 
+            :ARG0 (y / you~e.2) 
+            :ARG1 (i2 / interpret-01~e.6 
+                  :ARG0 y 
+                  :ARG1~e.7 (d / date-entity :year 2008~e.8) 
+                  :ARG2-of (w / wrong-04~e.5))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.8 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok He was n't the most conservative , Huckabee was .
+# ::alignments 1-1.3.r 2-1.1 2-1.1.r 4-1.2 5-1 7-1.3.2.1 8-1.3.r
+(c / conservative~e.5 :polarity~e.2 -~e.2 
+      :degree (m / most~e.4) 
+      :domain~e.1,8 (p / person :wiki "Mike_Huckabee" 
+            :name (n / name :op1 "Huckabee"~e.7)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.9 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok And Huckabee was sincere .
+# ::alignments 0-1 1-1.1.1.2.1 2-1.1.1.r 3-1.1
+(a / and~e.0 
+      :op1 (s / sincere~e.3 
+            :domain~e.2 (p / person :wiki "Mike_Huckabee" 
+                  :name (n / name :op1 "Huckabee"~e.1))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.10 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok What you forget about all those talking heads is that they are all paid by big corporations .
+# ::alignments 0-1.2 1-1.1 2-1 3-1.2.1.r 4-1.2.1.2 5-1.2.1.3 6-1.2.1.1 7-1.2.1 9-1.2.1.3 12-1.2.1.2 13-1.2.2 14-1.2.2.1.r 15-1.2.2.1.1 16-1.2.2.1
+(f / forget-01~e.2 
+      :ARG0 (y / you~e.1) 
+      :ARG1 (t / thing~e.0 
+            :topic~e.3 (h / head~e.7 
+                  :ARG0-of (t2 / talk-01~e.6) 
+                  :mod (a / all~e.4,12) 
+                  :mod (t3 / that~e.5,9)) 
+            :domain (p / pay-01~e.13 
+                  :ARG0~e.14 (c / corporation~e.16 
+                        :mod (b / big~e.15)) 
+                  :ARG2 h)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.11 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok The real problem is that Corporate Conservatism and Social Conservatism are n't on the same page .
+# ::alignments 1-1.4.1 2-1.4 3-1.4.r 5-1.1.1 6-1.1 6-1.2 7-1 8-1.2.1 9-1.2 10-1.4.r 11-1.3.1 11-1.3.1.r 14-1.3.2 15-1.3
+(a / and~e.7 
+      :op1 (c / conservatism~e.6 
+            :mod (c2 / corporation~e.5)) 
+      :op2 (c3 / conservatism~e.6,9 
+            :mod (s / social~e.8)) 
+      :location (p2 / page~e.15 :polarity~e.11 -~e.11 
+            :ARG1-of (s2 / same-01~e.14)) 
+      :domain~e.3,10 (p / problem~e.2 
+            :ARG1-of (r / real-04~e.1)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.12 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok The big corporations do n't give a shit about Abortion or Gay Marriage or gettin ' Jay @-@ a @-@ zus into your life .
+# ::alignments 1-1.2.1 2-1.2 4-1.1 4-1.1.r 5-1 7-1.3 8-1.4.r 9-1.4.1 10-1.4 11-1.4.2.1 12-1.4.2 13-1.4 22-1.4.3.2.1 22-1.4.3.2.1.r 23-1.4.3.2
+(g / give-16~e.5 :polarity~e.4 -~e.4 
+      :ARG0 (c / corporation~e.2 
+            :mod (b / big~e.1)) 
+      :ARG1 (s / shit~e.7) 
+      :ARG2~e.8 (o / or~e.10,13 
+            :op1 (a / abort-01~e.9) 
+            :op2 (m / marry-01~e.12 
+                  :mod (g2 / gay~e.11)) 
+            :op3 (g3 / get-05 
+                  :ARG1 (p / person :mode expressive :wiki "Jesus" 
+                        :name (n / name :op1 "Jesus")) 
+                  :ARG2 (l / life~e.23 
+                        :poss~e.22 (y / you~e.22)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.13 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok They just want laws friendly to Wall Street , and Romney is that guy .
+# ::alignments 0-1.1.1 1-1.1.3 2-1.1 3-1.1.2 4-1.1.2.1 5-1.1.2.1.1.r 6-1.1.2.1.1.2.1 7-1.1.2.1.1.2.2 9-1 10-1.2.2.2.1 11-1.2.2.r 12-1.2.1 13-1.2
+(a / and~e.9 
+      :op1 (w / want-01~e.2 
+            :ARG0 (t / they~e.0) 
+            :ARG1 (l / law~e.3 
+                  :ARG1-of (f / friendly-01~e.4 
+                        :ARG2~e.5 (m / market-sector :wiki "Wall_Street" 
+                              :name (n2 / name :op1 "Wall"~e.6 :op2 "Street"~e.7)))) 
+            :mod (j / just~e.1)) 
+      :op2 (g / guy~e.13 
+            :mod (t2 / that~e.12) 
+            :domain~e.11 (p / person :wiki "Mitt_Romney" 
+                  :name (n / name :op1 "Romney"~e.10))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.14 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Huckabee actually believed in all that Jay @-@ a @-@ zus shit , and that scared the corporate guys .
+# ::alignments 0-1.1.1.2.1 1-1.1.3 2-1.1 3-1.1.2.r 4-1.1.2.1 5-1.1.2.2 11-1.1.2 14-1.1.2.2 15-1.2 17-1.2.1.1 18-1.2.1
+(a / and 
+      :op1 (b / believe-01~e.2 
+            :ARG0 (p / person :wiki "Mike_Huckabee" 
+                  :name (n / name :op1 "Huckabee"~e.0)) 
+            :ARG1~e.3 (s / shit~e.11 
+                  :mod (a3 / all~e.4) 
+                  :mod (t / that~e.5,14) 
+                  :topic (p2 / person :mode expressive :wiki "Jesus" 
+                        :name (n2 / name :op1 "Jesus"))) 
+            :ARG1-of (a2 / actual-02~e.1)) 
+      :op2 (s2 / scare-01~e.15 
+            :ARG1 (g / guy~e.18 
+                  :mod (c / corporation~e.17)) 
+            :ARG2 b))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.15 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Here 's the ugly little truth .
+# ::alignments 0-1.3 1-1.3.r 3-1.2 4-1.1 5-1
+(t / truth~e.5 
+      :mod (l / little~e.4) 
+      :mod (u / ugly~e.3) 
+      :location~e.1 (h / here~e.0))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.16 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok The religious right could win elections without the corporate right .
+# ::alignments 1-1.1.1.1 2-1.1.1 3-1 4-1.1 5-1.1.2 6-1.1.3.1 6-1.1.3.1.r 8-1.1.3.2.1 9-1.1.3.2
+(p / possible-01~e.3 
+      :ARG1 (w / win-01~e.4 
+            :ARG0 (r / right-08~e.2 
+                  :ARG2 (r2 / religion~e.1)) 
+            :ARG2 (e / elect-01~e.5) 
+            :manner (a / accompany-01 :polarity~e.6 -~e.6 
+                  :ARG0 (r3 / right-08~e.9 
+                        :ARG2 (c / corporation~e.8)) 
+                  :ARG1 r)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.17 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Easily .
+# ::alignments 0-1
+(e / easy-05~e.0)
+
+# ::id bolt-eng-DF-170-181103-8881981_0040.18 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok They 'd even have an easier time of it , because a lot of religious people vote Democrats and are n't fooled into voting against their own economic interests .
+# ::alignments 0-1.1.2 2-1.1.1.3 5-1.1.1 5-1.1.1.1 5-1.1.1.1.r 6-1 8-1.1 10-1.1.1.2 12-1.1.1.2.1.1.1.1 13-1.1.1.2.1.1.1.1.r 14-1.1.1.2.1.1.1.2 15-1.1.1.2.1.1.1 16-1.1.1.2.1.1 17-1.1.1.2.1.1.2.2.1 18-1.1.1.2.1 20-1.1.1.2.1.2.1 20-1.1.1.2.1.2.1.r 21-1.1.1.2.1.2 22-1.1.1.2.1.2.3.r 23-1.1.1.2.1.2.3 24-1.1.1.2.1.2.3.2 25-1.1.2 27-1.1.1.2.1.2.3.2.1.1 28-1.1.1.2.1.2.3.2.1
+(t2 / time~e.6 
+      :op1 (i / it~e.8 
+            :ARG1-of (e / easy-05~e.5 
+                  :degree~e.5 (m / more~e.5) 
+                  :ARG1-of (c / cause-01~e.10 
+                        :ARG0 (a / and~e.18 
+                              :op1 (v / vote-01~e.16 
+                                    :ARG0 (p / person~e.15 
+                                          :quant~e.13 (l / lot~e.12) 
+                                          :mod (r / religious~e.14)) 
+                                    :ARG1 (p2 / political-party :wiki "Democratic_Party_(United_States)" 
+                                          :name (n / name :op1 "Democrat"~e.17))) 
+                              :op2 (f / fool-01~e.21 :polarity~e.20 -~e.20 
+                                    :ARG1 p 
+                                    :purpose~e.22 (v2 / vote-01~e.23 
+                                          :ARG0 p 
+                                          :ARG1 (a2 / against~e.24 
+                                                :op1 (i2 / interest~e.28 
+                                                      :mod (e2 / economy~e.27) 
+                                                      :poss p)))))) 
+                  :mod (e3 / even~e.2)) 
+            :beneficiary (t / they~e.0,25)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.1 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok One of the most lucid , reasonable descriptions of Romney I 've seen yet , well done .
+# ::alignments 0-1.3.1.1 3-1.3.1.2.2.1 4-1.3.1.2.2 6-1.3 6-1.3.1.2.3 7-1.3.1.2 8-1.3.1.2.1.r 9-1.3.1.2.1.2.1 10-1.3.1.2.4.1 12-1.3.1.2.4 13-1.3.1.2.4.2 15-1.1.2 16-1.1
+(s2 / say-01 
+      :ARG1 (d2 / do-02~e.16 
+            :ARG0 (y2 / you) 
+            :degree (w / well~e.15)) 
+      :ARG2 y2 
+      :ARG1-of (c / cause-01~e.6 
+            :ARG0 (i2 / include-91 
+                  :ARG1 (o / one~e.0) 
+                  :ARG2 (d / describe-01~e.7 
+                        :ARG1~e.8 (p / person :wiki "Mitt_Romney" 
+                              :name (n / name :op1 "Romney"~e.9)) 
+                        :mod (l / lucid~e.4 
+                              :degree (m2 / most~e.3)) 
+                        :ARG1-of (r / reasonable-02~e.6 
+                              :degree m2) 
+                        :ARG1-of (s / see-01~e.12 
+                              :ARG0 (i / i~e.10) 
+                              :time (y / yet~e.13))))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.2 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok The guy is awkward and does n't connect .
+# ::alignments 1-1.1.1 2-1.1.1.r 3-1.1 4-1 6-1.2.1 6-1.2.1.r 7-1.2
+(a / and~e.4 
+      :op1 (a2 / awkward~e.3 
+            :domain~e.2 (g / guy~e.1)) 
+      :op2 (c / connect-01~e.7 :polarity~e.6 -~e.6 
+            :ARG1 g))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.3 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok There are obviously plenty of people like that , it does n't make you evil , but it 's obviously a significant handicap when you 're running for President .
+# ::alignments 2-1.1 3-1.1.1.1 4-1.1.1.1.r 5-1.1.1 6-1.1.1.2 7-1.1.1.2.1 9-1.2.1.2 11-1.2.1.1 11-1.2.1.1.r 12-1.2.1 13-1.2.1.4 14-1.2.1.3 16-1.2 17-1.2.1.2 19-1.2.2 21-1.2.2.1.2 22-1.2.2.1 23-1.2.2.1.3.r 24-1.2.2.1.3.1 26-1.2.2.1.3 27-1.2.2.1.3.2.r 28-1.2.2.1.3.2
+(a / and 
+      :op1 (o / obvious-01~e.2 
+            :ARG1 (p / person~e.5 
+                  :quant~e.4 (p2 / plenty~e.3) 
+                  :ARG1-of (r / resemble-01~e.6 
+                        :ARG2 (t / that~e.7)))) 
+      :op2 (c / contrast-01~e.16 
+            :ARG1 (m2 / make-01~e.12 :polarity~e.11 -~e.11 
+                  :ARG0 (i / it~e.9,17) 
+                  :ARG1 (e / evil~e.14) 
+                  :ARG2 (y / you~e.13)) 
+            :ARG2 (o2 / obvious-01~e.19 
+                  :ARG1 (h / handicap-01~e.22 
+                        :ARG1 i 
+                        :ARG1-of (s / significant-02~e.21) 
+                        :time~e.23 (r2 / run-02~e.26 
+                              :ARG0 y~e.24 
+                              :ARG1~e.27 (p3 / president~e.28))))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.4 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Add that to the fact that he just seems so eager to please , and you have a guy who is n't easy to trust .
+# ::alignments 0-1.1 1-1.1.1 2-1.1.2.r 4-1.1.2 5-1.1.1 6-1.1.2.1.1 7-1.1.2.1.2 8-1.1.2.1 9-1.1.2.1.1.1.2 10-1.1.2.1.1.1 12-1.1.2.1.1.1.1 14-1 15-1.2.1 16-1.2 18-1.2.2 21-1.2.2.1.1.1 21-1.2.2.1.1.1.r 22-1.2.2.1.1 24-1.2.2.1
+(a / and~e.14 
+      :op1 (a2 / add-02~e.0 
+            :ARG1 (t / that~e.1,5) 
+            :ARG2~e.2 (f / fact~e.4 
+                  :domain (s / seem-01~e.8 
+                        :ARG1 (h / he~e.6 
+                              :ARG0-of (e / eager-01~e.10 
+                                    :ARG1 (p / please-01~e.12 
+                                          :ARG0 h) 
+                                    :degree (s2 / so~e.9))) 
+                        :mod (j / just~e.7)))) 
+      :op2 (h2 / have-03~e.16 
+            :ARG0 (y / you~e.15) 
+            :ARG1 (g / guy~e.18 
+                  :ARG1-of (t2 / trust-02~e.24 
+                        :ARG1-of (e2 / easy-05~e.22 :polarity~e.21 -~e.21)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.6 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok What ?
+# ::alignments 0-1
+(a / amr-unknown~e.0)
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.7 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Liberals are finding something wrong with Romney ?
+# ::alignments 0-1.2 0-1.2.1 0-1.2.1.r 2-1 3-1.3 4-1.3.1 5-1.3.1.1.r 6-1.3.1.1.2.1 7-1.1 7-1.1.r
+(f / find-02~e.2 :mode~e.7 interrogative~e.7 
+      :ARG0 (p2 / person~e.0 
+            :ARG1-of~e.0 (l / liberal-02~e.0)) 
+      :ARG1 (s / something~e.3 
+            :ARG1-of (w / wrong-02~e.4 
+                  :ARG2~e.5 (p / person :wiki "Mitt_Romney" 
+                        :name (n / name :op1 "Romney"~e.6)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.8 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Unbelievable !
+# ::alignments 0-1.1
+(p / possible-01 :polarity -~e.0 
+      :ARG1 (b / believe-01))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.9 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok If you want to pretend that Romney is perfect , okay , your call , I see it with partisans on both sides all the time .
+# ::alignments 0-1.2.r 1-1.2.1 2-1.2 4-1.2.2 5-1.2.2.2.r 6-1.2.2.2.1.2.1 8-1.2.2.2 10-1 12-1.1.1 12-1.1.1.r 13-1.1 15-1.3.1.1 16-1.3.1 17-1.3.1.2 18-1.3.1.3.r 19-1.3.1.3 20-1.3.1.3.1.r 21-1.3.1.3.1.1 22-1.3.1.3.1 23-1.3.1.4.1 25-1.3.1.4
+(o / okay-01~e.10 
+      :ARG1 (c / call-10~e.13 
+            :ARG0~e.12 (y2 / you~e.12)) 
+      :condition~e.0 (w / want-01~e.2 
+            :ARG0 (y / you~e.1) 
+            :ARG1 (p2 / pretend-01~e.4 
+                  :ARG0 y 
+                  :ARG1~e.5 (p3 / perfect-02~e.8 
+                        :ARG1 (p / person :wiki "Mitt_Romney" 
+                              :name (n / name :op1 "Romney"~e.6))))) 
+      :ARG1-of (c2 / cause-01 
+            :ARG0 (s / see-01~e.16 
+                  :ARG0 (i / i~e.15) 
+                  :ARG1 (i2 / it~e.17) 
+                  :source~e.18 (p4 / partisan~e.19 
+                        :location~e.20 (s2 / side~e.22 
+                              :mod (b / both~e.21))) 
+                  :frequency (t / time~e.25 
+                        :mod (a / all~e.23)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.10 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok It is possible , however , to admit weaknesses in candidates from your party without being arrested .
+# ::alignments 2-1.1 4-1 7-1.1.1 8-1.1.1.2 9-1.1.1.2.1.r 10-1.1.1.2.1 11-1.1.1.2.1.1.r 11-1.1.1.3.r 12-1.1.1.3.2 12-1.1.1.3.2.r 13-1.1.1.2.1.1 14-1.1.1.3.1 14-1.1.1.3.1.r 16-1.1.1.3
+(h / have-concession-91~e.4 
+      :ARG2 (p / possible-01~e.2 
+            :ARG1 (a / admit-01~e.7 
+                  :ARG0 y 
+                  :ARG1 (w / weak-02~e.8 
+                        :ARG1~e.9 (c / candidate~e.10 
+                              :source~e.11 (p2 / party~e.13 
+                                    :poss y))) 
+                  :ARG2-of~e.11 (a2 / arrest-01~e.16 :polarity~e.14 -~e.14 
+                        :ARG1~e.12 (y / you~e.12)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.11 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok It is possible to be reasonable and honest , too .
+# ::alignments 2-1 5-1.1.1 6-1.1 7-1.1.2 9-1.2
+(p / possible-01~e.2 
+      :ARG1 (a / and~e.6 
+            :op1 (r / reasonable-02~e.5) 
+            :op2 (h / honest-01~e.7)) 
+      :mod (t / too~e.9))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.13 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Read the post I made right after that one .
+# ::alignments 0-1 2-1.3 3-1.3.1.1 4-1.3.1 5-1.3.1.2.2 6-1.3.1.2 7-1.3.1.2.1.1 8-1.3.1.2.1
+(r / read-01~e.0 :mode imperative 
+      :ARG0 (y / you) 
+      :ARG1 (p / post-01~e.2 
+            :ARG1-of (m / make-01~e.4 
+                  :ARG0 (i / i~e.3) 
+                  :time (a / after~e.6 
+                        :op1 (o / one~e.8 
+                              :mod (t / that~e.7)) 
+                        :mod (r2 / right~e.5)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0041.14 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Apology accepted .
+# ::alignments 0-1.1 1-1
+(a / accept-01~e.1 
+      :ARG1 (a2 / apologize-01~e.0))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.1 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok As I 'm pretty sure that the OP was asking Republican voters , I will answer .
+# ::alignments 1-1.2.1.1 3-1.2.1.3 4-1.2.1 5-1.2.1.2.r 7-1.2.1.2.1.1.1 9-1.2.1.2 10-1.2.1.2.2.2.2.1 11-1.2.1.2.2 11-1.2.1.2.2.1 11-1.2.1.2.2.1.r 13-1.2.1.1 15-1
+(a / answer-01~e.15 
+      :ARG0 (i / i) 
+      :ARG1-of (c / cause-01 
+            :ARG0 (s / sure-02~e.4 
+                  :ARG0 i~e.1,13 
+                  :ARG1~e.5 (a2 / ask-01~e.9 
+                        :ARG0 (p4 / person 
+                              :ARG0-of (p5 / post-01 
+                                    :mod (o / original~e.7))) 
+                        :ARG2 (p2 / person~e.11 
+                              :ARG0-of~e.11 (v / vote-01~e.11) 
+                              :mod (p / political-party :wiki "Republican_Party_(United_States)" 
+                                    :name (n / name :op1 "Republican"~e.10)))) 
+                  :degree (p3 / pretty~e.3))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.2 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Keep in mind that even though I 'm a registered Republican I am decidedly Libertarian .
+# ::alignments 0-1 1-1.4.r 2-1.4 3-1.3.r 4-1.3.2.r 5-1.3.2.r 6-1.3.2.1 7-1.3.2.1 9-1.3.2 10-1.3.2.2.2.1 11-1.3.2.1 12-1.3.2.1 14-1.3
+(k / keep-01~e.0 :mode imperative 
+      :ARG0 (y / you) 
+      :ARG1~e.3 (l / libertarian~e.14 
+            :domain (i / i) 
+            :concession~e.4,5 (r / register-02~e.9 
+                  :ARG1 i~e.6,7,11,12 
+                  :ARG3 (p / political-party :wiki "Republican_Party_(United_States)" 
+                        :name (n / name :op1 "Republican"~e.10))) 
+            :manner (d / decide-01)) 
+      :location~e.1 (m / mind~e.2))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.3 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Romney has a credibility issue with me .
+# ::alignments 0-1.1.2.1 1-1 3-1.2.1 4-1.2 5-1.2.2.r 6-1.2.2
+(h / have-03~e.1 
+      :ARG0 (p / person :wiki "Mitt_Romney" 
+            :name (n / name :op1 "Romney"~e.0)) 
+      :ARG1 (i / issue-02~e.4 
+            :ARG0 (c / credibility~e.3) 
+            :ARG1~e.5 (i2 / i~e.6)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.4 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Even after I put aside all the things that I disagree with him on ( Me , being a Libertarian ) I just cannot trust him to do the things I would expect of a Republican .
+# ::alignments 2-1.3.1 3-1.3 4-1.3.3 5-1.3.2.2 7-1.3.2 9-1.3.2.1.1 10-1.3.2.1 11-1.3.2.1.2.r 12-1.3.2.1.2 15-1.3.2.1.3.1.1 17-1.3.2.1.3.1.1.r 19-1.3.2.1.3.1 21-1.2.1 22-1.2.4 23-1 23-1.1 23-1.1.r 24-1.2 25-1.2.2.1 27-1.2.2 29-1.2.2.2 30-1.2.2.2.1.1 32-1.2.2.2.1 33-1.2.2.2.1.2.r 35-1.2.2.2.1.2.1.2.1
+(p / possible-01~e.23 :polarity~e.23 -~e.23 
+      :ARG1 (t / trust-01~e.24 
+            :ARG0 (i / i~e.21) 
+            :ARG1 (d / do-02~e.27 
+                  :ARG0 h~e.25 
+                  :ARG1 (t2 / thing~e.29 
+                        :ARG1-of (e / expect-01~e.32 
+                              :ARG0 i~e.30 
+                              :source~e.33 (p3 / person 
+                                    :mod (p2 / political-party :wiki "Republican_Party_(United_States)" 
+                                          :name (n / name :op1 "Republican"~e.35)))))) 
+            :ARG2 (h / he) 
+            :mod (j / just~e.22)) 
+      :concession (p4 / put-01~e.3 
+            :ARG0 i~e.2 
+            :ARG1 (t3 / thing~e.7 
+                  :ARG2-of (d3 / disagree-01~e.10 
+                        :ARG0 i~e.9 
+                        :ARG1~e.11 h~e.12 
+                        :ARG1-of (c / cause-01 
+                              :ARG0 (l / libertarian~e.19 
+                                    :domain~e.17 i~e.15))) 
+                  :mod (a2 / all~e.5)) 
+            :ARG2 (a / aside~e.4)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.5 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok I am not convinced that he will repeal obamacare , I am not convinced that he will reduce government spending , and I am not convinced that he will run the country like a businessman .
+# ::alignments 0-1.2 2-1.1 2-1.1.r 3-1 5-1.3.1.1 7-1.3.1 8-1.3.1.2.2.1 10-1.2 12-1.1 12-1.1.r 13-1 15-1.3.2.1 17-1.3.2 18-1.3.2.2.1 18-1.3.2.2.1.1 18-1.3.2.2.1.1.r 19-1.3.2.2 21-1.3 22-1.2 24-1.1 24-1.1.r 25-1 27-1.3.3.1 29-1.3.3 31-1.3.3.2 32-1.3.3.3 34-1.3.3.3.1
+(c / convince-01~e.3,13,25 :polarity~e.2,12,24 -~e.2,12,24 
+      :ARG1 (i / i~e.0,10,22) 
+      :ARG2 (a / and~e.21 
+            :op1 (r / repeal-01~e.7 
+                  :ARG0 (h / he~e.5) 
+                  :ARG1 (l / law :wiki "Patient_Protection_and_Affordable_Care_Act" 
+                        :name (n / name :op1 "Obamacare"~e.8))) 
+            :op2 (r2 / reduce-01~e.17 
+                  :ARG0 h~e.15 
+                  :ARG1 (s / spend-01~e.19 
+                        :ARG0 (g / government-organization~e.18 
+                              :ARG0-of~e.18 (g2 / govern-01~e.18)))) 
+            :op3 (r3 / run-01~e.29 
+                  :ARG0 h~e.27 
+                  :ARG1 (c2 / country~e.31) 
+                  :manner (r4 / resemble-01~e.32 
+                        :ARG2 (b / businessman~e.34)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.6 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Having followed the last 2 presidential races , ( 9 in total ) I am familiar with Romney , and familiar with what he says compared to wht he has done and what he has said .
+# ::alignments 1-1.1 3-1.1.2.3 4-1.1.2.1 5-1.1.2.2 6-1.1.2 9-1.1.2.4.1 11-1.1.2.4 13-1.2 15-1 17-1.3.1.2.1 19-1.3 20-1 21-1.3.r 22-1.3.2 23-1.3.2.1.1 24-1.3.2.1 25-1.3.2.2.r 28-1.3.2.2.1.1.1 30-1.3.2.2.1.1 31-1.3.2.2 32-1.3.2 32-1.3.2.2.1 32-1.3.2.2.2 35-1.3.2.1 35-1.3.2.2.2.1
+(f / familiarize-01~e.15,20 
+      :ARG0 (f2 / follow-02~e.1 
+            :ARG0 i 
+            :ARG1 (r / race-02~e.6 :quant 2~e.4 
+                  :ARG2 (p2 / president~e.5) 
+                  :mod (l / last~e.3) 
+                  :concession (t4 / total-01~e.11 :ARG2 9~e.9))) 
+      :ARG1 (i / i~e.13) 
+      :ARG2~e.21 (a / and~e.19 
+            :op1 (p / person :wiki "Mitt_Romney" 
+                  :name (n / name :op1 "Romney"~e.17)) 
+            :op2 (t / thing~e.22,32 
+                  :ARG1-of (s / say-01~e.24,35 
+                        :ARG0 p~e.23) 
+                  :compared-to~e.25 (a2 / and~e.31 
+                        :op1 (t2 / thing~e.32 
+                              :ARG1-of (d / do-02~e.30 
+                                    :ARG0 p~e.28 
+                                    :time (p3 / past))) 
+                        :op2 (t3 / thing~e.32 
+                              :ARG1-of (s2 / say-01~e.35 
+                                    :ARG0 p 
+                                    :time p3))))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.7 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok That 's what is wrong with Romney , and what is right about Romney is that with all his faults , he 's 10 times better than obama .
+# ::alignments 0-1.1.2 1-1.1.2.r 2-1.1 3-1.1.2.r 4-1.1.1 5-1.1.1.1.r 6-1.1.1.1.2.1 8-1 9-1.1 9-1.2 10-1.1.2.r 11-1.2.1 12-1.2.1.1 13-1.2.1.1.1 14-1.1.2.r 15-1.1.2 16-1.2.2.r 17-1.2.2.4.2 18-1.2.2.4.1 18-1.2.2.4.1.r 19-1.2.2.4 21-1.2.2.1 22-1.2.2.1.r 23-1.2.2.2.1.1 24-1.2.2.2.1 25-1.2.2 25-1.2.2.2 25-1.2.2.2.1.r 25-1.2.2.2.r 26-1.2.2.3.r 27-1.2.2.3.2.1
+(a / and~e.8 
+      :op1 (t / thing~e.2,9 
+            :ARG1-of (w / wrong-02~e.4 
+                  :ARG2~e.5 (p / person :wiki "Mitt_Romney" 
+                        :name (n / name :op1 "Romney"~e.6))) 
+            :domain~e.1,3,10,14 (t2 / that~e.0,15)) 
+      :op2 (t3 / thing~e.9 
+            :ARG1-of (r / right-02~e.11 
+                  :mod (a3 / about~e.12 
+                        :op1 p~e.13)) 
+            :domain~e.16 (g / good-02~e.25 
+                  :ARG1~e.22 p~e.21 
+                  :degree~e.25 (m / more~e.25 
+                        :degree~e.25 (p3 / product-of~e.24 :op1 10~e.23)) 
+                  :compared-to~e.26 (p2 / person :wiki "Barack_Obama" 
+                        :name (n2 / name :op1 "Obama"~e.27)) 
+                  :concession (f / fault-02~e.19 
+                        :ARG1~e.18 p~e.18 
+                        :mod (a2 / all~e.17)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.8 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok why would you think the o/p is asking " republicans ".
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 2-1.1 3-1 7-1.2 9-1.2.2.1.1.2.1
+(t / think-01~e.3 
+      :ARG0 (y / you~e.2) 
+      :ARG1 (a2 / ask-01~e.7 
+            :ARG0 (p / person 
+                  :ARG0-of (p2 / post-01 
+                        :manner (o / original))) 
+            :ARG2 (p3 / person 
+                  :ARG0-of (h / have-org-role-91 
+                        :ARG1 (p4 / political-party :wiki "Republican_Party_(United_States)" 
+                              :name (n / name :op1 "Republican"~e.9))))) 
+      :ARG1-of (c / cause-01~e.0 
+            :ARG0~e.0 (a / amr-unknown~e.0)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.9 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok i 've voted republican enough times where i 'm probably the better gauge .
+# ::alignments 0-1.2.1.1 2-1.2.1 3-1.2.1.2.2.1 4-1.2.1.3.1 5-1.2.1.3 7-1.1.1 11-1.1.2 11-1.1.2.1 11-1.1.2.1.r 12-1.1
+(l / likely-01 
+      :ARG1 (g / gauge-01~e.12 
+            :ARG2 (i / i~e.7) 
+            :ARG1-of (g2 / good-02~e.11 
+                  :degree~e.11 (m / more~e.11))) 
+      :ARG1-of (c / cause-01 
+            :ARG0 (v / vote-01~e.2 
+                  :ARG0 i~e.0 
+                  :ARG1 (p / political-party :wiki "Republican_Party_(United_States)" 
+                        :name (n / name :op1 "Republican"~e.3)) 
+                  :quant (t / time~e.5 
+                        :mod (e / enough~e.4)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.10 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok just sayin
+# ::alignments 0-1.1
+(s / say-01 
+      :mod (j / just~e.0))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.11 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok thank you though for pointing out what the real problem is ...
+# ::alignments 0-1 1-1.1 2-1.3 3-1.2.r 4-1.2 5-1.2 6-1.2.2 8-1.2.2.1.1 9-1.2.2.1 10-1.2.2.1.r
+(t / thank-01~e.0 
+      :ARG1 (y / you~e.1) 
+      :ARG2~e.3 (p / point-out-02~e.4,5 
+            :ARG0 y 
+            :ARG1 (t2 / thing~e.6 
+                  :domain~e.10 (p2 / problem~e.9 
+                        :ARG1-of (r / real-04~e.8)))) 
+      :ARG1-of (h / have-concession-91~e.2))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.12 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok it 's the rightwingnut base and the difficulties of appealing to it if one is a normal moderate person .
+# ::alignments 0-1.1.2 1-1.1.2.r 4-1.1 5-1 7-1.2 8-1.2.1.r 9-1.2.1 10-1.2.1.1.r 11-1.2.1.1 12-1.2.1.2.r 13-1.2.1.2.3 14-1.2.1.2.3.r 16-1.2.1.2.1 17-1.2.1.2.2 18-1.2.1.2
+(a / and~e.5 
+      :op1 (b / base~e.4 
+            :mod (w / wingnut 
+                  :ARG1-of (r / right-08)) 
+            :domain~e.1 (i / it~e.0)) 
+      :op2 (d / difficult~e.7 
+            :topic~e.8 (a2 / appeal-03~e.9 
+                  :ARG1~e.10 b~e.11 
+                  :conj-as-if~e.12 (p / person~e.18 
+                        :ARG1-of (n / normal-02~e.16) 
+                        :ARG1-of (m / moderate-03~e.17) 
+                        :domain~e.14 (o / one~e.13)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.13 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok btw , you are n't a libertarian if you 're anti @-@ choice .
+# ::alignments 0-1.4 2-1.2 3-1.2.r 4-1.1 4-1.1.r 6-1 7-1.3.r 8-1.3.1 9-1.3.1 10-1.3 12-1.3.2
+(l / libertarian~e.6 :polarity~e.4 -~e.4 
+      :domain~e.3 (y / you~e.2) 
+      :condition~e.7 (o / oppose-01~e.10 
+            :ARG0 y~e.8,9 
+            :ARG1 (c / choose-01~e.12)) 
+      :mod (b / by-the-way~e.0))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.14 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok just sayin
+# ::alignments 0-1.1
+(s / say-01 
+      :mod (j / just~e.0))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.15 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Jumping with both feet right into a pile of bull shit are n't you .
+# ::alignments 0-1 1-1.4.r 2-1.4.1 3-1.4 4-1.5.2 5-1.5.r 7-1.5 12-1.1 12-1.1.r 13-1.3
+(j / jump-03~e.0 :polarity~e.12 -~e.12 :mode interrogative 
+      :ARG0 (y / you~e.13) 
+      :manner~e.1 (f / foot~e.3 
+            :mod (b / both~e.2)) 
+      :destination~e.5 (p / pile-01~e.7 
+            :ARG1 (b2 / bullshit) 
+            :mod (r / right~e.4)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.16 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok I am and have always been pro @-@ choice all the way accross the board .
+# ::alignments 0-1.1.1 2-1 4-1.2.3 6-1.1 6-1.2 8-1.1.2 8-1.2.2 9-1.2.5 10-1.2.5 11-1.2.4.r 13-1.2.5 14-1.2.4.1
+(a / and~e.2 
+      :op1 (f / favor-01~e.6 
+            :ARG0 (i / i~e.0) 
+            :ARG1 (c / choose-01~e.8)) 
+      :op2 (f2 / favor-01~e.6 
+            :ARG0 i 
+            :ARG1 (c2 / choose-01~e.8) 
+            :time (a2 / always~e.4) 
+            :manner~e.11 (a3 / across 
+                  :op1 (b / board~e.14)) 
+            :extent (a4 / all-the-way~e.9,10,13)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.17 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok In every area , I am pro choice , pro freedom .
+# ::alignments 1-1.3.1 2-1.3 4-1.1 6-1 7-1.2.1 9-1 10-1.2.2
+(f / favor-01~e.6,9 
+      :ARG0 (i / i~e.4) 
+      :ARG1 (a / and 
+            :op1 (c / choose-01~e.7) 
+            :op2 (f2 / free-04~e.10)) 
+      :location (a2 / area~e.2 
+            :mod (e / every~e.1)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0042.18 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Which makes me an enemy of obama .
+# ::alignments 1-1 2-1.1.2 4-1.1.3 6-1.1.1.2.1
+(m / make-02~e.1 
+      :ARG1 (h / have-rel-role-91 
+            :ARG0 (p / person :wiki "Barack_Obama" 
+                  :name (n / name :op1 "Obama"~e.6)) 
+            :ARG1 (i / i~e.2) 
+            :ARG2 (e / enemy~e.4)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0043.19 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok then you have my apology and it makes unique among so @-@ called " libertarians " on this board .
+# ::alignments 0-1.1.3 1-1.1.1 2-1.1 3-1.1.2.1 3-1.1.2.1.r 4-1.1.2 5-1 6-1.2.1 7-1.2 8-1.2.2 9-1.2.2.1 10-1.2.2.1.1.2 12-1.2.2.1.1.2 17-1.2.2.1.1.1.1 18-1.2.2.1.1.1
+(a / and~e.5 
+      :op1 (h / have-03~e.2 
+            :ARG0 (y / you~e.1) 
+            :ARG1 (a2 / apologize-01~e.4 
+                  :ARG0~e.3 (i / i~e.3)) 
+            :time (t / then~e.0)) 
+      :op2 (m / make-02~e.7 
+            :ARG0 (i2 / it~e.6) 
+            :ARG1 (u / unique~e.8 
+                  :ARG1-of (i3 / include-91~e.9 
+                        :ARG2 (l / libertarian 
+                              :location (b / board~e.18 
+                                    :mod (t2 / this~e.17)) 
+                              :mod (s2 / so-called~e.10,12))) 
+                  :domain y)))
+
+# ::id bolt-eng-DF-170-181103-8881981_0043.20 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok carry on .
+# ::alignments 0-1 1-1
+(c / carry-on-02~e.0,1 :mode imperative 
+      :ARG0 (y / you))
+
+# ::id bolt-eng-DF-170-181103-8881981_0044.10 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok Looks like you made the post after I did , did n't you .
+# ::alignments 0-1 1-1.1.r 2-1.1.2 3-1.1 5-1.1.3 5-1.1.4 6-1.1.4 7-1.1.4.1.1 8-1.1.4.1 10-1.1.4.1 12-1.1.2
+(l / look-02~e.0 
+      :ARG1~e.1 (m / make-01~e.3 :mode interrogative 
+            :ARG0 (y / you~e.2,12) 
+            :ARG1 (p / post-01~e.5 
+                  :ARG0 y) 
+            :time (a / after~e.5,6 
+                  :op1 (d / do-02~e.8,10 
+                        :ARG0 (i / i~e.7)))))
+
+# ::id bolt-eng-DF-170-181103-8881981_0044.11 ::amr-annotator LDC-AMR-14 ::preferred
+# ::tok No apology needed .
+# ::alignments 0-1.1.1 0-1.1.1.r 1-1.1 2-1
+(n / need-01~e.2 
+      :ARG1 (a / apologize-01~e.1 :polarity~e.0 -~e.0))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok And the Bush Twins too .
+# ::alignments 0-1 2-1.1.1.2.1 3-1.1.2 4-1.1.3
+(a / and~e.0 
+      :op2 (h / have-rel-role-91 
+            :ARG0 (p2 / person :wiki "George_W._Bush" 
+                  :name (n / name :op1 "Bush"~e.2)) 
+            :ARG2 (t / twin~e.3) 
+            :mod (t2 / too~e.4)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok It 's only a one way street with TM and crew you know .
+# ::alignments 2-1.2.2 4-1.2.1.1 5-1.2.1 6-1.2 7-1.2.3.r 8-1.2.3.1.2.1 9-1.2.3 10-1.2.3.2 10-1.2.3.2.1 10-1.2.3.2.1.r 11-1.1 12-1
+(k / know-01~e.12 
+      :ARG0 (y / you~e.11) 
+      :ARG1 (s / street~e.6 
+            :mod (w / way~e.5 :quant 1~e.4) 
+            :mod (o / only~e.2) 
+            :location-of~e.7 (a / and~e.9 
+                  :op1 (p / person :wiki - 
+                        :name (n / name :op1 "TM"~e.8)) 
+                  :op2 (p2 / person~e.10 
+                        :ARG0-of~e.10 (c / crew-01~e.10)))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Now once the children become celebs on their own they are free game .
+# ::alignments 0-1.3 3-1.2.1.1.1 4-1.2 6-1.2.3 7-1.2.3 8-1.2.3 9-1.4 10-1.4.r 11-1.1 12-1
+(g / game~e.12 
+      :ARG1-of (f / free-04~e.11) 
+      :time (b / become-01~e.4 
+            :ARG1 (p / person 
+                  :ARG0-of (h / have-rel-role-91 
+                        :ARG2 (c / child~e.3))) 
+            :ARG2 (c2 / celebrity) 
+            :mod (b2 / by-oneself~e.6,7,8)) 
+      :mod (n / now~e.0) 
+      :domain~e.10 p~e.9)
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok The Bush twins have not pursued this angle however one Palin child has .
+# ::alignments 1-1.1.2.2.1 2-1.1.2.3.1 3-1.1.2.3 4-1.1.1 4-1.1.1.r 5-1.1 5-1.2 6-1.1.3.1 7-1.1.3 8-1 9-1.2.1.1 10-1.2.1.2.1.2.1 11-1.2.1.2.1.3.1 12-1.2.1.2.1.3
+(c / contrast-01~e.8 
+      :ARG1 (p3 / pursue-01~e.5 :polarity~e.4 -~e.4 
+            :ARG0 (p / person :wiki "George_W._Bush" 
+                  :name (n / name :op1 "Bush"~e.1) 
+                  :ARG0-of (h / have-rel-role-91~e.3 
+                        :ARG2 (t / twin~e.2))) 
+            :ARG1 (a / angle~e.7 
+                  :mod (t2 / this~e.6))) 
+      :ARG2 (p4 / pursue-01~e.5 
+            :ARG0 (p2 / person :quant 1~e.9 
+                  :ARG1-of (i / include-91 
+                        :ARG2 (p5 / person :wiki "Sarah_Palin" 
+                              :name (n2 / name :op1 "Palin"~e.10) 
+                              :ARG0-of (h2 / have-rel-role-91~e.12 
+                                    :ARG2 (c2 / child~e.11))))) 
+            :ARG1 a))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok And she dances like a horse .
+# ::alignments 0-1 1-1.1.1 2-1.1 3-1.1.2 5-1.1.2.1
+(a / and~e.0 
+      :op2 (d / dance-01~e.2 
+            :ARG0 (s / she~e.1) 
+            :ARG1-of (r / resemble-01~e.3 
+                  :ARG2 (h / horse~e.5))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Really ? ?
+# ::alignments 0-1 1-1.1 1-1.1.r 2-1.1.r
+(r / real-04~e.0 :mode~e.1,2 interrogative~e.1)
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.7 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok So are you going to claim that Trig ...
+# ::alignments 2-1.1.2.1 5-1.1.2 7-1.1.2.2.1.2.1
+(i2 / infer-01 
+      :ARG1 (i / intend-01 
+            :ARG0 y 
+            :ARG1 (c / claim-01~e.5 
+                  :ARG0 (y / you~e.2) 
+                  :ARG1 (c2 / concern-02 
+                        :ARG1 (p / person :wiki - 
+                              :name (n / name :op1 "Trig"~e.7))))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.8 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Willow etc became a celeb on theri own then ?
+# ::alignments 0-1.2.1.2.1 1-1.2.2 2-1 8-1.5 9-1.1 9-1.1.r
+(b / become-01~e.2 :mode~e.9 interrogative~e.9 
+      :ARG1 (a / and 
+            :op1 (p / person :wiki - 
+                  :name (n / name :op1 "Willow"~e.0)) 
+            :op2 (e / et-cetera~e.1)) 
+      :ARG2 (c / celebrity) 
+      :manner (b2 / by-oneself) 
+      :mod (t / then~e.8))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.9 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Because the nastynesshas not been not just aimed at Bristol .
+# ::alignments 0-1 3-1.1.1.r 5-1.1.1 5-1.1.1.r 6-1.1.4 7-1.1 8-1.1.3.r 9-1.1.3.2.1
+(c / cause-01~e.0 
+      :ARG1 (a / aim-02~e.7 :polarity~e.3,5 -~e.5 
+            :ARG1 (n / nastyness) 
+            :ARG2~e.8 (p / person :wiki "Bristol_Palin" 
+                  :name (n2 / name :op1 "Bristol"~e.9)) 
+            :mod (j / just~e.6)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.10 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Also care to explain the nastyness that came from your side prior to DWTS ?
+# ::alignments 0-1.4 1-1 3-1.3 5-1.3.2 7-1.3.2.1 8-1.2.r 8-1.3.2.1.1.r 9-1.2 10-1.3.2.1.1 11-1.3.2.1.2 12-1.3.2.1.2.1.r 13-1.3.2.1.2.1.2.1 14-1.1 14-1.1.r
+(c / care-02~e.1 :mode~e.14 interrogative~e.14 
+      :ARG0~e.8 (y / you~e.9) 
+      :ARG1 (e / explain-01~e.3 
+            :ARG0 y 
+            :ARG1 (n / nastyness~e.5 
+                  :ARG1-of (c2 / come-01~e.7 
+                        :ARG3~e.8 (s / side~e.10 
+                              :poss y) 
+                        :time (p / prior~e.11 
+                              :op1~e.12 (s2 / show :wiki "Dancing_with_the_Stars_(U.S._TV_series)" 
+                                    :name (n2 / name :op1 "DWTS"~e.13)))))) 
+      :mod (a / also~e.0))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.11 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok You do know it was heaped on them before that ...
+# ::alignments 0-1.1 2-1 3-1.2.1 5-1.2 6-1.2.2.r 7-1.2.2 8-1.2.3 9-1.2.3.1
+(k / know-01~e.2 
+      :ARG0 (y / you~e.0) 
+      :ARG1 (h / heap-01~e.5 
+            :ARG1 (i / it~e.3) 
+            :ARG2~e.6 (t / they~e.7) 
+            :time (b / before~e.8 
+                  :op1 (t2 / that~e.9))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.12 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok right ?
+# ::alignments 0-1
+(r2 / request-confirmation-91~e.0)
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.13 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Sorry ...
+# ::alignments 0-1
+(s / sorry-01~e.0)
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.14 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok you lose .
+# ::alignments 0-1.1 1-1
+(l / lose-02~e.1 
+      :ARG0 (y / you~e.0))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.15 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Bristol aso got nearly 1 @/@ 4 million from a non profit to promote NON teen pregnancy .
+# ::alignments 0-1.1.2.1 2-1 3-1.2 8-1.3.r 10-1.3.1.1 10-1.3.1.1.r 11-1.3 11-1.3.1 11-1.3.1.r 13-1.4 14-1.4.2.1.1 14-1.4.2.1.1.r 15-1.4.2.1 16-1.4.2
+(g / get-01~e.2 
+      :ARG0 (p / person :wiki "Bristol_Palin" 
+            :name (n2 / name :op1 "Bristol"~e.0)) 
+      :ARG1 (n / nearly~e.3 
+            :op1 (m / monetary-quantity :quant 250000 
+                  :unit (d / dollar))) 
+      :ARG2~e.8 (t / thing~e.11 
+            :ARG0-of~e.11 (p2 / profit-01~e.11 :polarity~e.10 -~e.10)) 
+      :purpose (p3 / promote-02~e.13 
+            :ARG0 p 
+            :ARG1 (i / impregnate-01~e.16 
+                  :ARG1 (t2 / teen~e.15 :polarity~e.14 -~e.14))) 
+      :mod (a / also))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.16 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok She got out on the circuit before dancing with the Starz .
+# ::alignments 0-1.1 1-1 2-1.2 3-1.2.1.r 3-1.3.r 4-1.3.1.2.3 5-1.2.1 6-1.3 7-1.3.1.2.1 8-1.3.1.2.2 9-1.3.1.2.3
+(g / get-05~e.1 
+      :ARG1 (s / she~e.0) 
+      :ARG2 (o / out~e.2 
+            :op1~e.3 (c / circuit~e.5)) 
+      :time~e.3 (b / before~e.6 
+            :op1 (b2 / broadcast-program :wiki "Dancing_with_the_Stars_(U.S._TV_series)" 
+                  :name (n2 / name :op1 "Dancing"~e.7 :op2 "with"~e.8 :op3 "the"~e.4,9 :op4 "Stars"))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.17 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Making 1 @/@ 4 mill off of her getting pregnant ?
+# ::alignments 0-1 6-1.3.r 7-1.3.1 7-1.3.1.r 9-1.3 10-1.1 10-1.1.r
+(m / make-01~e.0 :mode~e.10 interrogative~e.10 
+      :ARG1 (m2 / monetary-quantity :quant 250000 
+            :unit (d / dollar)) 
+      :ARG2~e.6 (i / impregnate-01~e.9 
+            :ARG1~e.7 (s / she~e.7)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0035.18 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Or capitolizing on her mothers fame ?
+# ::alignments 0-1 3-1.1.2 3-1.1.2.r 4-1.1.3.2.2 5-1.1.3 6-1.1.1 6-1.1.1.r
+(o / or~e.0 
+      :op2 (c / capitalize-02 :mode~e.6 interrogative~e.6 
+            :ARG0~e.3 (s / she~e.3) 
+            :ARG1 (f / fame-01~e.5 
+                  :ARG1 s 
+                  :ARG2 (h / have-rel-role-91 
+                        :ARG0 s 
+                        :ARG2 (m / mother~e.4)))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Do you guys even remember how you have treated Hilary and pelosi ?
+# ::alignments 1-1.2 2-1.2.1 3-1.4 4-1 6-1.3.1.1 8-1.3.1 9-1.3.1.2.1.2.1 10-1.3.1.2 11-1.3.1.2.2.2.1 12-1.1 12-1.1.r
+(r / remember-01~e.4 :mode~e.12 interrogative~e.12 
+      :ARG0 (y / you~e.1 
+            :mod (g / guy~e.2)) 
+      :ARG1 (t / thing 
+            :ARG2-of (t2 / treat-01~e.8 
+                  :ARG0 y~e.6 
+                  :ARG1 (a / and~e.10 
+                        :op1 (p2 / person :wiki "Hillary_Clinton" 
+                              :name (n2 / name :op1 "Hilary"~e.9)) 
+                        :op2 (p / person :wiki "Nancy_Pelosi" 
+                              :name (n / name :op1 "Pelosi"~e.11))))) 
+      :mod (e / even~e.3))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Boxer and Di Fi ?
+# ::alignments 0-1.2.2.1 1-1 2-1.3.2.1 3-1.3.2.2 4-1.1 4-1.1.r
+(a / and~e.1 :mode~e.4 interrogative~e.4 
+      :op1 (p / person :wiki - 
+            :name (n / name :op1 "Boxer"~e.0)) 
+      :op2 (p2 / person :wiki - 
+            :name (n2 / name :op1 "Di"~e.2 :op2 "Fi"~e.3)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Amy Carter when she was but a child ?
+# ::alignments 0-1.3.1 1-1.3.2 2-1.4.r 3-1.4.2 4-1.4.2.r 7-1.4 8-1.1 8-1.1.r
+(p / person :mode~e.8 interrogative~e.8 :wiki "Amy_Carter" 
+      :name (n / name :op1 "Amy"~e.0 :op2 "Carter"~e.1) 
+      :time~e.2 (c / child~e.7 
+            :mod (o / only) 
+            :domain~e.4 p~e.3))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Chelsea ?
+# ::alignments 0-1.3.1 1-1.1 1-1.1.r
+(p / person :mode~e.1 interrogative~e.1 :wiki "Chelsea_Clinton" 
+      :name (n / name :op1 "Chelsea"~e.0))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok You never seen to mind women being treated like crap unless its some right wing woman .
+# ::alignments 0-1.1.2 1-1.1.1 1-1.1.1.r 1-1.1.5 4-1.1 5-1.1.3.1 5-1.1.4 7-1.1.3 9-1.1.3.2 9-1.1.3.2.1 9-1.1.3.2.1.r 10-1.1.1.r 12-1.1.4.1 13-1.1.4.2 14-1.1.4.2 15-1.1.4
+(s / seem-01 
+      :ARG1 (m / mind-01~e.4 :polarity~e.1,10 -~e.1 
+            :ARG0 (y / you~e.0) 
+            :ARG1 (t / treat-01~e.7 
+                  :ARG1 (w2 / woman~e.5) 
+                  :ARG2 (t2 / thing~e.9 
+                        :ARG1-of~e.9 (c / crap-01~e.9))) 
+            :concession (w3 / woman~e.5,15 
+                  :mod (s2 / some~e.12) 
+                  :mod (r / right-wing~e.13,14)) 
+            :time (e / ever~e.1)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok No , I do n't Please elaborate .
+# ::alignments 0-1.1.1.r 2-1.1.2 3-1.1 4-1.1.1 4-1.1.1.r 5-1.2.2 5-1.2.2.r 6-1.2
+(m / multi-sentence 
+      :snt1 (d / do-02~e.3 :polarity~e.0,4 -~e.4 
+            :ARG0 (i / i~e.2)) 
+      :snt2 (e / elaborate-01~e.6 :mode imperative :polite~e.5 +~e.5 
+            :ARG0 (y / you)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.7 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok On his TV show , early in the Clinton administration , Limbaugh put up a picture of Socks , the White House cat , and asked , ' Did you know there 's a White House dog ?
+# ::alignments 1-1.3.2 1-1.3.2.r 2-1.3.1 3-1.3 5-1.4 6-1.4.1.r 8-1.4.1.2.2.1 9-1.4.1 9-1.4.1.1 9-1.4.1.1.r 11-1.1.1.2.1 12-1.1 13-1.1 15-1.1.2 16-1.1.2.1.r 17-1.1.2.1.2.1 20-1.1.2.1.3.2.1 21-1.1.2.1.3.2.2 22-1.1.2.1 24-1 25-1.2 29-1.2.2.2 30-1.2.2 34-1.2.2.3.1 35-1.2.2.3.1 36-1.2.2.3 37-1.2.2.1 37-1.2.2.1.r
+(a2 / and~e.24 
+      :op1 (p2 / put-up-11~e.12,13 
+            :ARG0 (p3 / person :wiki "Rush_Limbaugh" 
+                  :name (n3 / name :op1 "Limbaugh"~e.11)) 
+            :ARG1 (p4 / picture-01~e.15 
+                  :ARG1~e.16 (c / cat~e.22 :wiki - 
+                        :name (n4 / name :op1 "Socks"~e.17) 
+                        :poss (g3 / government-organization :wiki "White_House" 
+                              :name (n2 / name :op1 "White"~e.20 :op2 "House"~e.21))))) 
+      :op1 (a3 / ask-01~e.25 
+            :ARG0 p3 
+            :ARG1 (k / know-01~e.30 :mode~e.37 interrogative~e.37 
+                  :ARG0 (y / you~e.29) 
+                  :ARG1 (d / dog~e.36 
+                        :poss g3~e.34,35))) 
+      :time (s / show~e.3 
+            :medium (t / television~e.2) 
+            :poss~e.1 p3~e.1) 
+      :time (e / early~e.5 
+            :op1~e.6 (g / government-organization~e.9 
+                  :ARG0-of~e.9 (a / administrate-01~e.9) 
+                  :mod (p / person :wiki "Bill_Clinton" 
+                        :name (n / name :op1 "Clinton"~e.8)))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.8 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok ' Then he put up a picture of Chelsea Clinton , who was 13 years old at the time and as far as I know had never done any harm to anyone .
+# ::alignments 1-1.3 2-1.1 3-1 4-1 6-1.2 7-1.2.1.r 8-1.2.1.2.1 9-1.2.1.2.2 13-1.2.1.3.1 14-1.2.1.3.2 15-1.2.1.3.r 18-1.2.1.3 18-1.2.1.3.3 18-1.2.1.3.3.r 20-1.2.1.3.3.r 21-1.2.1.4.5 22-1.2.1.4.5 23-1.2.1.4.5.1.1 24-1.2.1.4.5.1 26-1.2.1.4.1 26-1.2.1.4.1.r 26-1.2.1.4.4 27-1.2.1 27-1.2.1.4 27-1.2.1.4.r 28-1.2.1.4.3 29-1.2.1 29-1.2.1.4 29-1.2.1.4.r 30-1.2.1.4.2.r 31-1.2.1.4.2
+(p2 / put-up-11~e.3,4 
+      :ARG0 (h / he~e.2) 
+      :ARG1 (p3 / picture~e.6 
+            :topic~e.7 (p4 / person~e.27,29 :wiki "Chelsea_Clinton" 
+                  :name (n2 / name :op1 "Chelsea"~e.8 :op2 "Clinton"~e.9) 
+                  :age~e.15 (t / temporal-quantity~e.18 :quant 13~e.13 
+                        :unit (y / year~e.14) 
+                        :time~e.18,20 (t3 / time~e.18)) 
+                  :ARG0-of~e.27,29 (h2 / harm-01~e.27,29 :polarity~e.26 -~e.26 
+                        :ARG1~e.30 (a2 / anyone~e.31) 
+                        :mod (a / any~e.28) 
+                        :time (e / ever~e.26) 
+                        :concession (a3 / as-far-as~e.21,22 
+                              :op1 (k / know-01~e.24 
+                                    :ARG0 (i / i~e.23)))))) 
+      :time (t2 / then~e.1))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.9 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok When viewers objected , he claimed , in typical Limbaugh fashion , that the gag was an accident and that without his permission some technician had put up the picture of Chelsea -- which I found as disgusting as his original attempt at humor .
+# ::alignments 0-1.4.r 2-1.4 5-1 9-1.1.2.1 12-1.2.r 14-1.2.1.1 15-1.2.1.1.r 17-1.2.1 18-1.2 19-1.2.r 20-1.2.2.3.1 20-1.2.2.3.1.r 21-1.2.2.3.2 21-1.2.2.3.2.r 22-1.2.2.3 23-1.2.2.1.1 24-1.2.2.1 26-1.2.2 27-1.2.2 29-1.2.2.2 30-1.2.2.2.1.r 31-1.2.2.2.1.2.1 34-1.5.1 36-1.4.r 37-1.5 38-1.4.r 38-1.5.3.r 39-1.5.3.1 39-1.5.3.1.r 40-1.5.3.3 41-1.5.3 42-1.5.3.2.r 43-1.5.3.2
+(c / claim-01~e.5 
+      :ARG0 (p / person :wiki "Rush_Limbaugh" 
+            :name (n / name :op1 "Limbaugh"~e.9)) 
+      :ARG1~e.12,19 (a2 / and~e.18 
+            :op1 (a / accident~e.17 
+                  :domain~e.15 (g / gag~e.14)) 
+            :op2 (p2 / put-up-11~e.26,27 
+                  :ARG0 (t2 / technician~e.24 
+                        :mod (s / some~e.23)) 
+                  :ARG1 (p3 / picture~e.29 
+                        :topic~e.30 (p4 / person :wiki "Chelsea_Clinton" 
+                              :name (n2 / name :op1 "Chelsea"~e.31))) 
+                  :ARG1-of (p5 / permit-01~e.22 :polarity~e.20 -~e.20 
+                        :ARG0~e.21 p~e.21))) 
+      :ARG0-of (t / typify-01 
+            :ARG1 p) 
+      :time~e.0,36,38 (o / object-01~e.2 
+            :ARG0 (p6 / person 
+                  :ARG0-of (v / view-01))) 
+      :ARG0-of (d / disgust-01~e.37 
+            :ARG1 (i / i~e.34) 
+            :degree (e / equal) 
+            :compared-to~e.38 (a3 / attempt-01~e.41 
+                  :ARG0~e.39 p~e.39 
+                  :ARG1~e.42 (h / humor~e.43) 
+                  :mod (o2 / original~e.40))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.10 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok <a href="http://mediamatters.org/research/200809020015"> Hannity 's memory lapse : " I do n't remember Chelsea Clinton being attacked " | Media Matters for America </a>
+# ::alignments 0-1.1.1.1.2.1 1-1.1.1.1.r 2-1.1.1 3-1.1 6-1.1.2.2 8-1.1.2.1 8-1.1.2.1.r 9-1.1.2 10-1.1.2.3.1.2.1 11-1.1.2.3.1.2.2 16-1.2.2.1 17-1.2.2.2 18-1.2.2.3 19-1.2.2.4
+(p2 / publication-91 
+      :ARG1 (l / lapse-01~e.3 
+            :ARG1 (m / memory~e.2 
+                  :poss~e.1 (p4 / person :wiki "Sean_Hannity" 
+                        :name (n5 / name :op1 "Hannity"~e.0))) 
+            :topic (r / remember-01~e.9 :polarity~e.8 -~e.8 
+                  :ARG0 p4~e.6 
+                  :ARG1 (a / attack-01 
+                        :ARG1 (p5 / person :wiki "Chelsea_Clinton" 
+                              :name (n6 / name :op1 "Chelsea"~e.10 :op2 "Clinton"~e.11))))) 
+      :ARG4 (p3 / publication :wiki "Media_Matters_for_America" 
+            :name (n4 / name :op1 "Media"~e.16 :op2 "Matters"~e.17 :op3 "for"~e.18 :op4 "America"~e.19)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.11 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok So ...
+# ::alignments 
+(i / infer-01)
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.12 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok were you idignant ? ?
+# ::alignments 0-1.2.r 1-1.2 3-1.1 3-1.1.r 4-1.1 4-1.1.r
+(i / indignant :mode~e.3,4 interrogative~e.3,4 
+      :domain~e.0 (y / you~e.1))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.13 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Outraged ? ?
+# ::alignments 0-1 1-1.1 1-1.1.r 2-1.1.r
+(o / outrage-01~e.0 :mode~e.1,2 interrogative~e.1)
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.14 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok If so ...
+# ::alignments 0-1 1-1.1
+(h / have-condition-91~e.0 
+      :ARG2 (s / so~e.1))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.15 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok you have no business excusing it from your own side .
+# ::alignments 0-1.2 1-1 2-1.1 2-1.1.r 3-1.3 4-1.3.1 5-1.3.1.2 6-1.3.1.3.r 7-1.3.1.3.1 7-1.3.1.3.1.r 9-1.3.1.3
+(h / have-03~e.1 :polarity~e.2 -~e.2 
+      :ARG0 y~e.0 
+      :ARG1 (b / business~e.3 
+            :mod (e / excuse-01~e.4 
+                  :ARG0 (y / you) 
+                  :ARG2 (i / it~e.5) 
+                  :source~e.6 (s / side~e.9 
+                        :poss~e.7 y~e.7))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.16 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Sorry ...
+# ::alignments 0-1
+(s / sorry-01~e.0)
+
+# ::id bolt-eng-DF-170-181103-8882248_0036.17 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok " so and so did it too " does n't cut it outside of kindergarden .
+# ::alignments 1-1.2.1.1 1-1.2.1.2 2-1.2.1 3-1.2.1.1 3-1.2.1.2 4-1.2 5-1.2.2 6-1.2.3 8-1.2 9-1.1 9-1.1.r 10-1 11-1.3 12-1.4 13-1.4.1.r 14-1.4.1
+(c / cut-03~e.10 :polarity~e.9 -~e.9 
+      :ARG0 (d / do-02~e.4,8 
+            :ARG0 (a / and~e.2 
+                  :op1 (s / so~e.1,3) 
+                  :op2 (s2 / so~e.1,3)) 
+            :ARG1 (i / it~e.5) 
+            :mod (t / too~e.6)) 
+      :ARG1 i~e.11 
+      :location (o / outside~e.12 
+            :op1~e.13 (k / kindergarden~e.14)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0037.17 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok So ? ?
+# ::alignments 0-1 1-1.1 1-1.1.r 2-1.1.r
+(s / so~e.0 :mode~e.1,2 interrogative~e.1)
+
+# ::id bolt-eng-DF-170-181103-8882248_0037.18 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok This automatically gives you and others the right to call her nasty names and attack her looks , body , sexuality etc ? ?
+# ::alignments 0-1.2 1-1.5 2-1 3-1.4.1 4-1.4 5-1.4.2 7-1.3 8-1.3.2.r 9-1.3.2.1 10-1.3.2.1.2 10-1.3.2.1.2.r 11-1.3.2.1.3.1 12-1.3.2.1.3 13-1.3.2 14-1.3.2.2 15-1.3.2.2.2.1.1.1 15-1.3.2.2.2.1.1.1.r 16-1.3.2.2.2.1 16-1.3.2.2.2.1.1 16-1.3.2.2.2.1.1.r 18-1.3.2.2.2.2 20-1.3.2.2.2.3 21-1.3.2.2.2.4 22-1.1 22-1.1.r 23-1.1.r
+(g / give-01~e.2 :mode~e.22,23 interrogative~e.22 
+      :ARG0 (t / this~e.0) 
+      :ARG1 (r / right-05~e.7 
+            :ARG1 a2 
+            :ARG2~e.8 (a / and~e.13 
+                  :op1 (c / call-01~e.9 
+                        :ARG0 a2 
+                        :ARG1~e.10 (s / she~e.10) 
+                        :ARG2 (n / name~e.12 
+                              :mod (n2 / nasty~e.11))) 
+                  :op2 (a3 / attack-01~e.14 
+                        :ARG0 a2 
+                        :ARG1 (a4 / and 
+                              :op1 (t2 / thing~e.16 
+                                    :ARG1-of~e.16 (l / look-02~e.16 
+                                          :ARG0~e.15 s~e.15)) 
+                              :op2 (b / body~e.18 
+                                    :poss s) 
+                              :op3 (s2 / sexuality~e.20 
+                                    :poss s) 
+                              :op4 (e / et-cetera~e.21))))) 
+      :ARG2 (a2 / and~e.4 
+            :op1 (y / you~e.3) 
+            :op2 (o / other~e.5)) 
+      :mod (a5 / automatic~e.1))
+
+# ::id bolt-eng-DF-170-181103-8882248_0038.1 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Funny , I seem to remember a recent thread about how ugly black women are .
+# ::alignments 0-1.2 2-1.1.1 3-1 5-1.1 7-1.1.3 8-1.1.2 9-1.1.2.1.r 10-1.1.2.1.2 11-1.1.2.1 12-1.1.2.1.1.1 13-1.1.2.1.1 14-1.1.2.1.1.r
+(s2 / seem-01~e.3 
+      :ARG1 (r / remember-01~e.5 
+            :ARG0 (i / i~e.2) 
+            :ARG1 (t / thread~e.8 
+                  :topic~e.9 (u / ugly~e.11 
+                        :domain~e.14 (w / woman~e.13 
+                              :ARG1-of (b / black-05~e.12)) 
+                        :degree (s / so~e.10))) 
+            :time (r2 / recent~e.7)) 
+      :mod (f / funny~e.0))
+
+# ::id bolt-eng-DF-170-181103-8882248_0038.2 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Hmmm , maybe it was only racist ?
+# ::alignments 0-1.3 0-1.3.1 0-1.3.1.r 2-1 3-1.2.1 4-1.2.1.r 5-1.2.2 6-1.2 7-1.1 7-1.1.r
+(p / possible-01~e.2 :mode~e.7 interrogative~e.7 
+      :ARG1 (r / racist~e.6 
+            :domain~e.4 (i / it~e.3) 
+            :mod (o / only~e.5)) 
+      :mod (h / hmmm~e.0 :mode~e.0 expressive~e.0))
+
+# ::id bolt-eng-DF-170-181103-8882248_0038.3 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Oh ...
+# ::alignments 0-1 0-1.1 0-1.1.r
+(o / oh~e.0 :mode~e.0 expressive~e.0)
+
+# ::id bolt-eng-DF-170-181103-8882248_0038.4 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok you mean the posts where people here were claiming Condolezza Rice looked like a man ?
+# ::alignments 0-1.2 1-1 3-1.3 4-1.3.2.1.1.r 5-1.3.2.1 6-1.3.2.1.1 8-1.3.2 9-1.3.2.2.1.2.1 10-1.3.2.2.1.2.2 11-1.3.2.2 12-1.3.2.2.2.r 14-1.3.2.2.2 15-1.1 15-1.1.r
+(m / mean-01~e.1 :mode~e.15 interrogative~e.15 
+      :ARG0 (y / you~e.0) 
+      :ARG2 (p / post-01~e.3 
+            :ARG0 p2 
+            :ARG1 (c / claim-01~e.8 
+                  :ARG0 (p2 / person~e.5 
+                        :location~e.4 (h / here~e.6)) 
+                  :ARG1 (l / look-02~e.11 
+                        :ARG0 (p3 / person :wiki "Condoleezza_Rice" 
+                              :name (n / name :op1 "Condolezza"~e.9 :op2 "Rice"~e.10)) 
+                        :ARG1~e.12 (m2 / man~e.14)))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0038.5 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Yes ...
+# ::alignments 0-1
+(y / yes~e.0)
+
+# ::id bolt-eng-DF-170-181103-8882248_0038.6 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok I saw those too .
+# ::alignments 0-1.1 1-1 2-1.2 3-1.3
+(s / see-01~e.1 
+      :ARG0 (i / i~e.0) 
+      :ARG1 (t / that~e.2) 
+      :mod (t2 / too~e.3))
+
+# ::id bolt-eng-DF-170-181103-8882248_0039.16 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Sure she made herself a public figure by her choice and action .
+# ::alignments 0-1.5 1-1.1 2-1 2-1.3 3-1.1 5-1.2.1 6-1.2 7-1.3.r 8-1.3.1 8-1.3.1.r 9-1.3 11-1.4
+(m / make-01~e.2 
+      :ARG0 (s / she~e.1,3) 
+      :ARG1 (f / figure~e.6 
+            :ARG1-of (p / public-02~e.5)) 
+      :ARG1-of~e.7 (c / choose-01~e.2,9 
+            :ARG0~e.8 s~e.8) 
+      :instrument (a / act-02~e.11 
+            :ARG0 s) 
+      :ARG1-of (s2 / sure-02~e.0))
+
+# ::id bolt-eng-DF-170-181103-8882248_0039.17 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Same as you have rights to criticize Pelosi or hanoi Jane , etc.
+# ::alignments 0-1 1-1.1.r 2-1.1.1 4-1.1 6-1.1.2 7-1.1.2.2.1.2.1 8-1.1.2.2 9-1.1.2.2.2.2.1 10-1.1.2.2.2.2.2 12-1.1.2.2.3
+(s / same-01~e.0 
+      :ARG1~e.1 (r / right-05~e.4 
+            :ARG1 (y / you~e.2) 
+            :ARG2 (c2 / criticize-01~e.6 
+                  :ARG0 y 
+                  :ARG1 (o / or~e.8 
+                        :op1 (p / person :wiki "Nancy_Pelosi" 
+                              :name (n / name :op1 "Pelosi"~e.7)) 
+                        :op2 (p2 / person :wiki - 
+                              :name (n3 / name :op1 "Hanoi"~e.9 :op2 "Jane"~e.10)) 
+                        :op3 (e / et-cetera~e.12)))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0040.17 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok What did Trig Palin do to deserve the treatment he 's gotten ?
+# ::alignments 0-1.2 1-1 2-1.1.2.1 3-1.1.2.2 4-1 6-1.3 8-1.3.2 11-1.3.2.2
+(d / do-02~e.1,4 
+      :ARG0 (p2 / person :wiki - 
+            :name (n2 / name :op1 "Trig"~e.2 :op2 "Palin"~e.3)) 
+      :ARG1 (a / amr-unknown~e.0) 
+      :ARG2-of (d2 / deserve-01~e.6 
+            :ARG0 p2 
+            :ARG1 (t / treat-01~e.8 
+                  :ARG1 p2 
+                  :ARG1-of (g / get-01~e.11 
+                        :ARG0 p2))))
+
+# ::id bolt-eng-DF-170-181103-8882248_0040.18 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Oh , yeah -- he 's a Palin .
+# ::alignments 0-1.3.1.r 0-1.3.2 2-1.3 2-1.3.1 2-1.3.1.r 7-1.2.1
+(p / person :wiki "Sarah_Palin" 
+      :name (n / name :op1 "Palin"~e.7) 
+      :mod (y / yeah~e.2 :mode~e.0,2 expressive~e.2 
+            :mod (o / oh~e.0)))
+
+# ::id bolt-eng-DF-170-181103-8882248_0041.16 ::amr-annotator SDL-AMR-09 ::preferred
+# ::tok Did I say anything about Trig ?
+# ::alignments 1-1.2 2-1 3-1.3 4-1.3.1.r 5-1.3.1.2.1 6-1.1 6-1.1.r
+(s / say-01~e.2 :mode~e.6 interrogative~e.6 
+      :ARG0 (i / i~e.1) 
+      :ARG1 (a / anything~e.3 
+            :topic~e.4 (p / person :wiki - 
+                  :name (n / name :op1 "Trig"~e.5))))
+
