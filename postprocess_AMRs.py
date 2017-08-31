@@ -3,7 +3,7 @@
 
 '''Script that tests given seq2seq model on given test data, also restoring and wikifying the produced AMRs
 
-Input should be a produced AMR -file. Outputs .restore, .pruned, .coref and .all files'''
+Input should either be a produced AMR -file or a folder to traverse. Outputs .restore, .pruned, .coref and .all files'''
 
 
 import sys
@@ -12,13 +12,22 @@ import argparse
 import os
 from amr_utils import *
 import wikify_file
+from multiprocessing import Pool
 
 
 def create_arg_parser():
+	### If using -fol, -f and -s are directories. In that case the filenames of the sentence file and output file should match (except extension)
+	### If not using -fol, -f and -s are directories ###
+	
 	parser = argparse.ArgumentParser()
-	parser.add_argument('-f', required = True ,help="File to be post-processed")
-	parser.add_argument('-s', required = True ,help="Sentence file, necessary for Wikification")
-	parser.add_argument('-o', required = True ,help="Output directory")
+	parser.add_argument('-f', required = True ,help="File or folder to be post-processed")
+	parser.add_argument('-s', default = '' ,help="Sentence file or folder, necessary for Wikification")
+	
+	parser.add_argument('-fol', action = 'store_true' ,help="Whether -f is a folder")
+	parser.add_argument('-sent_ext', default = '.sent' ,help="Sentence file, necessary for Wikification - only needed when doing single file")
+	parser.add_argument('-out_ext', default = '.seq.amr' ,help="Output directory when doing a file")
+	parser.add_argument('-t', default = 16, type = int ,help="Maximum number of parallel threads")
+	
 	parser.add_argument('-c', default = 'dupl', action='store', choices=['dupl','index','abs'], help='How to handle coreference - input was either duplicated/indexed/absolute path')
 	parser.add_argument('-no_wiki', action='store_true', help='Not doing Wikification, since it takes a long time')
 	args = parser.parse_args() 
@@ -132,15 +141,17 @@ def restore_amr(in_file, out_file, coref_type):
 	return out_file
 
 
-def process_file(f, sent_file, output_direc):
+def process_file(input_list):
 	'''Postprocessing AMR file'''
+	f = input_list[0]
+	sent_file = input_list[1]
 	
-	if not os.path.isfile(sent_file):
-		print 'Something is wrong, sent-file does not exist'
+	if not os.path.isfile(sent_file) or not os.path.isfile(f):
+		print 'Something is wrong, sent-file or amr-file does not exist'
 		sys.exit(0)
 	
 	if os.path.getsize(f) > 0: #check if file has content			
-		restore_file 		= args.o + f.split('/')[-1] + '.restore'
+		restore_file 		= f + '.restore'
 		restore_file 		= restore_amr(f, restore_file, args.c)
 		prune_file 			= do_pruning(restore_file)
 		
@@ -164,16 +175,40 @@ def process_file(f, sent_file, output_direc):
 			else:
 				print 'Wikification failed earlier, not trying again here\n'	
 		print 'Done processing!'			
+
+
+def match_files_by_name(amr_files, sent_files):
+	'''Input is a list of both amr and sentence files, return matching pairs to test in parallel in the main function'''
 	
+	matches = []
+	
+	for amr in amr_files:
+		match_amr = amr.split('/')[-1].split('.')[0]	#return filename when given file /home/user/folder/folder2/filename.txt
+		for sent in sent_files:
+			match_sent = sent.split('/')[-1].split('.')[0]
+			if match_sent == match_amr:		#matching sentence and AMR file, we can process those
+				matches.append([amr, sent])
+				break
+	
+	return matches
+	
+				
 if __name__ == "__main__":
 	args = create_arg_parser()
-	process_file(args.f, args.s, args.o)
-				
-									
 	
-	
-	
-	
+	if not args.fol:
+		print 'Process single file\n'
+		process_file(args.f, args.s)
+	else:
+		sent_files = get_files_by_ext(args.s, args.sent_ext)
+		amr_files  = get_files_by_ext(args.f, args.out_ext)
+		matching_files = match_files_by_name(amr_files, sent_files)
+		
+		#Process file in parallel here
+		print 'Processing {0} files, doing max {1} in parallel'.format(len(matching_files), args.t)
+		
+		pool = Pool(processes=args.t)						
+		pool.map(process_file, matching_files)	
 	
 	
 

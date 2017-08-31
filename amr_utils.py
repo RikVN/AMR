@@ -7,6 +7,7 @@ from collections import defaultdict
 import sys
 import re
 import json
+import os
 
 
 def get_default_amr():
@@ -19,6 +20,18 @@ def write_to_file(lst, file_new):
 		for line in lst:
 			out_f.write(line.strip() + '\n')
 	out_f.close()
+
+
+def get_files_by_ext(direc, ext):
+	'''Function that traverses a directory and returns all files that match a certain extension'''
+	
+	return_files = []
+	for root, dirs, files in os.walk(direc):
+		for f in files:
+			if f.endswith(ext):
+				return_files.append(os.path.join(root, f))
+	
+	return return_files
 
 
 def tokenize_line(line):

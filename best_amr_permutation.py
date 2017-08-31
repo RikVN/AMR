@@ -135,7 +135,7 @@ def get_word_and_sense(line):
 			sense, word = get_sense(tmp)
 			comb = [[word,sense]]
 		except:
-			print 'Strange error that only happens for parses (non-gold data), ignore'
+			print 'Strange occurrence in AMR, ignore'
 			return [['','']]			 
 	return comb				
 
