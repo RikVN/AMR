@@ -68,7 +68,7 @@ Finally, Wikipedia links are restored using Spotlight. These steps are done sepa
 python postprocess_AMRs.py -f sample_alignment_input/sample.char.tf -s sample_alignment_input/sample.sent -o sample_input/
 ```
 
-Here -f is the file to be processed, -s is the sentence file (needed for Wikification) and -o is the output directory to put the files. It is possible to use -no_wiki to skip the Wikification step.
+Here -f is the file to be processed and -s is the sentence file (needed for Wikification) It is possible to use -no_wiki to skip the Wikification step. These options can also be used to process a whole folder (use -fol) in parallel, to speed up the process. Check the script for details.
 
 ## Important ##
 
