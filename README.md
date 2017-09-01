@@ -65,7 +65,7 @@ This script first restores the variables, by using a modified restoring script f
 Finally, Wikipedia links are restored using Spotlight. These steps are done separately (creating .restore, .prune, .coref and .wiki files), but also together (creating .all file).
 
 ```
-python postprocess_AMRs.py -f sample_alignment_input/sample.char.tf -s sample_alignment_input/sample.sent -o sample_input/
+python postprocess_AMRs.py -f sample_alignment_input/sample.char.tf -s sample_alignment_input/sample.sent
 ```
 
 Here -f is the file to be processed and -s is the sentence file (needed for Wikification) It is possible to use -no_wiki to skip the Wikification step. These options can also be used to process a whole folder (use -fol) in parallel, to speed up the process. Check the script for details.
