@@ -95,7 +95,7 @@ def valid_amr(amrtext):
 	  return True  
 
   except (AttributeError,Exception),e:
-	#print 'Error:',e
+	print 'Error:',e
 	return False
   
   return True

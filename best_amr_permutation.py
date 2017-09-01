@@ -276,6 +276,7 @@ def get_add_string(search_part):
 	start_adding = False
 	permutations = []	
 	add_string = ''
+
 	
 	for idx, ch in enumerate(search_part):
 		if ch == '(':					# parenthesis found
@@ -526,7 +527,7 @@ def preprocess(f_path):
 def create_output(f, old_amrs, new_amrs, sent_amrs):
 	'''Print output to the correct files - also keep no-var AMR'''
 	
-	permuted_amr, no_var_amr, sent_file, double_sent_file, double_amr_file = get_filenames(f_path, args.amr_ext)
+	permuted_amr, no_var_amr, sent_file, double_sent_file, double_amr_file = get_filenames(f, args.amr_ext)
 		
 	write_to_file(old_amrs, no_var_amr)
 	write_to_file(new_amrs, permuted_amr)
@@ -548,16 +549,11 @@ def get_filenames(f, amr_ext):
 	
 
 if __name__ == '__main__':
-	args = create_args_parser()
+	args = create_arg_parser()
 	
+	print 'Processing {0}'.format(args.f)
 	
-	for root, dirs, files in os.walk(args.f):
-		for f in files:
-			if f.endswith(args.amr_ext):
-				print 'Processing {0}'.format(f)
-				
-				f_path = os.path.join(root,f)
-				sent_amrs, old_amrs = preprocess(f_path)
-				new_amrs, old_amrs	= process_file_best(old_amrs, sent_amrs, args.cut_off)
-				
-				create_output(f_path, old_amrs, new_amrs, sent_amrs)	
+	sent_amrs, old_amrs = preprocess(args.f)
+	new_amrs, old_amrs	= process_file_best(old_amrs, sent_amrs, args.cut_off)
+	
+	create_output(args.f, old_amrs, new_amrs, sent_amrs)	

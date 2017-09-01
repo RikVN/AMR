@@ -50,14 +50,14 @@ def single_line_convert(lines):
 	sents = []
 
 	for line in lines:
-		if not line.strip():
+		if not line.strip() and cur_amr:
 			cur_amr_line = " ".join(cur_amr)
 			all_amrs.append(cur_amr_line.strip())
 			cur_amr = []
 		elif line.startswith('# ::snt') or line.startswith('# ::tok'):	#match sentence 
 			sent = re.sub('(^# ::(tok|snt))','',line).strip() #remove # ::snt or # ::tok
 			sents.append(sent)
-		elif not line.startswith('# ::'):
+		elif not line.startswith('#'):
 			cur_amr.append(line.strip())
 
 	if cur_amr:  # file did not end with newline, so add AMR here

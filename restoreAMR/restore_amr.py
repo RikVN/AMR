@@ -61,16 +61,21 @@ def initial_check(index, absolute):
 		sys.exit(0)
 	elif index:
 		replace_types = ['Normal case', 'Replace by variable that is not referred to','Replace by most frequent index', 'Replace by most frequent concept','No concepts found - do person']
+		index_dict = dict.fromkeys(replace_types, 0)
 		print '\nRestoring with Index method'
 	elif absolute:
 		replace_types = ['Path lead to variable','Path did not lead to variable']
+		index_dict = {}
+		index_dict[replace_types[0]] = []
+		index_dict[replace_types[1]] = []
+		#index_dict = dict.fromkeys(replace_types, [])
 		print '\nRestoring with Paths method...\n'
 	else:
 		replace_types = [] 	#not needed
+		index_dict = dict.fromkeys(replace_types, 0)
 		print '\nRestoring with normal method'	
 	
 	ref_dict = load_dict('restoreAMR/ref_dict')	#dictionary with frequency information
-	index_dict = dict.fromkeys(replace_types, 0)
 	
 	return ref_dict, index_dict, replace_types
 
@@ -459,14 +464,15 @@ def replace_absolute_paths(line, ref_dict):
 	
 	for idx, item in enumerate(spl_line):
 		if 'COREF*' in item:
-			repl = find_replacement(line, item, ref_dict)					#find actual replacement here
+			repl = find_replacement(line, item, ref_dict)			#find actual replacement here
 			if repl:
 				to_be_replaced = " ".join(spl_line[idx-3:idx+2])	#replace this part with the reference
 			else:
 				to_be_replaced = " ".join(spl_line[idx-4:idx+2])	#remove reference, so also include the argument
 			
-			new_line = new_line.replace(to_be_replaced, repl)		#do actual replacement here
-	
+			new_line = tokenize_line(new_line)
+			new_line = new_line.replace(to_be_replaced, repl)		#do actual replacement here		
+				
 	return reverse_tokenize(new_line)
 	
 
@@ -474,23 +480,114 @@ def find_replacement(line, item, ref_dict):
 	'''Find variable replacement for the path described in the output'''
 	
 	path = item.replace('COREF','').replace('COLON',':').replace('*',' ').strip()	#temp changes are put back here
+	#print path
 	args = [x for idx, x in enumerate(path.split()) if idx % 2 == 0]
 	num =  [x for idx, x in enumerate(path.split()) if idx % 2 != 0]
 	nums = [int(x.replace('|','').strip()) for x in num]
 	
 	concept_dict = get_concepts(line)
-	tok_line = tokenize_line(line)
+	tok_line = " ".join(line.split())
 	new_parts = filter_colons(tok_line)					#remove non-arguments that have a colon such as timestamps and websites
 	_, search_part = get_keep_string(new_parts, 0)		#get part we have to search	
 	
 	path_found, search_part = possible_path(args, nums, search_part)	#check if we found a correct path		
 	
 	if path_found:	#if we found correct path, return it
-		index_dict[replace_types[0]] += 1
+		index_dict[replace_types[0]].append(path)
+		#print 'Add {0} to {1}'.format(path, replace_types[0])
+		#print len(index_dict[replace_types[0]]), len(index_dict[replace_types[1]])
 		return get_reference(search_part)
 	else:
-		index_dict[replace_types[1]] += 1
+		#print 'Add {0} to {1}'.format(path, replace_types[1])
+		#print len(index_dict[replace_types[0]]), len(index_dict[replace_types[1]])
+		index_dict[replace_types[1]].append(path)
 		return most_frequent_var(concept_dict, ref_dict)	#else, return the variable the is most frequently a referent in the training set
+
+
+def get_path_to_search(search_part):
+	add_str, cur_rel, prev_rel, add_cur_rel, start_adding = '', '','', False, False
+	
+	for idx, ch in enumerate(search_part):
+		if ch == ':':
+			add_cur_rel = True
+			cur_rel = ':'
+			if start_adding:
+				add_str += ch
+		elif ch == '(':
+			start_adding = True
+			add_str += ch
+		elif start_adding:
+			add_str += ch
+		elif ch == ' ':
+			prev_rel = cur_rel
+			cur_rel = ''
+			add_cur_rel = False
+		elif add_cur_rel:
+			cur_rel += ch
+	
+	#if prev_rel == '':
+	#	print 'Strange error, prev_rel is empty'
+	#	print 'Was looking at', search_part
+
+	return prev_rel + ' ' + add_str
+	
+				
+def get_permutations_by_string(search_part, level):
+	'''Get the initial permutations and add_string'''
+	
+	paren_count = 0
+	start_adding = False
+	permutations = []	
+	add_string = ''
+	
+	if level > 0:
+		search_part = ':' + ":".join(search_part.split(':')[2:])
+		search_part = get_path_to_search(search_part)
+	
+	num_pattern = re.compile(r':[a-zA-Z0-9]+[ ]+(-\d+|\d+|imperative|interrogative|expressive|-)')
+	li_pattern = re.compile(r':li+[ ]+"[A-Za-z-0-9]+"')	#:li is special and needs a separate regex
+	search_part = " ".join(search_part.split())	#remove double spaces
+	
+	for idx, ch in enumerate(search_part):
+		if ch == '(':					# parenthesis found
+			if start_adding:
+				add_string += ch
+			paren_count += 1
+		elif ch == ':':
+			start_adding = True
+			add_string += ch
+		elif ch == ')':
+			paren_count -= 1
+			if start_adding:
+				add_string += ch
+			if paren_count == 0:		# we closed one of the permutations now
+				permutations.append(add_string.strip())
+				add_string = ''	
+		elif start_adding:
+			add_string += ch
+		
+		if idx != len(search_part) -1 and (num_pattern.match(add_string.strip()) or li_pattern.match(add_string.strip())) and not search_part[idx+1].isdigit():		#special case, numbers such as :li 2 and :quant 300 mess everything up, or :mode imperative
+			permutations.append(add_string.strip())		#then just add permutation now already and continue
+			add_string = ''					
+	
+	
+	if add_string and ':' in add_string:
+		permutations.append(add_string.replace(')','').strip())
+		for idx, p in enumerate(permutations):
+			while permutations[idx].count(')') < permutations[idx].count('('):
+				permutations[idx] += ')'
+	
+	
+	#permutate without brackets (e.g. :op1 "hoi" :op2 "hai" :op3 "ok"	
+	
+	for p in permutations:
+		if ')' not in p or '(' not in p:				
+			if p.count(':') > 2:
+				p_split = p.split(':')[1:]
+				new_perms = [':' + x.strip() for x in p_split]
+				return add_string, new_perms
+	
+	return add_string, permutations	
 
 
 def get_concepts(line):
@@ -512,9 +609,8 @@ def possible_path(args, nums, search_part):
 	path_found = True
 	
 	for idx in range(0, len(args)):
-		_, permutations = get_add_string(search_part)	
+		_, permutations = get_permutations_by_string(search_part, idx)		
 		search_part  = matching_perm(permutations, args[idx], nums[idx])	#check if the output path matches with a path in the AMR
-		
 		if not search_part:	 #did not find a correct path
 			path_found = False
 			break
@@ -544,8 +640,8 @@ def get_reference(search_part):
 		if spl_line[idx] == '/':
 			ref_var = spl_line[idx-1]
 			break
-			
-	return ref_var
+
+	return ref_var.replace('(','')		
 
 
 def most_frequent_var(concept_dict, ref_dict):
@@ -599,10 +695,28 @@ if __name__ == '__main__':
 	
 	#print detailed results for the coreference methods
 	
-	if args.index or args.abs:
+	if args.index:
 		print 'Results for types of replacements:\n'
 		
 		for key in replace_types:
 			print '{0}: {1}'.format(key, index_dict[key])
-
+	elif args.abs:
+		#pass
+		for i in range(0,100):
+			print index_dict[replace_types[0]][i],'split', index_dict[replace_types[0]][i]
+		
+		for idx in range(1,4):
+			for key in replace_types:
+				cur_paths = [x for x in index_dict[key] if (len(x.split()) / 2) == idx]	#only get paths of certain length
+				print key
+				print 'Len cur_paths: {0} for idx {1}\n'.format(len(cur_paths), idx)
+		for key in replace_types:
+				cur_paths = [x for x in index_dict[key] if (len(x.split()) / 2) > 0]	#all paths
+				print key
+				print 'Len cur_paths: {0} for idx {1}\n'.format(len(cur_paths), 0)
+		for key in replace_types:
+				cur_paths = [x for x in index_dict[key] if (len(x.split()) / 2) > 3]		#all longer paths
+				print key
+				print 'Len cur_paths: {0} for idx {1}\n'.format(len(cur_paths), '>3')
+					
 	write_to_file(restored_lines, args.o)

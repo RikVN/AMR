@@ -198,13 +198,14 @@ if __name__ == "__main__":
 	
 	if not args.fol:
 		print 'Process single file\n'
-		process_file(args.f, args.s)
+		process_file([args.f, args.s])
 	else:
 		sent_files = get_files_by_ext(args.s, args.sent_ext)
 		amr_files  = get_files_by_ext(args.f, args.out_ext)
 		matching_files = match_files_by_name(amr_files, sent_files)
 		
 		#Process file in parallel here
+		
 		print 'Processing {0} files, doing max {1} in parallel'.format(len(matching_files), args.t)
 		
 		pool = Pool(processes=args.t)						
