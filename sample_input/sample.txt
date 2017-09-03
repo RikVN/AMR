@@ -1,0 +1,2228 @@
+# ::id bolt12_07_4800.1 ::date 2012-12-19T12:53:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt Establishing Models in Industrial Innovation
+# ::save-date Wed Oct 30, 2013 ::file bolt12_07_4800_1.txt
+(e / establish-01
+  :ARG1 (m / model
+          :mod (i / innovate-01
+                 :ARG1 (i2 / industry))))
+
+# ::id bolt12_07_4800.2 ::date 2012-12-19T14:01:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt After its competitor invented the front loading washing machine, the CEO of the American IM company believed that each of its employees had the ability for innovation , and formulated strategic countermeasures for innovation in the industry.
+# ::save-date Fri Oct 16, 2015 ::file bolt12_07_4800_2.txt
+(a / and
+      :op1 (b / believe-01
+            :ARG0 (p2 / person
+                  :ARG0-of (h2 / have-org-role-91
+                        :ARG1 (c2 / company :wiki - :name (n / name :op1 "IM")
+                              :mod (c3 / country :wiki "United_States" :name (n2 / name :op1 "United" :op2 "States")))
+                        :ARG2 (o / officer
+                              :mod (e3 / executive)
+                              :mod (c7 / chief))))
+            :ARG1 (c8 / capable-01
+                  :ARG1 (p / person
+                        :ARG1-of (e / employ-01
+                              :ARG0 c2)
+                        :mod (e2 / each))
+                  :ARG2 (i / innovate-01
+                        :ARG0 p)))
+      :op2 (f / formulate-01
+            :ARG0 (o2 / officer
+                  :mod (e4 / executive)
+                  :mod (c / chief))
+            :ARG1 (c4 / countermeasure
+                  :mod (s / strategy)
+                  :purpose (i2 / innovate-01
+                        :prep-in (i3 / industry))))
+      :time (a3 / after
+            :op1 (i4 / invent-01
+                  :ARG0 (c5 / company
+                        :ARG0-of (c6 / compete-02
+                              :ARG1 c2))
+                  :ARG1 (m / machine
+                        :ARG0-of (w / wash-01)
+                        :ARG1-of (l / load-01
+                              :mod (f2 / front))))))
+
+# ::id bolt12_07_4800.3 ::date 2012-12-20T08:37:49 ::annotator SDL-AMR-09 ::preferred
+# ::snt 1. Establish an innovation fund with a maximum amount of 1,000 U.S. dollars.
+# ::save-date Mon Oct 12, 2015 ::file bolt12_07_4800_3.txt
+(e / establish-01 :li 1
+      :ARG1 (f2 / fund
+            :purpose (i / innovate-01)
+            :ARG1-of (a / amount-01
+                  :ARG2 (a2 / at-most
+                        :op1 (m / monetary-quantity :quant 1000
+                              :unit (d / dollar
+                                    :mod (c / country :wiki "United_States"
+                                          :name (n / name :op1 "United" :op2 "States"))))))))
+
+# ::id bolt12_07_4800.4 ::date 2012-12-20T08:39:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt 2. Choose 100 innovative concepts to encourage employees to conduct research and development during their work time or spare time.
+# ::save-date Wed Dec 3, 2014 ::file bolt12_07_4800_4.txt
+(c / choose-01
+      :ARG1 (c2 / concept :quant 100
+            :ARG1-of (i / innovate-01))
+      :li 2
+      :purpose (e / encourage-01
+            :ARG0 c2
+            :ARG1 (p / person
+                  :ARG1-of (e2 / employ-01))
+            :ARG2 (a / and
+                  :op1 (r / research-01
+                        :ARG0 p)
+                  :op2 (d / develop-02
+                        :ARG0 p)
+                  :time (o / or
+                        :op1 (w / work-01
+                              :ARG0 p)
+                        :op2 (t2 / time
+                              :poss p
+                              :mod (s / spare))))))
+
+# ::id bolt12_07_4800.5 ::date 2012-12-20T09:54:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt 3. From among them, pick out 50 for submission to an assessment committee to assess.
+# ::save-date Thu Jan 9, 2014 ::file bolt12_07_4800_5.txt
+(p / pick-out-03
+      :ARG1 (t / thing :quant 50
+            :ARG1-of (s / submit-01
+                  :ARG2 (c / committee
+                        :ARG0-of (a / assess-01))
+                  :ARG3 (a2 / assess-01
+                        :ARG0 c
+                        :ARG1 t)))
+      :ARG2 (t2 / they)
+      :li 3)
+
+# ::id bolt12_10465_5552.1 ::date 2012-12-03T16:21:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Since the Tangshan Earthquake, the starting point for construction standards in the mainland is that under an earthquake of the same magnitude, buildings should preserve their basic frame without collapsing.
+# ::save-date Fri May 29, 2015 ::file bolt12_10465_5552_1.txt
+(p2 / point
+      :mod (s / start-01
+            :ARG1 (s2 / standard
+                  :mod (c3 / construct-01)))
+      :location (m / mainland)
+      :domain (r / recommend-01
+            :ARG1 (p / preserve-01
+                  :ARG0 (b / building)
+                  :ARG1 (f / frame
+                        :part-of (t / thing)
+                        :mod (b2 / basic)
+                        :poss b)
+                  :manner (c2 / collapse-01 :polarity -
+                        :ARG1 f))
+            :time (s3 / since
+                  :op1 (e / earthquake :wiki "1976_Tangshan_earthquake" :name (n / name :op1 "Tangshan")))
+            :condition (e2 / earthquake
+                  :mod (m2 / magnitude
+                        :ARG1-of (s4 / same-01
+                              :ARG2 (m3 / magnitude
+                                    :poss e))))))
+
+# ::id bolt12_10465_5552.2 ::date 2012-12-06T18:54:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, most of the buildings in this hard-hit area did not meet these requirements, with the widespread collapse of school buildings in particular arousing intense public disgust.
+# ::save-date Mon Jul 27, 2015 ::file bolt12_10465_5552_2.txt
+(c / contrast-01
+      :ARG2 (a / and
+            :op1 (m / meet-01 :polarity -
+                  :ARG0 (b / building
+                        :quant (m2 / most)
+                        :ARG1-of (i2 / include-91
+                              :ARG2 (b3 / building
+                                    :location (a3 / area
+                                          :ARG1-of (h / hit-01
+                                                :ARG1-of (h2 / hard-04))
+                                          :mod (t5 / this)))))
+                  :ARG1 (t2 / thing
+                        :ARG1-of (r / require-01)
+                        :mod (t3 / this)))
+            :op2 (a2 / arouse-01
+                  :ARG0 (c2 / collapse-01
+                        :ARG1 (b2 / building
+                              :mod (s3 / school))
+                        :ARG1-of (s2 / spread-02
+                              :ARG1-of (w / wide-02)))
+                  :ARG1 (d / disgust-01
+                        :ARG1 (p / public)
+                        :ARG1-of (i / intense-02))
+                  :mod (p2 / particular))))
+
+# ::id bolt12_10465_5552.3 ::date 2012-12-06T19:17:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt Raising standards to in excess of Tangshan's 8.0 magnitude could leave authorities with some breathing space for explanation, and alleviate public anger.
+# ::save-date Thu Jul 30, 2015 ::file bolt12_10465_5552_3.txt
+(p / possible-01
+      :ARG1 (a / and
+            :op1 (l / leave-13
+                  :ARG0 (r / raise-01
+                        :ARG1 (s / standard)
+                        :ARG4 (i / in-excess-of
+                              :op1 (s2 / seismic-quantity :quant 8.0
+                                    :poss (e2 / earthquake :wiki "1976_Tangshan_earthquake" :name (n / name :op1 "Tangshan")))))
+                  :ARG1 (h / have-03
+                        :ARG0 (a3 / authority)
+                        :ARG1 (s3 / space
+                              :mod (b / breathe-01)
+                              :quant (s4 / some)
+                              :purpose (e3 / explain-01
+                                    :ARG0 a3))))
+            :op2 (a2 / alleviate-01
+                  :ARG0 r
+                  :ARG1 (a4 / anger-01
+                        :ARG1 (p2 / public)))))
+
+# ::id bolt12_10465_5552.4 ::date 2012-12-06T19:24:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt According to information leaked from numerous channels, we can say for certain that before the earthquake struck, the serious earthquake risk in the Ngawa region was already well known to the CCP.
+# ::save-date Thu Feb 4, 2016 ::file bolt12_10465_5552_4.txt
+(s / say-01
+      :ARG0 (i2 / information
+            :ARG1-of (l / leak-01
+                  :ARG0 (c / channel
+                        :quant (n / numerous))))
+      :ARG1 (p / possible-01
+            :ARG1 (s2 / say-01
+                  :ARG0 (w / we)
+                  :ARG1 (k / know-02
+                        :ARG0 (p2 / political-party :wiki "Communist_Party_of_China" :name (n3 / name :op1 "CCP"))
+                        :ARG1 (r / risk-01
+                              :ARG2 (e / earthquake)
+                              :ARG1-of (s4 / serious-02)
+                              :location (l2 / local-region :wiki "Ngawa_Tibetan_and_Qiang_Autonomous_Prefecture" :name (n2 / name :op1 "Ngawa")))
+                        :time (b / before
+                              :op1 (s3 / strike-01
+                                    :ARG2 (e2 / earthquake)))
+                        :time (a / already)
+                        :ARG1-of (w2 / well-09))
+                  :manner (c2 / certain))))
+
+# ::id bolt12_10465_5552.5 ::date 2012-12-06T19:27:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt Although current forecasting standards cannot give us an accurate prediction of the exact time, place, and strength of an earthquake, there is considerable experience accumulated both in China and overseas in predicting to within the timeframe of a month, and the area of a province.
+# ::save-date Mon Nov 2, 2015 ::file bolt12_10465_5552_5.txt
+(h / have-concession-91
+      :ARG1 (a / accumulate-01
+            :ARG1 (e / experience
+                  :quant (c3 / considerable)
+                  :prep-in (a7 / and
+                        :op1 (p2 / predict-01
+                              :extent (t2 / temporal-quantity :quant 1
+                                    :unit (m / month)))
+                        :op2 (p6 / predict-01
+                              :ARG1 (a6 / area
+                                    :part-of (p5 / province)))))
+            :location (a5 / and
+                  :op1 (c4 / country :wiki "China" :name (n / name :op1 "China"))
+                  :op2 (o / overseas)))
+      :ARG2 (p / possible-01 :polarity -
+            :ARG1 (p3 / predict-01
+                  :ARG0 (s / standard
+                        :mod (f / forecast-01)
+                        :time (c2 / current))
+                  :ARG1 (a4 / and
+                        :op1 (t / time
+                              :time-of (e2 / earthquake))
+                        :op2 (p4 / place
+                              :location-of e2)
+                        :op3 (s2 / strong-02
+                              :ARG1 e2)
+                        :mod (e3 / exact))
+                  :mod (a3 / accurate)
+                  :beneficiary (w2 / we))))
+
+# ::id bolt12_10465_5552.6 ::date 2012-12-06T20:04:14 ::annotator SDL-AMR-09 ::preferred
+# ::snt In regions where the earthquake risk is high, warning the public and spreading disaster prevention awareness could greatly reduce casualties during earthquakes; this is the very minimum duty that any responsible government should undertake.
+# ::save-date Sun Jul 26, 2015 ::file bolt12_10465_5552_6.txt
+(m2 / multi-sentence
+      :snt1 (p / possible-01
+            :ARG1 (r2 / reduce-01
+                  :ARG0 (a2 / and
+                        :op1 (w / warn-01
+                              :ARG2 (p2 / public))
+                        :op2 (s / spread-03
+                              :ARG1 (a3 / awareness
+                                    :topic (p3 / prevent-01
+                                          :ARG1 (d2 / disaster)))))
+                  :ARG1 (c / casualty)
+                  :location (r / region
+                        :location-of (h / high-02
+                              :ARG1 (r3 / risk-01
+                                    :ARG2 (e / earthquake))))
+                  :extent (g / great)
+                  :time e))
+      :snt2 (d / duty
+            :domain (t / this)
+            :mod (m / minimum
+                  :degree (v / very))
+            :ARG1-of (u / undertake-01
+                  :ARG0 (g3 / government-organization
+                        :ARG0-of (g2 / govern-01)
+                        :ARG1-of (r4 / responsible-02)
+                        :mod (a4 / any))
+                  :ARG1-of (r5 / recommend-01))))
+
+# ::id bolt12_10465_5552.7 ::date 2012-12-06T20:12:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt In the past the CCP has done a lot of these sorts of things, but on this occasion not only did nothing, but in response to queries from the public pulled out some whopping lies, playing syntax games with words like "geological disaster" and "earthquake disaster".
+# ::save-date Sun Jul 26, 2015 ::file bolt12_10465_5552_7.txt
+(h / have-concession-91
+      :ARG1 (a3 / and
+            :op1 (d2 / do-02
+                  :ARG0 p5
+                  :ARG1 (n / nothing)
+                  :mod (o2 / only :polarity -))
+            :op2 (r / respond-01
+                  :ARG0 p5
+                  :ARG1 (t4 / thing
+                        :ARG2-of (q / query-01
+                              :ARG0 (p4 / public)))
+                  :ARG2 (a / and
+                        :op1 (p / pull-01
+                              :ARG0 p5
+                              :ARG1 (t5 / thing
+                                    :ARG1-of (l2 / lie-08)
+                                    :quant (s2 / some)
+                                    :mod (w / whopping))
+                              :ARG2 (o4 / out))
+                        :op2 (p2 / play-01
+                              :ARG0 p5
+                              :ARG1 (g / game
+                                    :mod (s3 / syntax))
+                              :ARG2 (w2 / word
+                                    :example (a2 / and
+                                          :op1 (d3 / disaster
+                                                :mod (g2 / geology))
+                                          :op2 (d4 / disaster
+                                                :mod (e / earthquake)))))))
+            :time (t6 / thing
+                  :ARG1-of (o / occasion-02)
+                  :mod (t / this)))
+      :ARG2 (d / do-02
+            :ARG0 (p5 / political-party :wiki "Communist_Party_of_China" :name (n2 / name :op1 "CCP"))
+            :ARG1 (t2 / thing
+                  :quant (l / lot)
+                  :mod (s / sort
+                        :mod (t3 / this)))
+            :time (p3 / past)))
+
+# ::id bolt12_10465_5592.1 ::date 2012-12-06T20:28:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt I think that if our Earthquake Administration had been able beforehand to do a simulation of big earthquakes on this Longmenshan mountain earthquake belt, then on that day of May 12, once the Earthquake Administration had measured the quake at a magnitude of 7.8, we would have been able to broadly judge the extent of damage and destruction in the earthquake disaster zone.
+# ::save-date Mon Jul 27, 2015 ::file bolt12_10465_5592_1.txt
+(t / think-01
+      :ARG0 (i / i)
+      :ARG1 (p / possible-01
+            :ARG1 (j / judge-01
+                  :ARG0 (w / we)
+                  :ARG1 (e / extent
+                        :extent-of (a / and
+                              :op1 (d / damage-01)
+                              :op2 (d2 / destroy-01))
+                        :location (z / zone
+                              :mod (d3 / disaster
+                                    :mod (e2 / earthquake))))
+                  :manner (b / broad))
+            :condition (p2 / possible-01
+                  :ARG1 (s / simulate-01
+                        :ARG0 (g / government-organization :wiki "China_Earthquake_Administration" :name (n / name :op1 "Earthquake" :op2 "Administration")
+                              :poss w)
+                        :ARG1 (e3 / earthquake
+                              :mod (b3 / big)
+                              :location (b4 / belt
+                                    :mod (e4 / earthquake)
+                                    :mod (m / mountain :wiki "Longmen_Mountains" :name (n2 / name :op1 "Longmenshan"))
+                                    :mod (t2 / this)))
+                        :time (b2 / beforehand)))
+            :time (m2 / measure-01
+                  :ARG0 g
+                  :ARG1 (q / quake)
+                  :ARG3 (s2 / seismic-quantity :quant 7.8))
+            :time (d5 / day
+                  :mod (t3 / that)
+                  :ARG1-of (m3 / mean-01
+                        :ARG2 (d4 / date-entity :month 5 :day 12)))))
+
+# ::id bolt12_10465_5592.2 ::date 2012-12-06T20:43:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt If the simulation program was well designed, circumstances like debris blocking roads, heavy rainfall obstructing parachute drops, power and communication outages should all have been within expectations.
+# ::save-date Sat Jan 30, 2016 ::file bolt12_10465_5592_2.txt
+(r4 / recommend-01
+      :ARG1 (c3 / conform-01
+            :ARG1 (c / circumstance
+                  :mod (a / all)
+                  :example (a2 / and
+                        :op1 (b2 / block-01
+                              :ARG1 (r2 / road)
+                              :ARG3 (d2 / debris))
+                        :op2 (o2 / obstruct-01
+                              :ARG0 (r / rain-01
+                                    :manner (h / heavy))
+                              :ARG1 (d3 / drop-01
+                                    :ARG1 (p2 / parachute)))
+                        :op3 (o3 / outage
+                              :mod (p3 / power-01))
+                        :op4 (o / outage
+                              :mod (c2 / communicate-01))))
+            :ARG2 (e / expect-01))
+      :condition (d / design-01
+            :ARG1 (p / program
+                  :purpose (s / simulate-01))
+            :manner (g / good-02)))
+
+# ::id bolt12_10465_5592.3 ::date 2012-12-06T20:47:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt Instead in this instance the Liberation Army headquarters emergency contingency plan obviously was not a contingency plan designed with earthquakes as the assumed condition, as the soldiers all rushed straight to Wenchuan, without immediately sending out troops in the direction of badly-hit areas Beichuan, Qingchuan and Gansu's Longnan; only 24 hours later was the full extent of the disaster area taken into consideration.
+# ::save-date Mon Jul 20, 2015 ::file bolt12_10465_5592_3.txt
+(m2 / multi-sentence
+      :snt1 (p / plan-01
+            :ARG1 (p2 / plan-01
+                  :ARG0 (h3 / headquarters
+                        :mod (m3 / military :wiki "People's_Liberation_Army" :name (n / name :op1 "Liberation" :op2 "Army")))
+                  :mod (c3 / contingency
+                        :mod (e / emergency)))
+            :ARG1-of (c2 / cause-01
+                  :ARG0 (a2 / and
+                        :op1 (r / rush-01
+                              :ARG0 (s2 / soldier
+                                    :mod (a4 / all))
+                              :ARG2 (c6 / county :wiki "Wenchuan_County" :name (n6 / name :op1 "Wenchuan"))
+                              :ARG1-of (s3 / straight-04))
+                        :op2 (s / send-03 :polarity -
+                              :ARG1 (t4 / troop)
+                              :ARG5 (a6 / and
+                                    :op1 (c7 / city :wiki "Beichuan_Qiang_Autonomous_County" :name (n5 / name :op1 "Beichuan"))
+                                    :op2 (c8 / city :wiki "Qingchuan_County" :name (n4 / name :op1 "Qingchuan"))
+                                    :op3 (c9 / city :wiki "Longnan" :name (n3 / name :op1 "Longnan")
+                                          :location (p3 / province :wiki "Gansu" :name (n2 / name :op1 "Gansu")))
+                                    :ARG1-of (h / hit-01
+                                          :ARG1-of (b / bad-05)))
+                              :time (i3 / immediate))))
+            :prep-in (i2 / instance
+                  :mod (t / this))
+            :ARG1-of (o / obvious-01)
+            :mod (c4 / contingency)
+            :ARG1-of (d / design-01 :polarity -
+                  :manner (a3 / assume-02
+                        :ARG1 (e2 / earthquake)
+                        :ARG2 (t2 / thing
+                              :ARG2-of (c5 / condition-01))))
+            :ARG1-of (i / instead-of-91))
+      :snt2 (c / consider-02
+            :ARG1 (e3 / extent
+                  :extent-of (a7 / area
+                        :mod (d2 / disaster))
+                  :mod (f / full))
+            :time (l / late
+                  :op1 (t5 / temporal-quantity :quant 24
+                        :unit (h2 / hour)
+                        :mod (o2 / only))
+                  :degree (m / more))))
+
+# ::id bolt12_10465_5592.4 ::date 2012-12-07T06:12:04 ::annotator SDL-AMR-09 ::preferred
+# ::snt In addition, the breakdown in communication also brought a serious problem to the surface. In the past, Red Army regiments were able to maintain contact with central headquarters by relying on just one battered radio. On this occasion though, people had no way to deal with the communication failure.
+# ::save-date Thu Feb 4, 2016 ::file bolt12_10465_5592_4.txt
+(m / multi-sentence
+      :snt2 (p2 / possible-01
+            :ARG1 (m2 / maintain-01
+                  :ARG0 (r / regiment
+                        :part-of (m3 / military :wiki "People's_Liberation_Army" :name (n / name :op1 "Red" :op2 "Army")))
+                  :ARG1 (c3 / contact-01
+                        :ARG0 r
+                        :ARG1 (h / headquarters
+                              :mod (c4 / central)
+                              :part-of m3))
+                  :manner (r2 / rely-01
+                        :ARG0 r
+                        :ARG1 (r3 / radio
+                              :ARG1-of (b3 / batter-01)
+                              :quant (j / just :op1 1))))
+            :time (p3 / past))
+      :snt1 (a2 / and
+            :op2 (b / bring-01
+                  :ARG0 (b2 / break-down-12
+                        :ARG1 (c2 / communicate-01))
+                  :ARG1 (p / problem
+                        :ARG1-of (s2 / serious-02))
+                  :ARG2 (s / surface)
+                  :mod (a / also)))
+      :snt3 (h3 / have-concession-91
+            :ARG1 (h2 / have-03 :polarity -
+                  :ARG0 (p4 / person)
+                  :ARG1 (w / way
+                        :manner-of (d / deal-01
+                              :ARG2 (f / fail-01
+                                    :ARG0 (c5 / communicate-01))))
+                  :time (t2 / thing
+                        :ARG1-of (o / occasion-02)
+                        :mod (t / this)))))
+
+# ::id bolt12_10465_5592.5 ::date 2012-12-07T06:40:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt It is clear that preparations prior to the event were not constructed on the basis of an earthquake disaster simulation.
+# ::save-date Fri May 29, 2015 ::file bolt12_10465_5592_5.txt
+(c / clear-06
+      :ARG1 (c2 / construct-01 :polarity -
+            :ARG1 (t / thing
+                  :ARG1-of (p / prepare-01
+                        :time (p2 / prior-to
+                              :op1 (e2 / event)))
+                  :ARG1-of (b / base-02
+                        :ARG2 (s / simulate-01
+                              :ARG1 (d / disaster
+                                    :mod (e / earthquake)))))))
+
+# ::id bolt12_10474_1421.1 ::date 2012-12-07T06:54:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt While it should have been a disaster relief command that takes overall leadership, it has suddenly come face-to-face with the broad base of disaster victims, directly dealing with them.
+# ::save-date Sat Jul 25, 2015 ::file bolt12_10474_1421_1.txt
+(c / contrast-01
+      :ARG1 (a / and
+            :op1 (f2 / face-01
+                  :ARG0 (i / it)
+                  :ARG1 (v / victim
+                        :mod (d4 / disaster)
+                        :mod (b2 / base
+                              :ARG1-of (b / broad-02)))
+                  :manner (s / sudden))
+            :op2 (d / deal-01
+                  :ARG0 i
+                  :ARG2 v
+                  :ARG1-of (d3 / direct-02)))
+      :ARG2 (r2 / recommend-01
+            :ARG1 (c4 / command-02
+                  :ARG1 (r / relieve-01
+                        :ARG1 (d2 / disaster))
+                  :ARG0-of (l / lead-02
+                        :mod (o3 / overall)))))
+
+# ::id bolt12_10474_1421.2 ::date 2012-12-07T07:00:24 ::annotator SDL-AMR-09 ::preferred
+# ::snt The lack or serious shortage of intermediate layers of Party organizations and units between the two has resulted in its inability to consider major issues with endless minor issues on hand, such that even if it is highly capable, it won't last long, as it will be dragged down by numerous petty things.
+# ::save-date Thu Feb 4, 2016 ::file bolt12_10474_1421_2.txt
+(r / result-01
+      :ARG1 (o / or
+            :op1 (l / lack-01
+                  :ARG0 (b / between
+                        :op1 (t / thing :quant 2))
+                  :ARG1 (l2 / layer
+                        :mod (i / intermediate)
+                        :part-of (a / and
+                              :op1 (o2 / organization)
+                              :op2 (u / unit)
+                              :part-of (p3 / party))))
+            :op1 (s / short-06
+                  :ARG1 b
+                  :ARG2 l2
+                  :ARG1-of (s2 / serious-02)))
+      :ARG2 (p / possible-01 :polarity -
+            :ARG1 (c / consider-02
+                  :ARG0 p3
+                  :ARG1 (i2 / issue-02
+                        :ARG1-of (m / major-02)))
+            :condition (h / have-03
+                  :ARG1 (i3 / issue-02
+                        :ARG1-of (m2 / minor-01)
+                        :quant (e / endless))
+                  :location (h2 / hand)))
+      :ARG0-of (c2 / cause-01
+            :ARG1 (l3 / last-01 :polarity -
+                  :ARG1 c3
+                  :ARG2 (l4 / long-03
+                        :ARG1 c3)
+                  :concession (e3 / even-if
+                        :op1 (c3 / capable-01
+                              :ARG1 p3
+                              :degree (h3 / high)
+                              :mod (e2 / even)))
+                  :ARG1-of (c4 / cause-01
+                        :ARG0 (d / drag-01
+                              :ARG0 (t2 / thing
+                                    :quant (n / numerous)
+                                    :mod (p2 / petty))
+                              :ARG1 c3
+                              :ARG2 (d2 / down))))))
+
+# ::id bolt12_10474_1421.3 ::date 2012-12-07T07:19:23 ::annotator SDL-AMR-09 ::preferred
+# ::snt This would have been unimaginable during the Great Tangshan Earthquake. A time without volunteers or mental workers, such petty things as directly dealing with average people were performed by the most primary Party branches, as well as enterprises and public institutions.
+# ::save-date Tue Jul 28, 2015 ::file bolt12_10474_1421_3.txt
+(m / multi-sentence
+      :snt1 (p / possible-01 :polarity -
+            :ARG1 (i / imagine-01
+                  :ARG1 (t / this))
+            :time (e / earthquake :wiki "1976_Tangshan_earthquake" :name (n / name :op1 "Great" :op2 "Tangshan" :op3 "Earthquake")))
+      :snt2 (p2 / perform-02
+            :ARG0 (a / and
+                  :op1 (b / branch
+                        :mod (p3 / primary
+                              :degree (m2 / most))
+                        :part-of (p9 / party))
+                  :op2 (e2 / enterprise)
+                  :op3 (i2 / institution
+                        :ARG1-of (p4 / public-02)))
+            :ARG1 (t2 / thing
+                  :example (d / deal-01
+                        :ARG2 (p7 / person
+                              :ARG1-of (a2 / average-03))
+                        :ARG1-of (d2 / direct-02))
+                  :mod (p8 / petty)
+                  :mod (s / such))
+            :time (o2 / or
+                  :op1 (p5 / person :polarity -
+                        :ARG0-of (v / volunteer-01))
+                  :op2 (p6 / person :polarity -
+                        :ARG0-of (w / work-01
+                              :mod (m3 / mental))))))
+
+# ::id bolt12_10474_1421.4 ::date 2012-12-07T07:31:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt As soon as the earthquake occurred, grass-root organizations contacted their own people and average people also contacted their own systems or departments, in an interdependent manner.
+# ::save-date Thu Jul 23, 2015 ::file bolt12_10474_1421_4.txt
+(a / and
+      :op1 (c / contact-01
+            :ARG0 (o2 / organization
+                  :mod (g / grass-roots))
+            :ARG1 (p / person
+                  :ARG0-of (h / have-org-role-91
+                        :ARG1 o2)))
+      :op2 (c2 / contact-01
+            :ARG0 (p2 / person
+                  :ARG1-of (a3 / average-03))
+            :ARG1 (o / or
+                  :op1 (s / system
+                        :poss p2)
+                  :op2 (d2 / department
+                        :poss p2))
+            :mod (a5 / also))
+      :time (a2 / as-soon-as
+            :op1 (e / earthquake))
+      :manner (i / interdependent))
+
+# ::id bolt12_10474_1421.5 ::date 2012-12-07T07:38:28 ::annotator SDL-AMR-09 ::preferred
+# ::snt Under the centralized leadership of higher-level organizations, everyone acted to make the rescue efforts very outstanding and successful, such that the Great Tangshan Earthquake, which happened just a few years ago, was forgotten all together in the subsequent reform and opening-up.
+# ::save-date Fri Mar 4, 2016 ::file bolt12_10474_1421_5.txt
+(f / forget-01
+      :ARG1 (e3 / earthquake :wiki "1976_Tangshan_earthquake" :name (n / name :op1 "Great" :op2 "Tangshan" :op3 "Earthquake")
+            :time (b / before
+                  :op1 (n2 / now)
+                  :quant (f2 / few
+                        :op1 (t / temporal-quantity :quant 1
+                              :unit (y / year))
+                        :mod (j / just))))
+      :ARG1-of (c / cause-01
+            :ARG0 (a / act-02
+                  :ARG0 (e / everyone)
+                  :purpose (m / make-02
+                        :ARG0 e
+                        :ARG1 (a2 / and
+                              :op1 (o3 / outstanding
+                                    :domain (e2 / effort-01
+                                          :ARG1 (r2 / rescue-01))
+                                    :degree (v / very))
+                              :op2 (s2 / succeed-01
+                                    :ARG0 e2)))
+                  :manner (l / lead-02
+                        :ARG0 (o / organization
+                              :mod (l2 / level
+                                    :ARG1-of (h / high-02
+                                          :degree (m2 / more))))
+                        :ARG1-of (c2 / centralize-01))))
+      :time (a3 / and
+            :op1 (r / reform-01)
+            :op2 (o2 / open-up-03)
+            :mod (s3 / subsequent))
+      :degree (a5 / altogether))
+
+# ::id bolt12_10474_1421.6 ::date 2012-12-07T07:50:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt It is obvious that no social or political problems were left then, nor were sequelae that cause headaches to later generations.
+# ::save-date Sat Jul 25, 2015 ::file bolt12_10474_1421_6.txt
+(o / obvious-01
+      :ARG1 (a / and
+            :op1 (l / leave-17 :polarity -
+                  :ARG1 (o2 / or
+                        :op1 (p / problem
+                              :topic (s2 / society))
+                        :op2 (p3 / problem
+                              :topic (p2 / politics))))
+            :op2 (l2 / leave-17 :polarity -
+                  :ARG1 (s / sequela
+                        :ARG0-of (c / cause-01
+                              :ARG1 (h / headache
+                                    :beneficiary (g / generation
+                                          :time (l3 / late
+                                                :degree (m / more)))))))
+            :time (t / then)))
+
+# ::id bolt12_10474_1831.1 ::date 2012-12-07T07:55:51 ::annotator SDL-AMR-09 ::preferred
+# ::snt During a time of prosperity and happiness, such a big earthquake suddenly struck.
+# ::save-date Tue Jun 9, 2015 ::file bolt12_10474_1831_1.txt
+(s / strike-01
+      :ARG2 (e / earthquake
+            :mod (b / big
+                  :mod (s2 / such)))
+      :time (t / time
+            :op1 (p / prosper-01)
+            :op2 (h / happiness))
+      :manner (s3 / sudden))
+
+# ::id bolt12_10474_1831.2 ::date 2012-12-07T07:58:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt Many people died, much property was destroyed, it was quite clearly a great disaster.
+# ::save-date Fri May 29, 2015 ::file bolt12_10474_1831_2.txt
+(a / and
+      :op1 (d / die-01
+            :ARG1 (p / person
+                  :quant (m / many)))
+      :op2 (d2 / destroy-01
+            :ARG1 (p2 / property
+                  :quant (m2 / much)))
+      :op3 (d3 / disaster
+            :domain (i / it)
+            :mod (g / great)
+            :ARG1-of (c / clear-06
+                  :degree (q / quite))))
+
+# ::id bolt12_10474_1831.3 ::date 2012-12-07T08:06:57 ::annotator SDL-AMR-09 ::preferred
+# ::snt But it was not totally without benefits, and I believe that its greatest benefit was that it served to strip off the false benevolence that composed the outer skin of the elitists, the politicians, the capitalists, and exposed once and for all the rotten cannibalistic core within.
+# ::save-date Mon Feb 9, 2015 ::file bolt12_10474_1831_3.txt
+(c / contrast-01
+      :ARG2 (a / and
+            :op1 (l / lack-01
+                  :ARG0 (i / it)
+                  :ARG1 (b2 / benefit-01)
+                  :degree (t / total :polarity -))
+            :op2 (b / believe-01
+                  :ARG0 (i2 / i)
+                  :ARG1 (b4 / benefit-01
+                        :ARG0 i
+                        :mod (g / great
+                              :degree (m / most))
+                        :manner (a2 / and
+                              :op1 (s / serve-01
+                                    :ARG0 i
+                                    :ARG1 (s2 / strip-01
+                                          :ARG0 i
+                                          :ARG1 (b3 / benevolence
+                                                :mod (f / false)
+                                                :ARG2-of (c2 / compose-01
+                                                      :ARG1 (s3 / skin
+                                                            :part-of (a3 / and
+                                                                  :op1 (e2 / elitist)
+                                                                  :op2 (p / politician)
+                                                                  :op3 (c3 / capitalist))
+                                                            :mod (o / outer))))))
+                              :op2 (e / expose-01
+                                    :ARG0 i
+                                    :ARG1 (c7 / core
+                                          :ARG1-of (r / rot-01)
+                                          :mod (c6 / cannibal)
+                                          :location (i3 / inside
+                                                :op1 a3))
+                                    :manner (o2 / once-and-for-all)))))))
+
+# ::id bolt12_10474_1831.4 ::date 2012-12-07T08:30:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt And an additional benefit was that many people who had been deluded came to their senses.
+# ::save-date Tue May 5, 2015 ::file bolt12_10474_1831_4.txt
+(a / and
+      :op2 (b / benefit-01
+            :ARG0 (c / come-04
+                  :ARG1 (p / person
+                        :ARG1-of (d / delude-01)
+                        :quant (m / many))
+                  :ARG2 (s / sense-01
+                        :ARG0 p))
+            :mod (a2 / additional)))
+
+# ::id bolt12_10474_1831.5 ::date 2012-12-07T08:33:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt Temporarily laid aside these abstract things and avoided speaking at length, saying only a few details that left the elitists, the politicians and capitalists highly embarrassed.
+# ::save-date Fri Jul 17, 2015 ::file bolt12_10474_1831_5.txt
+(a / and
+      :op1 (l / lay-01
+            :ARG1 (t2 / thing
+                  :mod (a4 / abstract)
+                  :mod (t4 / this))
+            :ARG2 (a2 / aside)
+            :duration (t / temporary))
+      :op2 (a3 / avoid-01
+            :ARG1 (s2 / speak-01
+                  :ARG1-of (l2 / long-03)))
+      :op3 (s / say-01
+            :ARG1 (d2 / detail
+                  :ARG0-of (e / embarrass-01
+                        :ARG1 (a5 / and
+                              :op1 (e2 / elitist)
+                              :op2 (p / politician)
+                              :op3 (c / capitalist))
+                        :degree (h / high))
+                  :quant (f / few))
+            :mod (o / only)))
+
+# ::id bolt12_10474_1831.6 ::date 2012-12-07T08:39:41 ::annotator SDL-AMR-09 ::preferred
+# ::snt The experts had just finished saying "Sacrificing yourself to help others is a foolish idea", when the leaders had no choice but to call once again for selfless devotion.
+# ::save-date Wed Nov 6, 2013 ::file bolt12_10474_1831_6.txt
+(f / finish-01
+      :ARG0 (p / person
+            :ARG1-of (e / expert-01))
+      :ARG1 (s / say-01
+            :ARG0 p
+            :ARG1 (i / idea
+                  :domain (s2 / sacrifice-01
+                        :ARG0 (y / you)
+                        :ARG1 y
+                        :ARG2 (h2 / help-01
+                              :ARG0 y
+                              :ARG1 (o2 / other)))
+                  :mod (f2 / foolish)))
+      :time (h / have-03
+            :ARG0 (p2 / person
+                  :ARG0-of (l / lead-02))
+            :ARG1 (t / thing :polarity -
+                  :ARG1-of (c / choose-01))
+            :ARG2-of (e2 / except-01
+                  :ARG1 (c2 / call-03
+                        :ARG0 p2
+                        :ARG1 (d / devote-01
+                              :manner (s3 / selfless))
+                        :mod (a / again
+                              :mod (o3 / once)))))
+      :time (j / just))
+
+# ::id bolt12_10474_1831.7 ::date 2012-12-07T09:01:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt This was mere chicanery, to the point where before engaging in life-saving, donation to charity, these sorts of behaviors, an idea had to be flashing through people's minds:
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10474_1831_7.txt
+(c / chicanery
+      :domain (t / this)
+      :mod (m / mere)
+      :extent (o / obligate-01
+            :ARG2 (f / flash-02
+                  :ARG1 (i / idea)
+                  :time (b / before
+                        :op1 (e / engage-01
+                              :ARG0 p
+                              :ARG2 (b2 / behave-01
+                                    :ARG0 p
+                                    :mod (s / sort
+                                          :mod (t3 / this))
+                                    :example (a / and
+                                          :op1 (s2 / save-02
+                                                :ARG0 p
+                                                :ARG1 (l2 / life))
+                                          :op2 (d2 / donate-01
+                                                :ARG0 p
+                                                :ARG2 (c2 / charity))))))
+                  :path (m2 / mind
+                        :poss (p / person)))))
+
+# ::id bolt12_10474_1831.8 ::date 2012-12-07T09:08:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt Am I being foolish in doing this?
+# ::save-date Sat Dec 8, 2012 ::file bolt12_10474_1831_8.txt
+(f / foolish :mode interrogative
+      :domain (i / i)
+      :condition (d / do-02
+            :ARG0 i
+            :ARG1 (t / this)))
+
+# ::id bolt12_10474_1831.9 ::date 2012-12-08T18:05:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt And when people saw on CCTV those private firms manufacturing tents in Jiangsu and Zhejiang working overtime to produce more tents, the first idea that popped to mind I'm afraid was probably "This time these capitalists have struck it big!"
+# ::save-date Sun Jul 26, 2015 ::file bolt12_10474_1831_9.txt
+(a / and
+      :op2 (p3 / probable
+            :domain (i / idea
+                  :ARG1-of (p2 / pop-04
+                        :ARG4 (m2 / mind)
+                        :time (s2 / see-01
+                              :ARG0 (p4 / person)
+                              :ARG1 (w / work-01
+                                    :ARG0 (f3 / firm
+                                          :mod (t4 / that)
+                                          :ARG1-of (p5 / private-03)
+                                          :ARG0-of (m / manufacture-01
+                                                :ARG1 (t5 / tent)
+                                                :location (a3 / and
+                                                      :op1 (p6 / province :wiki "Jiangsu" :name (n2 / name :op1 "Jiangsu"))
+                                                      :op2 (p7 / province :wiki "Zhejiang" :name (n / name :op1 "Zhejiang")))))
+                                    :ARG1 (p / produce-01
+                                          :ARG0 f3
+                                          :ARG1 (t7 / tent
+                                                :quant (m3 / more)))
+                                    :mod (o / overtime))
+                              :medium (p8 / publication :wiki "China_Central_Television" :name (n3 / name :op1 "CCTV")))
+                        :ARG1-of (f / fear-01
+                              :ARG0 i))
+                  :ord (o2 / ordinal-entity :value 1)
+                  :domain (s / strike-01
+                        :ARG0 (c / capitalist
+                              :mod (t / this))
+                        :manner (b / big)
+                        :time (t2 / time
+                              :mod (t3 / this))))))
+
+# ::id bolt12_10474_1831.10 ::date 2012-12-08T18:08:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt "Why is it that these capitalists instead of those capitalists get the big order forms, surely there couldn't be anything fishy involved?
+# ::save-date Thu Jul 9, 2015 ::file bolt12_10474_1831_10.txt
+(a / and
+      :op1 (g / get-01
+            :ARG0 (c3 / capitalist
+                  :mod (t / this))
+            :ARG1 (f / form
+                  :purpose (o / order-02)
+                  :mod (b / big))
+            :ARG1-of (i2 / instead-of-91
+                  :ARG2 (g2 / get-01
+                        :ARG0 (c4 / capitalist
+                              :mod (t2 / that))
+                        :ARG1 f))
+            :ARG1-of (c / cause-01
+                  :ARG0 (a2 / amr-unknown)))
+      :op2 (s / sure-02 :mode interrogative
+            :ARG1 (p / possible-01 :polarity -
+                  :ARG1 (i / involve-01
+                        :ARG1 (a3 / anything
+                              :mod (f2 / fishy))))))
+
+# ::id bolt12_10489_5932.1 ::date 2012-12-09T13:46:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt During this process, there were again talks about filing a complaint against the Xinghui Travel Agency.
+# ::save-date Mon Jul 13, 2015 ::file bolt12_10489_5932_1.txt
+(t / talk-01
+      :ARG1 (f / file-01
+            :ARG1 (c / complain-01)
+            :ARG3 (c2 / company :wiki - :name (n / name :op1 "Xinghui" :op2 "Travel" :op3 "Agency")))
+      :time (p / process-02
+            :mod (t2 / this))
+      :mod (a / again))
+
+# ::id bolt12_10489_5932.2 ::date 2012-12-09T13:59:02 ::annotator SDL-AMR-09 ::preferred
+# ::snt The reason for filing the complaint is that even if we owed their hourly fees, they still should fulfill their obligation on the contract they signed: driving people from Canberra back to Sydney.
+# ::save-date Wed Jun 3, 2015 ::file bolt12_10489_5932_2.txt
+(c4 / cause-01
+      :ARG0 (r / recommend-01
+            :ARG1 (f / fulfill-01
+                  :ARG0 (t / they)
+                  :ARG1 (t2 / thing
+                        :ARG2-of (o / obligate-01
+                              :ARG0 (c / contract
+                                    :ARG1-of (s / sign-02
+                                          :ARG0 t))
+                              :ARG1 t)
+                        :ARG1-of (m / mean-01
+                              :ARG2 (d / drive-01
+                                    :ARG0 t
+                                    :beneficiary (p / person)
+                                    :destination (c2 / city :wiki "Sydney" :name (n2 / name :op1 "Sydney"))
+                                    :source (c3 / city :wiki "Canberra" :name (n / name :op1 "Canberra"))
+                                    :direction (b / back))))
+                  :mod (s2 / still))
+            :concession (e2 / even-if
+                  :op1 (o2 / owe-01
+                        :ARG0 (w / we)
+                        :ARG1 (f2 / fee
+                              :poss t
+                              :mod (h / hour))
+                        :ARG2 t
+                        :mod (e / even))))
+      :ARG1 (f3 / file-01
+            :ARG0 w
+            :ARG1 (c5 / complain-01)))
+
+# ::id bolt12_10489_5932.3 ::date 2012-12-09T14:30:42 ::annotator SDL-AMR-09 ::preferred
+# ::snt As long as we stick to this issue, Xinghui surely has no way of winning the lawsuit if it goes to court.
+# ::save-date Wed Jul 15, 2015 ::file bolt12_10489_5932_3.txt
+(s / sure-02
+      :ARG1 (h / have-03 :polarity -
+            :ARG0 (c / company :wiki - :name (n / name :op1 "Xinghui"))
+            :ARG1 (w2 / way
+                  :instrument-of (w3 / win-01
+                        :ARG0 c
+                        :ARG2 (s3 / sue-02)))
+            :condition (g / go-01
+                  :ARG1 s3
+                  :ARG4 (c2 / court)))
+      :condition (a / as-long-as
+            :op1 (s2 / stick-01
+                  :ARG1 (w / we)
+                  :ARG2 (i / issue-02
+                        :mod (t / this)))))
+
+# ::id bolt12_10489_5932.4 ::date 2012-12-09T14:47:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, what greatly surprised me was the attitude of the student union in this appeal. They seemed very reluctant to make the contract public.
+# ::save-date Wed Nov 6, 2013 ::file bolt12_10489_5932_4.txt
+(m / multi-sentence
+      :snt1 (c / contrast-01
+            :ARG2 (s2 / surprise-01
+                  :ARG0 (a / attitude
+                        :poss (u / union
+                              :consist-of (p2 / person
+                                    :ARG0-of (s3 / study-01)))
+                        :topic (a2 / appeal-01
+                              :mod (t2 / this)))
+                  :ARG1 (i / i)
+                  :degree (g / great)))
+      :snt2 (s / seem-01
+            :ARG1 (r / reluctant
+                  :degree (v / very)
+                  :domain (t / they)
+                  :topic (p3 / publicize-01
+                        :ARG0 t
+                        :ARG1 (c2 / contract)))))
+
+# ::id bolt12_10489_5932.5 ::date 2012-12-09T15:02:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt They even lied, saying that they and Xinghui initially felt that signing a contract would rather make each other feel like strangers since they were both doing it for the sake of the motherland.
+# ::save-date Wed Nov 6, 2013 ::file bolt12_10489_5932_5.txt
+(a / and
+      :op1 (l / lie-08
+            :ARG0 (t / they)
+            :mod (e / even))
+      :op2 (s / say-01
+            :ARG0 t
+            :ARG1 (f / feel-01
+                  :ARG0 (a2 / and
+                        :op1 t
+                        :op2 (c / company :wiki -
+                              :name (n / name :op1 "Xinghui")))
+                  :ARG1 (m / make-02
+                        :ARG0 (s3 / sign-02
+                              :ARG0 t
+                              :ARG1 (c3 / contract)
+                              :ARG2 c)
+                        :ARG1 (f2 / feel-01
+                              :ARG0 a2
+                              :ARG1 (r / resemble-01
+                                    :ARG1 a2
+                                    :ARG2 (s2 / stranger)))
+                        :mod (r2 / rather))
+                  :time (i / initial)
+                  :ARG1-of (c2 / cause-01
+                        :ARG0 (d / do-02
+                              :ARG0 a2
+                              :ARG1 (i2 / it)
+                              :ARG2 (m2 / motherland))))))
+
+# ::id bolt12_10489_5932.6 ::date 2012-12-09T15:24:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt As you know, this type of logic absolutely won't work in Australia.
+# ::save-date Tue Jun 9, 2015 ::file bolt12_10489_5932_6.txt
+(k / know-01
+      :ARG0 (y / you)
+      :ARG1 (w / work-09 :polarity -
+            :ARG1 (l / logic
+                  :mod (t / type
+                        :mod (t2 / this)))
+            :location (c / country :wiki "Australia" :name (n / name :op1 "Australia"))
+            :degree (a / absolute)))
+
+# ::id bolt12_10489_5932.7 ::date 2012-12-09T16:00:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt Xinghui accepted this order of ours and deployed all the buses of other travel agencies in Sydney.
+# ::save-date Tue Nov 5, 2013 ::file bolt12_10489_5932_7.txt
+(a / and
+      :op1 (a2 / accept-01
+            :ARG0 (c / company :wiki -
+                  :name (n2 / name :op1 "Xinghui"))
+            :ARG1 (t / thing
+                  :ARG1-of (o / order-02
+                        :ARG0 (w / we))
+                  :mod (t3 / this)))
+      :op2 (d / deploy-01
+            :ARG0 c
+            :ARG1 (b / bus
+                  :mod (a3 / all)
+                  :poss (a4 / agency
+                        :mod (t2 / travel-01)
+                        :mod (o2 / other)
+                        :location (c2 / city :wiki "Sydney"
+                              :name (n / name :op1 "Sydney"))))))
+
+# ::id bolt12_10489_5932.8 ::date 2012-12-09T17:27:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt Without the guarantee from the contract signed with us, they would surely have been unable to deploy them!
+# ::save-date Thu Jul 9, 2015 ::file bolt12_10489_5932_8.txt
+(s / sure-02
+      :ARG1 (p / possible-01 :polarity -
+            :ARG1 (d / deploy-01
+                  :ARG0 (t2 / they)
+                  :ARG1 (t3 / they)))
+      :manner (t / thing :polarity -
+            :ARG1-of (g / guarantee-01
+                  :source (c / contract
+                        :ARG1-of (s2 / sign-02
+                              :ARG0 t2
+                              :ARG2 (w / we))))))
+
+# ::id bolt12_10489_5932.9 ::date 2012-12-09T17:30:37 ::annotator SDL-AMR-09 ::preferred
+# ::snt In addition, there was something else that was very suspicious.
+# ::save-date Tue Nov 5, 2013 ::file bolt12_10489_5932_9.txt
+(a / and
+      :op2 (s / suspicious
+            :domain (s3 / something
+                  :mod (e / else))
+            :degree (v / very)))
+
+# ::id bolt12_10489_5932.10 ::date 2012-12-09T17:33:17 ::annotator SDL-AMR-09 ::preferred
+# ::snt I heard from a friend at the consulate that the government took this matter very seriously and had promptly agreed to allocate funds to compensate the students who had used their own money instead that night.
+# ::save-date Tue Mar 1, 2016 ::file bolt12_10489_5932_10.txt
+(h / hear-01
+      :ARG0 (i / i)
+      :ARG1 (a / and
+            :op1 (s2 / serious-01
+                  :ARG1 (g2 / government-organization
+                        :ARG0-of (g / govern-01))
+                  :ARG2 (m / matter
+                        :mod (t2 / this))
+                  :degree (v2 / very))
+            :op2 (a2 / agree-01
+                  :ARG0 g2
+                  :ARG1 (a3 / allocate-01
+                        :ARG0 g2
+                        :ARG1 (t / thing
+                              :ARG2-of (f2 / fund-01
+                                    :ARG0 g2
+                                    :ARG1 c2))
+                        :ARG2 (c2 / compensate-01
+                              :ARG0 g2
+                              :ARG1 m2
+                              :ARG2 (p2 / person
+                                    :ARG0-of (u / use-01
+                                          :ARG1 (m2 / money
+                                                :poss p2)
+                                          :time (d / date-entity
+                                                :mod (t3 / that)
+                                                :dayperiod (n / night))
+                                          :ARG1-of (i3 / instead-of-91))
+                                    :ARG0-of (s / study-01))))
+                  :manner (p / prompt)))
+      :ARG2 (p3 / person
+            :ARG0-of (h2 / have-org-role-91
+                  :ARG1 (c / consulate))
+            :ARG0-of (h3 / have-rel-role-91
+                  :ARG1 i
+                  :ARG2 (f / friend))))
+
+# ::id bolt12_10489_6271.1 ::date 2012-12-09T17:46:10 ::annotator SDL-AMR-09 ::preferred
+# ::snt Yesterday afternoon I went back to check out the torch relay, but even the flame was practically impossible to see, let alone the guys carrying the torch.
+# ::save-date Fri Feb 26, 2016 ::file bolt12_10489_6271_1.txt
+(c / contrast-01
+      :ARG1 (g / go-back-19
+            :ARG1 (i / i)
+            :purpose (c2 / check-out-05
+                  :ARG0 i
+                  :ARG1 (r / relay-02
+                        :ARG2 (t / torch)))
+            :time (d / date-entity
+                  :dayperiod (a2 / afternoon)
+                  :mod (y / yesterday)))
+      :ARG2 (p / possible-01 :polarity -
+            :ARG1 (s / see-01
+                  :ARG1 (a / and
+                        :op1 (f / flame
+                              :mod (e / even))
+                        :op2 (g2 / guy
+                              :mod (l / let-alone)
+                              :ARG0-of (c3 / carry-01
+                                    :ARG1 t))))
+            :mod (p2 / practical)))
+
+# ::id bolt12_10489_6271.2 ::date 2012-12-09T17:54:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt There were so many people there it was frightening. Some had even climbed onto the roofs of buses!
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10489_6271_2.txt
+(m / multi-sentence
+      :snt1 (b / be-located-at-91
+            :ARG1 (p / person
+                  :quant (m2 / many
+                        :degree (s2 / so)))
+            :ARG2 (t / there)
+            :ARG0-of (c2 / cause-01
+                  :ARG1 (f / frighten-01)))
+      :snt2 (c / climb-01
+            :ARG0 (p2 / person
+                  :quant (s / some))
+            :ARG1 (o / onto
+                  :op1 (r2 / roof
+                        :part-of (b2 / bus-01)))
+            :mod (e / even)))
+
+# ::id bolt12_10489_6271.3 ::date 2012-12-09T18:00:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt I headed straight for the center of activities, but in actual fact traffic was being controlled as early as 4 o'clock, and they had already started limiting the crowds entering the sports center.
+# ::save-date Fri Sep 18, 2015 ::file bolt12_10489_6271_3.txt
+(c / contrast-01
+      :ARG1 (h / head-02
+            :ARG0 (i / i)
+            :ARG1 (c6 / center
+                  :mod (a2 / activity-06))
+            :ARG1-of (s2 / straight-04))
+      :ARG2 (a / and
+            :op1 (c2 / control-01
+                  :ARG1 (t / traffic)
+                  :mod (i2 / in-fact
+                        :ARG1-of (a3 / actual-02))
+                  :time (d / date-entity :time "4:00"
+                        :mod (e / early)))
+            :op2 (s / start-01
+                  :ARG0 (t2 / they)
+                  :ARG1 (l2 / limit-01
+                        :ARG1 (c4 / crowd
+                              :ARG0-of (e2 / enter-01
+                                    :ARG1 (c5 / center
+                                          :mod (s3 / sport)))))
+                  :time (a4 / already))))
+
+# ::id bolt12_10489_6271.4 ::date 2012-12-09T18:01:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt Some guys were really insane, banding together in groups and yelling out "Go China!"
+# ::save-date Thu Mar 12, 2015 ::file bolt12_10489_6271_4.txt
+(i / insane
+      :domain (g / guy
+            :quant (s / some))
+      :degree (r / really)
+      :ARG1-of (m / mean-01
+            :ARG2 (a / and
+                  :op1 (b / band-01
+                        :ARG1 g
+                        :ARG3 (t / together)
+                        :prep-in (g4 / group))
+                  :op2 (y / yell-01
+                        :ARG0 g
+                        :ARG1 (g2 / go-01
+                              :ARG1 (c / country :wiki "China" :name (n / name :op1 "China")))))))
+
+# ::id bolt12_10489_6271.5 ::date 2012-12-09T19:08:12 ::annotator SDL-AMR-09 ::preferred
+# ::snt I actually had some other classmates there, and was going to call them.
+# ::save-date Thu Feb 11, 2016 ::file bolt12_10489_6271_5.txt
+(a / and
+      :op1 (h / have-03
+            :ARG0 (i / i)
+            :ARG1 (c2 / classmate
+                  :quant (s / some)
+                  :mod (o / other)
+                  :location (t / there))
+            :ARG1-of (a2 / actual-02))
+      :op2 (c / call-02
+            :ARG0 i
+            :ARG1 c2))
+
+# ::id bolt12_10489_6271.6 ::date 2012-12-09T19:10:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt I guessed the carrying capacity of the base station towers was totally overloaded, and I couldn't get through at all. I was only able to find a signal, not a chance of connecting to the Internet.
+# ::save-date Wed Jul 29, 2015 ::file bolt12_10489_6271_6.txt
+(m / multi-sentence
+      :snt1 (a / and
+            :op1 (g / guess-01
+                  :ARG0 (i / i)
+                  :ARG1 (o / overload-01
+                        :ARG1 (c / capacity
+                              :mod (c2 / carry-01)
+                              :poss (t2 / tower
+                                    :part-of (s / station
+                                          :mod (b / base))))
+                        :degree (t / total)))
+            :op2 (g2 / get-through-12 :polarity -
+                  :ARG0 i
+                  :degree (a2 / at-all)))
+      :snt2 (c3 / contrast-01
+            :ARG1 (p / possible-01
+                  :ARG1 (f / find-01
+                        :ARG0 (i3 / i)
+                        :ARG1 (s2 / signal))
+                  :mod (o2 / only))
+            :ARG2 (c4 / chance-02 :polarity -
+                  :ARG1 (c5 / connect-01
+                        :ARG0 i3
+                        :ARG2 (i2 / internet)))))
+
+# ::id bolt12_10489_6271.7 ::date 2012-12-09T19:20:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt Only one phone call I made there got through - that was calling home.
+# ::save-date Thu Mar 12, 2015 ::file bolt12_10489_6271_7.txt
+(g / get-through-12
+      :ARG0 (c / call-02
+            :ARG0 (i / i)
+            :medium (p / phone)
+            :quant (o / only :op1 1)
+            :location (t / there)
+            :ARG1-of (m / mean-01
+                  :ARG2 (c2 / call-02
+                        :ARG0 i
+                        :ARG1 (h / home)))))
+
+# ::id bolt12_10489_6271.8 ::date 2012-12-09T19:31:50 ::annotator SDL-AMR-09 ::preferred
+# ::snt I had a look at my call register, and out of dozens of calls dialed only one was properly connected!
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10489_6271_8.txt
+(a / and
+      :op1 (l / look-01
+            :ARG0 (i / i)
+            :ARG1 (r / register-02
+                  :ARG1 (c2 / call-02
+                        :ARG0 i)))
+      :op2 (c / connect-01
+            :ARG1 (c3 / call-02
+                  :quant (o / only :op1 1)
+                  :ARG1-of (i2 / include-91
+                        :ARG2 (c4 / call-02
+                              :quant (m / multiple :op1 12)
+                              :ARG1-of (d3 / dial-01))))
+            :manner (p / proper)))
+
+# ::id bolt12_10489_6271.9 ::date 2012-12-09T19:35:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt Sometime after 6 I went straight back home to watch it on TV. The spectacle was just as astonishing on TV, except that it was just one angle of the whole thing.
+# ::save-date Mon Jul 20, 2015 ::file bolt12_10489_6271_9.txt
+(m / multi-sentence
+      :snt1 (g / go-back-19
+            :ARG1 i
+            :ARG2 (h / home)
+            :ARG1-of (s / straight-04)
+            :purpose (w / watch-01
+                  :ARG0 i
+                  :ARG1 (i2 / it)
+                  :medium (t / television))
+            :time (s4 / sometime
+                  :op1 (a3 / after
+                        :op1 (d / date-entity :time "6:00"))))
+      :snt2 (a / astonish-01
+            :ARG0 (s3 / spectacle
+                  :medium (t3 / television))
+            :ARG1-of (r / resemble-01)
+            :ARG2-of (e / except-01
+                  :ARG1 (a2 / angle
+                        :domain (i / it)
+                        :quant (j / just :op1 1)
+                        :topic (t2 / thing
+                              :extent (w2 / whole))))))
+
+# ::id bolt12_10489_6271.10 ::date 2012-12-09T19:50:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Next time I won't be partaking in this kind of activity!!
+# ::save-date Tue Nov 3, 2015 ::file bolt12_10489_6271_10.txt
+(p / partake-01 :polarity -
+      :ARG0 (i / i)
+      :ARG1 (a / activity-06
+            :mod (k / kind
+                  :mod (t2 / this)))
+      :time (t / time
+            :mod (n / next)))
+
+# ::id bolt12_10494_3592.1 ::date 2012-12-09T19:53:36 ::annotator SDL-AMR-09 ::preferred
+# ::snt Wang Shi's experience of being under public condemnation underscored to a certain extent the tense relationship between the rich and poor classes in Chinese society;
+# ::save-date Sun Jul 26, 2015 ::file bolt12_10494_3592_1.txt
+(u / underscore-01
+      :ARG0 (e / experience-01
+            :ARG0 (p / person :wiki "Wang_Shi_(entrepreneur)" :name (n / name :op1 "Wang" :op2 "Shi"))
+            :ARG1 (c / condemn-01
+                  :ARG0 (p2 / public)
+                  :ARG1 p))
+      :ARG1 (r / relation-03
+            :ARG0 (c3 / class
+                  :mod (r2 / rich)
+                  :part-of (s / society
+                        :mod (c5 / country :wiki "China" :name (n2 / name :op1 "China"))))
+            :ARG2 (c4 / class
+                  :mod (p3 / poor)
+                  :part-of s)
+            :ARG1-of (t / tense-03))
+      :degree (e2 / extent
+            :mod (c2 / certain)))
+
+# ::id bolt12_10494_3592.2 ::date 2012-12-10T05:53:53 ::annotator SDL-AMR-09 ::preferred
+# ::snt because as China grows prosperous day by day, the gap of wealth between the successful elite and the remaining 1.3 billion people is widening.
+# ::save-date Thu Oct 31, 2013 ::file bolt12_10494_3592_2.txt
+(c / cause-01
+      :ARG0 (w / widen-01
+            :ARG1 (g2 / gap
+                  :mod (w2 / wealth)
+                  :mod (b / between
+                        :op1 (e / elite
+                              :ARG0-of (s / succeed-01))
+                        :op2 (p2 / person :quant 1300000000
+                              :ARG1-of (r / remain-01))))
+            :time (g / grow-02
+                  :ARG1 (c2 / country :wiki "China"
+                        :name (n / name :op1 "China"))
+                  :ARG2 (p / prosper-01
+                        :ARG0 c2)
+                  :frequency (r2 / rate-entity-91
+                        :ARG3 (t / temporal-quantity :quant 1
+                              :unit (d / day))))))
+
+# ::id bolt12_10494_3592.3 ::date 2012-12-10T06:00:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt Thirty years ago, people had basically the same incomes, which were all deplorably meager.
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10494_3592_3.txt
+(h / have-03
+      :ARG0 (p / person)
+      :ARG1 (i / income
+            :ARG1-of (s / same-01
+                  :ARG2 (i2 / income
+                        :time (n2 / now))
+                  :mod (b / basic))
+            :mod (m / meager
+                  :degree (p2 / possible-01
+                        :ARG1 (d / deplore-01)))
+            :mod (a2 / all))
+      :time (b2 / before
+            :op1 (n / now)
+            :quant (t / temporal-quantity :quant 30
+                  :unit (y / year))))
+
+# ::id bolt12_10494_3592.4 ::date 2012-12-10T06:04:35 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, Hurun Report (Hurun Report) shows that by 2007, there were a total of 106 billionaires (in U.S. dollars) in China, with the number of people only next to that of the United States.
+# ::save-date Thu Feb 4, 2016 ::file bolt12_10494_3592_4.txt
+(c3 / contrast-01
+      :ARG2 (s / show-01
+            :ARG0 (p / publication :wiki "Rupert_Hoogewerf" :name (n / name :op1 "Hurun" :op2 "Report"))
+            :ARG1 (b / billionaire :quant 106
+                  :mod (d2 / dollar
+                        :mod (c2 / country :wiki "United_States" :name (n4 / name :op1 "United" :op2 "States")))
+                  :location (c / country :wiki "China" :name (n5 / name :op1 "China"))
+                  :time (b2 / by
+                        :op1 (d / date-entity :year 2007))
+                  :ARG2-of (t / total-01)
+                  :quant (n2 / number
+                        :ARG1-of (e / exceed-01
+                              :ARG0 (n6 / number
+                                    :quant-of (b3 / billionaire
+                                          :mod d2
+                                          :location c2))
+                              :mod (o / only))))))
+
+# ::id bolt12_10494_3592.5 ::date 2012-12-10T06:18:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt Now, Wang Shi said, these responses have had effects on me.
+# ::save-date Fri Nov 1, 2013 ::file bolt12_10494_3592_5.txt
+(s / say-01
+      :ARG0 (p / person :wiki "Wang_Shi_(entrepreneur)"
+            :name (n2 / name :op1 "Wang" :op2 "Shi"))
+      :ARG1 (e / effect-03
+            :ARG0 (t2 / thing
+                  :ARG2-of (r / respond-01)
+                  :mod (t / this))
+            :ARG1 p)
+      :time (n / now))
+
+# ::id bolt12_10494_3592.6 ::date 2012-12-10T06:19:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt He admitted that he was not sensitive enough to the current situation when he wrote his blog.
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10494_3592_6.txt
+(a / admit-01
+      :ARG0 (h / he)
+      :ARG1 (s / sensitive-03
+            :ARG0 h
+            :ARG1 (s2 / situation
+                  :time (c / current))
+            :time (w / write-01
+                  :ARG0 h
+                  :ARG1 (b / blog
+                        :poss h))
+            :degree (e / enough :polarity -)))
+
+# ::id bolt12_10494_3592.7 ::date 2012-12-10T06:22:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt Wang Shi noted additionally that since China currently has not yet established a sound system of social security insurance, the growing hatred of the rich is unavoidable.
+# ::save-date Mon Nov 4, 2013 ::file bolt12_10494_3592_7.txt
+(n / note-01
+      :ARG0 (p / person :wiki "Wang_Shi_(entrepreneur)"
+            :name (n2 / name :op1 "Wang" :op2 "Shi"))
+      :ARG1 (p2 / possible-01 :polarity -
+            :ARG1 (a / avoid-01
+                  :ARG1 (h / hate-01
+                        :ARG0 (p3 / person
+                              :mod (r / rich))
+                        :ARG1-of (g / grow-01)))
+            :ARG1-of (c / cause-01
+                  :ARG0 (e / establish-01 :polarity -
+                        :ARG0 (c2 / country :wiki "China"
+                              :name (n3 / name :op1 "China"))
+                        :ARG1 (s / system
+                              :mod (s2 / sound)
+                              :purpose (i / insure-02
+                                    :ARG1 (s3 / security
+                                          :mod (s4 / society))))
+                        :time (y / yet)
+                        :time (c3 / current))))
+      :mod (a2 / additional))
+
+# ::id bolt12_10494_3592.8 ::date 2012-12-10T06:28:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt On Tuesday, Wanke announced that it would make an additional donation of RMB 100 million yuan for the temporary resettlement and post-disaster reconstruction in the next three to five years.
+# ::save-date Thu Mar 3, 2016 ::file bolt12_10494_3592_8.txt
+(a / announce-01
+      :ARG0 (c / company :wiki - :name (n2 / name :op1 "Wanke"))
+      :ARG1 (d / donate-01
+            :ARG0 c
+            :ARG1 (m / monetary-quantity :quant 100000000
+                  :unit (y / yuan
+                        :mod (r3 / renminbi)))
+            :purpose (a3 / and
+                  :op1 (r / resettle-01
+                        :duration (t / temporary))
+                  :op2 (r2 / reconstruct-01
+                        :time (a4 / after
+                              :op1 (d2 / disaster))))
+            :mod (a2 / additional)
+            :time (a5 / after
+                  :op1 (n3 / now)
+                  :quant (b / between
+                        :op1 (t3 / temporal-quantity :quant 3
+                              :unit (y3 / year))
+                        :op2 (t4 / temporal-quantity :quant 5
+                              :unit (y4 / year)))))
+      :time (d3 / date-entity
+            :weekday (t2 / tuesday)))
+
+# ::id bolt12_10494_3592.9 ::date 2012-12-10T06:40:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt Yao Ming, the basketball player who was hailed as a national hero thanks to his success in establishing himself in NBA, was also blamed after he announced his donation of RMB two million yuan because a rumor on the Internet alleged he had donated one million U.S. dollars for disaster relief of Hurricane Katrina (Hurricane) in 2005.
+# ::save-date Mon Jan 6, 2014 ::file bolt12_10494_3592_9.txt
+(b / blame-01
+      :ARG0 (p / person :wiki "Yao_Ming"
+            :name (n / name :op1 "Yao" :op2 "Ming")
+            :ARG0-of (p2 / play-01
+                  :ARG1 (b2 / basketball))
+            :ARG1-of (h / hail-02
+                  :ARG2 (h2 / hero
+                        :mod (n2 / nation))
+                  :ARG1-of (c / cause-01
+                        :ARG0 (s / succeed-01
+                              :ARG0 p
+                              :ARG1 (e / establish-01
+                                    :ARG0 p
+                                    :ARG1 p
+                                    :prep-in (l / league :wiki "National_Basketball_Association"
+                                          :name (n6 / name :op1 "NBA"))))))
+            :mod (a2 / also))
+      :time (a / after
+            :op1 (a3 / announce-01
+                  :ARG0 p
+                  :ARG1 (d / donate-01
+                        :ARG0 p
+                        :ARG1 (m / monetary-quantity :quant 2000000
+                              :unit (y / yuan
+                                    :mod (r3 / renminbi))))))
+      :ARG1-of (c2 / cause-01
+            :ARG0 (a4 / allege-01
+                  :ARG0 (r / rumor-01
+                        :medium (i / internet))
+                  :ARG1 (d2 / donate-01
+                        :ARG0 p
+                        :ARG1 (m2 / monetary-quantity :quant 1000000
+                              :unit (d3 / dollar
+                                    :mod (c3 / country :wiki "United_States"
+                                          :name (n5 / name :op1 "U.S.")))
+                              :purpose (r2 / relieve-01
+                                    :ARG1 (n3 / natural-disaster :wiki "Hurricane_Katrina"
+                                          :name (n4 / name :op1 "Hurricane" :op2 "Katrina"))))
+                        :time (d5 / date-entity :year 2005)))))
+
+# ::id bolt12_10494_4343.1 ::date 2012-12-10T16:30:16 ::annotator SDL-AMR-09 ::preferred
+# ::snt Even so, donation behavior and the treatment of donation behavior should not deviate from two principles, namely that it is voluntary and does not seek return. Otherwise, the donation loses its original meaning.
+# ::save-date Sat Jul 25, 2015 ::file bolt12_10494_4343_1.txt
+(m / multi-sentence
+      :snt1 (h / have-concession-91
+            :ARG1 (r / recommend-01
+                  :ARG1 (d / deviate-01 :polarity -
+                        :ARG0 (a2 / and
+                              :op1 (b / behave-01
+                                    :mod (d2 / donate-01))
+                              :op2 (t / treat-01
+                                    :ARG1 b))
+                        :ARG1 (p / principle :quant 2
+                              :ARG1-of (m3 / mean-01
+                                    :ARG2 (a / and
+                                          :op1 (v / voluntary-02
+                                                :ARG1 b)
+                                          :op2 (s / seek-01 :polarity -
+                                                :ARG0 b
+                                                :ARG1 (r2 / return-02))))))))
+      :snt2 (h2 / have-condition-91
+            :ARG1 (l / lose-02
+                  :ARG0 (d4 / donate-01)
+                  :ARG1 (t2 / thing
+                        :ARG2-of (m2 / mean-01
+                              :ARG1 d4)
+                        :mod (o / original)))))
+
+# ::id bolt12_10494_4343.2 ::date 2012-12-10T16:41:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt In actual fact, whether it is McDonalds or any other foreign owned enterprises in China on the so-called "international iron rooster" blacklist, they all gave generously to the cause of helping the disaster victims, exhibiting their social responsibility.
+# ::save-date Tue Feb 9, 2016 ::file bolt12_10494_4343_2.txt
+(g / give-01
+      :ARG0 (t2 / they
+            :mod (a / all)
+            :ARG2-of (i / include-91
+                  :ARG1 (o / or
+                        :op1 (c4 / company :wiki "McDonald's" :name (n3 / name :op1 "McDonald's"))
+                        :op2 (e3 / enterprise
+                              :ARG1-of (o2 / own-01
+                                    :mod (f2 / foreign))
+                              :mod (o3 / other
+                                    :mod (a3 / any))
+                              :ARG1-of (b2 / blacklist-01
+                                    :location (t / thing
+                                          :ARG1-of (c2 / call-01
+                                                :ARG2 (r2 / rooster
+                                                      :mod (i3 / iron)
+                                                      :mod (i4 / international))
+                                                :mod (s2 / so))))
+                              :location (c / country :wiki "China" :name (n2 / name :op1 "China"))))))
+      :ARG2 (c3 / cause
+            :topic (h / help-01
+                  :ARG1 (v / victim
+                        :mod (d / disaster))))
+      :instrument-of (e / exhibit-01
+            :ARG0 o
+            :ARG1 (r / responsible-02
+                  :ARG1 o
+                  :mod (s / society)))
+      :manner (g2 / generous-01
+            :ARG0 o
+            :ARG1 c3)
+      :mod (i2 / in-fact
+            :ARG1-of (a2 / actual-02)))
+
+# ::id bolt12_10494_4343.3 ::date 2012-12-10T17:06:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt Even if by comparison some companies really didn't donate a huge amount, they should not be besieged or subjected to verbal violence in the arena of public opinion.
+# ::save-date Thu Oct 8, 2015 ::file bolt12_10494_4343_3.txt
+(r / recommend-01
+      :ARG1 (o / or
+            :op1 (b / besiege-01 :polarity -
+                  :ARG1 c)
+            :op2 (s / subject-01 :polarity -
+                  :ARG1 c
+                  :ARG2 (v / violence
+                        :mod (v2 / verbal))
+                  :location (a2 / arena
+                        :mod (o2 / opine-01
+                              :ARG0 (p / public)))))
+      :concession (e / even-if
+            :op1 (d / donate-01 :polarity -
+                  :ARG0 (c / company
+                        :quant (s2 / some))
+                  :ARG2 (a / amount
+                        :mod (h / huge))
+                  :ARG1-of (r2 / real-04)
+                  :manner (c2 / compare-01))))
+
+# ::id bolt12_10494_4343.4 ::date 2012-12-10T17:19:25 ::annotator SDL-AMR-09 ::preferred
+# ::snt Donating, after all, is not a legal obligation that companies must carry out. Urging businesses to donate apart from the force of moral considerations should not take the form of any other coercive means.
+# ::save-date Mon Nov 2, 2015 ::file bolt12_10494_4343_4.txt
+(m / multi-sentence
+      :snt1 (o / obligate-01 :polarity -
+            :ARG1 (c2 / company)
+            :ARG2 (d / donate-01
+                  :ARG0 c2)
+            :ARG1-of (l / legal-02)
+            :mod (a / after-all))
+      :snt2 (r / recommend-01
+            :ARG1 (f2 / form-01 :polarity -
+                  :ARG1 (m2 / means
+                        :instrument-of (c3 / coerce-01)
+                        :mod (a2 / any)
+                        :mod (o3 / other))
+                  :ARG2 (u / urge-01
+                        :ARG1 (b / business)
+                        :ARG2 (d2 / donate-01
+                              :ARG0 b)
+                        :ARG1-of (e2 / except-01
+                              :ARG2 (f / force-04
+                                    :ARG0 (c4 / consider-02
+                                          :ARG1 (m3 / moral-02))))))))
+
+# ::id bolt12_10494_4343.5 ::date 2012-12-10T17:31:40 ::annotator SDL-AMR-09 ::preferred
+# ::snt As long as a company's source of income is legal, any compulsory payment outside of legal obligations is a kind of theft.
+# ::save-date Mon Nov 2, 2015 ::file bolt12_10494_4343_5.txt
+(s2 / steal-01
+      :ARG1 (t4 / thing
+            :ARG1-of (p / pay-01
+                  :ARG0 c
+                  :ARG2-of (c2 / compel-01)
+                  :manner (o / outside
+                        :op1 (t3 / thing
+                              :ARG2-of (o2 / obligate-01
+                                    :ARG0 (l2 / law)
+                                    :ARG1 c)))))
+      :ARG2 c
+      :condition (a / as-long-as
+            :op1 (l / legal-02
+                  :ARG1 (t2 / thing
+                        :ARG2-of (s / source-01
+                              :ARG0 (c / company)
+                              :ARG1 (i / income)))))
+      :mod (k / kind))
+
+# ::id bolt12_10494_4343.6 ::date 2012-12-10T17:36:29 ::annotator SDL-AMR-09 ::preferred
+# ::snt Even in an abnormal circumstance such as disaster relief, legal order and the rights bestowed upon by law should be respected.
+# ::save-date Fri Dec 18, 2015 ::file bolt12_10494_4343_6.txt
+(r / recommend-01
+      :ARG1 (r2 / respect-01
+            :ARG1 (a / and
+                  :op1 (o / order
+                        :ARG1-of (l2 / legal-02))
+                  :op2 (r3 / right-05
+                        :ARG1-of (b / bestow-01
+                              :ARG0 (l / law)))))
+      :concession (b2 / be-located-at-91
+            :ARG2 (c / circumstance
+                  :ARG1-of (n / normal-02 :polarity -)
+                  :example (r4 / relieve-01
+                        :ARG1 (d / disaster)))))
+
+# ::id bolt12_10494_4343.7 ::date 2012-12-10T17:48:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt If we are unfortunate enough to be unable to avoid becoming a disaster victim, we can at least preserve the nobility and dignity of humanity and not turn into rabble.
+# ::save-date Mon May 4, 2015 ::file bolt12_10494_4343_7.txt
+(p / possible-01
+      :ARG1 (a / and
+            :op1 (p2 / preserve-01
+                  :ARG0 w
+                  :ARG1 (a4 / and
+                        :op1 (n / nobility
+                              :poss (h / humanity))
+                        :op2 (d2 / dignity
+                              :poss (h2 / humanity))))
+            :op2 (t / turn-02 :polarity -
+                  :ARG1 w
+                  :ARG2 (r / rabble)))
+      :condition (f / fortunate-01 :polarity -
+            :ARG1 (w / we)
+            :ARG2 (p3 / possible-01 :polarity -
+                  :ARG1 (a2 / avoid-01
+                        :ARG0 w
+                        :ARG1 (b / become-01
+                              :ARG1 w
+                              :ARG2 (v2 / victim
+                                    :mod (d / disaster)))))
+            :degree (e / enough))
+      :mod (a3 / at-least))
+
+# ::id bolt12_10495_0392.1 ::date 2012-12-10T17:51:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt The lawsuit proposed by Hai Ming did not have a clear subject of the right of action; moreover it did not satisfy the legal requirement for libel.
+# ::save-date Fri Dec 18, 2015 ::file bolt12_10495_0392_1.txt
+(m2 / multi-sentence
+      :snt1 (h / have-03 :polarity -
+            :ARG0 (s3 / sue-02
+                  :ARG1-of (p / propose-01
+                        :ARG0 (p2 / person :wiki - :name (n / name :op1 "Hai" :op2 "Ming"))))
+            :ARG1 (s2 / subject
+                  :topic (r / right-05
+                        :ARG2 (a2 / act-02))
+                  :ARG1-of (c / clear-06)))
+      :snt2 (a / and
+            :op2 (s / satisfy-02 :polarity -
+                  :ARG0 (i / it)
+                  :ARG1 (t / thing
+                        :ARG1-of (r2 / require-01
+                              :purpose (l2 / libel-01)
+                              :ARG1-of (l / legal-02))))))
+
+# ::id bolt12_10495_0392.2 ::date 2012-12-11T10:43:19 ::annotator SDL-AMR-09 ::preferred
+# ::snt For example, he failed to clarify whether Cafferty's comment was an argument over opinions or an act of spreading an untruthful statement.
+# ::save-date Fri May 29, 2015 ::file bolt12_10495_0392_2.txt
+(e / exemplify-01
+      :ARG0 (f / fail-01
+            :ARG0 (h / he)
+            :ARG2 (c / clarify-10
+                  :ARG0 h
+                  :ARG1 (o / or :mode interrogative
+                        :op1 (a / argue-02
+                              :ARG2 (t / thing
+                                    :ARG1-of (o2 / opine-01)))
+                        :op2 (s / spread-03
+                              :ARG1 (t2 / thing
+                                    :ARG1-of (s2 / state-01)
+                                    :mod (t3 / truthful :polarity -)))
+                        :domain (c2 / comment-01
+                              :ARG0 (p / person :wiki "Jack_Cafferty" :name (n / name :op1 "Cafferty")))))))
+
+# ::id bolt12_10495_0392.3 ::date 2012-12-12T19:43:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt The malicious intent of Cafferty has not been established, either. More importantly, he has been unable to offer anything as to how to establish the damage to the 1.3 billion Chinese people.
+# ::save-date Mon Nov 4, 2013 ::file bolt12_10495_0392_3.txt
+(m / multi-sentence
+      :snt1 (e / establish-01 :polarity -
+            :ARG1 (t / thing
+                  :ARG1-of (i2 / intend-01
+                        :ARG0 (p2 / person :wiki "Jack_Cafferty"
+                              :name (n2 / name :op1 "Cafferty"))
+                        :mod (m3 / malice)))
+            :mod (e3 / either))
+      :snt2 (i / important
+            :degree (m2 / more)
+            :domain (p / possible-01 :polarity -
+                  :ARG1 (o / offer-01
+                        :ARG0 (h / he)
+                        :ARG1 (a2 / anything
+                              :topic (t2 / thing
+                                    :manner-of (e2 / establish-01
+                                          :ARG1 (d / damage-01
+                                                :ARG1 (p4 / person :quant 1300000000
+                                                      :mod (c / country :wiki "China"
+                                                            :name (n / name :op1 "China")))))))))))
+
+# ::id bolt12_10495_0392.4 ::date 2012-12-12T20:27:07 ::annotator SDL-AMR-09 ::preferred
+# ::snt In addition, in his complaint, it is said that Chinese people have already expressed their displeasure through demonstrations.
+# ::save-date Tue Apr 15, 2014 ::file bolt12_10495_0392_4.txt
+(a / and
+      :op2 (s / say-01
+            :ARG0 (c / complain-01
+                  :ARG0 (h / he))
+            :ARG1 (e / express-01
+                  :ARG0 (p2 / person
+                        :mod (c2 / country :wiki "China" :name (n / name :op1 "China")))
+                  :ARG1 (d2 / displease-01
+                        :ARG1 p2)
+                  :time (a2 / already)
+                  :manner (d / demonstrate-01
+                        :ARG0 p2))))
+
+# ::id bolt12_10495_0392.5 ::date 2012-12-12T20:30:09 ::annotator SDL-AMR-09 ::preferred
+# ::snt Here it is a country with the freedom of speech.
+# ::save-date Tue Apr 28, 2015 ::file bolt12_10495_0392_5.txt
+(c / country
+      :ARG1-of (f / free-04
+            :ARG3 (s / speak-01))
+      :location (h / here)
+      :domain (i / it))
+
+# ::id bolt12_10495_0392.6 ::date 2012-12-12T20:33:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt On the issue of libel, courts only support those who have actually suffered damages and have no other way to seek justice.
+# ::save-date Thu Feb 11, 2016 ::file bolt12_10495_0392_6.txt
+(s / support-01
+      :ARG0 (c / court)
+      :ARG1 (p / person
+            :ARG0-of (s3 / suffer-01
+                  :ARG1 (d / damage-01
+                        :ARG1 p)
+                  :ARG1-of (a / actual-02))
+            :ARG0-of (h / have-03 :polarity -
+                  :ARG1 (w / way
+                        :instrument-of (s2 / seek-01
+                              :ARG0 p
+                              :ARG1 (j / justice))
+                        :mod (o2 / other)))
+            :mod (o / only))
+      :topic (i / issue-02
+            :ARG0 (l / libel-01)))
+
+# ::id bolt12_10495_0392.7 ::date 2012-12-12T20:38:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt Therefore, it is very hard for the government, politicians, and public figures to get legal protection on the issue of libel,
+# ::save-date Sat Jul 25, 2015 ::file bolt12_10495_0392_7.txt
+(c / cause-01
+      :ARG1 (h / hard-02
+            :ARG1 (g / get-01
+                  :ARG0 (a / and
+                        :op1 (g2 / government-organization
+                              :ARG0-of (g3 / govern-01))
+                        :op2 (p2 / politician)
+                        :op3 (f / figure
+                              :ARG1-of (p3 / public-02)))
+                  :ARG1 (p / protect-01
+                        :ARG1 a
+                        :ARG2 (i / issue-02
+                              :ARG0 (l / libel-01))
+                        :ARG1-of (l2 / legal-02)))
+            :degree (v / very)))
+
+# ::id bolt12_10495_0392.8 ::date 2012-12-12T20:44:06 ::annotator SDL-AMR-09 ::preferred
+# ::snt because they have the capability to clear themselves of "smears."
+# ::save-date Fri Nov 1, 2013 ::file bolt12_10495_0392_8.txt
+(c / cause-01
+      :ARG0 (c3 / capable-01
+            :ARG1 (t / they)
+            :ARG2 (c2 / clear-01
+                  :ARG0 t
+                  :ARG1 t
+                  :ARG2 (s / smear-02
+                        :ARG1 t))))
+
+# ::id bolt12_10495_0392.9 ::date 2012-12-12T20:46:52 ::annotator SDL-AMR-09 ::preferred
+# ::snt If you have already cleared your own reputation through legal protests, for example, Chinese people are not goons and thugs, then a lawsuit is meaningless.
+# ::save-date Thu Jul 23, 2015 ::file bolt12_10495_0392_9.txt
+(m2 / multi-sentence
+      :snt1 (m / mean-01 :polarity -
+            :ARG1 (s / sue-02)
+            :condition (c / clear-01
+                  :ARG0 (y / you)
+                  :ARG1 (r / reputation
+                        :poss y)
+                  :manner (p / protest-01
+                        :ARG0 y
+                        :ARG1-of (l / legal-02))
+                  :ARG0-of (e2 / exemplify-01)
+                  :time (a / already)))
+      :snt2 (a2 / and
+            :op1 (g / goon :polarity -)
+            :op2 (t / thug :polarity -)
+            :domain (p2 / person
+                  :mod (c2 / country :wiki "China" :name (n2 / name :op1 "China")))))
+
+# ::id bolt12_10495_0392.10 ::date 2012-12-13T05:32:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt Remember, a lawsuit for libel is only to clear your name and get compensation.
+# ::save-date Wed May 6, 2015 ::file bolt12_10495_0392_10.txt
+(r / remember-01 :mode imperative
+      :ARG0 (y / you)
+      :ARG1 (h / have-purpose-91
+            :ARG1 (s / sue-02
+                  :ARG2 (l2 / libel-01))
+            :ARG2 (a / and
+                  :op1 (c / clear-01
+                        :ARG1 (n / name
+                              :poss y))
+                  :op2 (c2 / compensate-01
+                        :ARG2 y)
+                  :mod (o / only))))
+
+# ::id bolt12_10495_6194.1 ::date 2012-12-13T05:37:31 ::annotator SDL-AMR-09 ::preferred
+# ::snt After Lee Teng-hui put forth the "two states theory", due to mainland countrymen being deceived by the CCP's propaganda machine, many people advocated using force to unite Taiwan.
+# ::save-date Tue Feb 9, 2016 ::file bolt12_10495_6194_1.txt
+(a / advocate-01
+      :ARG0 (p5 / person
+            :quant (m3 / many))
+      :ARG1 (u / use-01
+            :ARG1 (f / force-04)
+            :purpose (u2 / unite-01
+                  :ARG1 (c4 / country :wiki "Taiwan" :name (n3 / name :op1 "Taiwan"))))
+      :time (a2 / after
+            :op1 (p / put-out-10
+                  :ARG0 (p2 / person :wiki "Lee_Teng-hui" :name (n / name :op1 "Lee" :op2 "Teng-hui"))
+                  :ARG1 (t / theory :wiki "Two_Chinas" :name (n4 / name :op1 "Two" :op2 "States" :op3 "Theory"))))
+      :ARG1-of (c / cause-01
+            :ARG0 (d / deceive-01
+                  :ARG0 (m / machine
+                        :purpose (p3 / propaganda)
+                        :poss (p4 / political-party :wiki "Communist_Party_of_China" :name (n2 / name :op1 "CCP")))
+                  :ARG1 (m4 / man
+                        :mod (c2 / country)
+                        :location (m2 / mainland)))))
+
+# ::id bolt12_10495_6194.2 ::date 2012-12-13T08:16:00 ::annotator SDL-AMR-09 ::preferred
+# ::snt Because they have no understanding whatsoever of the situation in Taiwan and the will of the Taiwan people,
+# ::save-date Fri Nov 1, 2013 ::file bolt12_10495_6194_2.txt
+(c / cause-01
+      :ARG0 (u / understand-01 :polarity -
+            :ARG0 (t / they)
+            :ARG1 (a / and
+                  :op1 (s / situation
+                        :location (c3 / country :wiki "Taiwan"
+                              :name (n / name :op1 "Taiwan")))
+                  :op2 (w2 / will
+                        :poss (p / person
+                              :mod c3)))
+            :degree (w / whatsoever)))
+
+# ::id bolt12_10495_6194.3 ::date 2012-12-13T08:51:32 ::annotator SDL-AMR-09 ::preferred
+# ::snt they universally exhibited extreme nationalistic sentiment.
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10495_6194_3.txt
+(e / exhibit-01
+      :ARG0 (t / they)
+      :ARG1 (s / sentiment
+            :mod (n / nationalism
+                  :mod (e2 / extreme)))
+      :mod (u / universal))
+
+# ::id bolt12_10495_6194.4 ::date 2012-12-13T08:53:30 ::annotator SDL-AMR-09 ::preferred
+# ::snt Just like the love-hate fusion of nationalistic war sentiment that erupted after the US mistakenly bombed the Chinese embassy.
+# ::save-date Fri Jul 24, 2015 ::file bolt12_10495_6194_4.txt
+(r / resemble-01
+      :ARG2 (f / fuse-01
+            :ARG1 (l / love-01)
+            :ARG2 (h / hate-01)
+            :ARG3 (s / sentiment
+                  :mod (n / nationalism)
+                  :mod (w / war))
+            :ARG1-of (e / erupt-01
+                  :time (a / after
+                        :op1 (b / bomb-01
+                              :ARG0 (c / country :wiki "United_States" :name (n3 / name :op1 "US"))
+                              :ARG1 (e2 / embassy
+                                    :poss (c2 / country :wiki "China" :name (n2 / name :op1 "China")))
+                              :ARG1-of (m / mistake-02
+                                    :ARG0 c)))))
+      :mod (j / just))
+
+# ::id bolt12_10495_6194.5 ::date 2012-12-13T08:58:58 ::annotator SDL-AMR-09 ::preferred
+# ::snt They similarly did not understand the real story in Kosovo.
+# ::save-date Thu Oct 8, 2015 ::file bolt12_10495_6194_5.txt
+(u / understand-01 :polarity -
+      :ARG0 (t / they)
+      :ARG1 (s / story
+            :location (c / country :wiki "Kosovo" :name (n / name :op1 "Kosovo"))
+            :ARG1-of (r / real-04))
+      :ARG1-of (r2 / resemble-01))
+
+# ::id bolt12_10495_6194.6 ::date 2012-12-13T09:00:44 ::annotator SDL-AMR-09 ::preferred
+# ::snt But Hong Kong people realize that first there was the Republic of China, only after that came "New China";
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10495_6194_6.txt
+(c / contrast-01
+      :ARG2 (r / realize-01
+            :ARG0 (p / person
+                  :mod (c2 / city :wiki "Hong_Kong"
+                        :name (n / name :op1 "Hong" :op2 "Kong")))
+            :ARG1 (a2 / and
+                  :op1 (c3 / country :wiki "Taiwan"
+                        :name (n2 / name :op1 "Republic" :op2 "of" :op3 "China")
+                        :time (f / first))
+                  :op2 (c4 / come-03
+                        :ARG1 (c5 / country :wiki -
+                              :name (n3 / name :op1 "New" :op2 "China"))
+                        :time (a / after
+                              :op1 c3
+                              :mod (o / only))))))
+
+# ::id bolt12_10495_6194.7 ::date 2012-12-13T09:05:27 ::annotator SDL-AMR-09 ::preferred
+# ::snt While this "Two States Separatist Theory" has purely and simply been dreamed up by the CCP.
+# ::save-date Fri Jul 24, 2015 ::file bolt12_10495_6194_7.txt
+(c / contrast-01
+      :ARG2 (d / dream-up-02
+            :ARG0 (p / political-party :wiki "Communist_Party_of_China" :name (n2 / name :op1 "CCP"))
+            :ARG1 (t / thing :wiki - :name (n / name :op1 "Two" :op2 "States" :op3 "Separatist" :op4 "Theory")
+                  :mod (t2 / this))
+            :ARG1-of (p2 / pure-02)
+            :manner (s / simple)))
+
+# ::id bolt12_10495_6194.8 ::date 2012-12-13T09:07:22 ::annotator SDL-AMR-09 ::preferred
+# ::snt Lee Teng-hui was doing nothing but bringing an already existing phenomenon to light.
+# ::save-date Fri Jun 5, 2015 ::file bolt12_10495_6194_8.txt
+(d / do-02
+      :ARG0 (p / person :wiki "Lee_Teng-hui" :name (n / name :op1 "Lee" :op2 "Teng-hui"))
+      :ARG1 (n2 / nothing
+            :ARG2-of (e2 / except-01
+                  :ARG1 (b / bring-01
+                        :ARG0 p
+                        :ARG1 (p2 / phenomenon
+                              :ARG1-of (e / exist-01
+                                    :time (a / already)))
+                        :ARG2 (l / light)))))
+
+# ::id bolt12_10495_6194.9 ::date 2012-12-13T09:16:55 ::annotator SDL-AMR-09 ::preferred
+# ::snt Moreover, the grand old men of the CCP who handed over on a silver platter a huge chunk of land in Manchuria north of the Amur River to Soviet Russia, who gave away land equivalent to ten percent of national territory in northern Mongolia; why not take this back, instead of insisting on trying to grab back a Taiwan that remains in the hands of Chinese people?
+# ::save-date Mon May 25, 2015 ::file bolt12_10495_6194_9.txt
+(a3 / and
+      :op2 (t / take-01 :polarity -
+            :ARG0 (m / man
+                  :mod (o / old)
+                  :mod (g3 / grand)
+                  :ARG0-of (h4 / have-org-role-91
+                        :ARG1 (p / political-party :wiki "Communist_Party_of_China" :name (n / name :op1 "CCP")))
+                  :ARG0-of (h / hand-01
+                        :ARG1 (c2 / chunk
+                              :part-of (l / land)
+                              :mod (h2 / huge)
+                              :location (c3 / country-region :wiki "Manchuria" :name (n9 / name :op1 "Manchuria"))
+                              :location (r3 / relative-position
+                                    :op1 (r2 / river :wiki "Amur_River" :name (n8 / name :op1 "Amur"))
+                                    :direction (n2 / north)))
+                        :ARG2 (c4 / country :wiki "Soviet_Union" :name (n3 / name :op1 "Soviet" :op2 "Russia"))
+                        :manner (p2 / platter
+                              :consist-of (s / silver)))
+                  :ARG0-of (g / give-away-02
+                        :ARG1 (l2 / land
+                              :ARG1-of (e / equal-01
+                                    :ARG2 (p3 / percentage-entity :value 10
+                                          :part-of (t3 / territory
+                                                :mod (n5 / nation))))
+                              :location (n10 / north
+                                    :part-of (c5 / country :wiki "Mongolia" :name (n4 / name :op1 "Mongolia"))))))
+            :ARG1 (a2 / and
+                  :op1 c2
+                  :op2 l2)
+            :ARG3 (b / back)
+            :ARG1-of (c6 / cause-01
+                  :ARG0 (a / amr-unknown))
+            :ARG1-of (i2 / instead-of-91
+                  :ARG2 (i / insist-01
+                        :ARG0 m
+                        :ARG1 (t2 / try-01
+                              :ARG0 m
+                              :ARG1 (g2 / grab-01
+                                    :ARG0 m
+                                    :ARG1 (c / country :wiki "Taiwan" :name (n7 / name :op1 "Taiwan")
+                                          :ARG1-of (r / remain-01
+                                                :ARG3 (h3 / hand
+                                                      :part-of (p4 / person
+                                                            :mod (c7 / country :wiki "China" :name (n6 / name :op1 "China"))))))
+                                    :mod (b2 / back)))))))
+
+# ::id bolt12_10495_6194.10 ::date 2012-12-13T09:43:08 ::annotator SDL-AMR-09 ::preferred
+# ::snt However, even though Hong Kong people have their grumbles, the "two states theory" has in no way triggered a sentimental attachment in Hong Kong people for "Old China".
+# ::save-date Tue Feb 9, 2016 ::file bolt12_10495_6194_10.txt
+(c / contrast-01
+      :ARG2 (t / trigger-01 :polarity -
+            :ARG0 (t2 / theory :wiki "Two_Chinas" :name (n / name :op1 "Two" :op2 "States" :op3 "Theory"))
+            :ARG1 (a / attach-01
+                  :ARG0 t2
+                  :ARG1 p
+                  :ARG2 (c3 / country :wiki - :name (n4 / name :op1 "Old" :op2 "China"))
+                  :mod (s / sentiment))
+            :manner (w / way)
+            :concession (g / grumble-01
+                  :ARG0 (p / person
+                        :mod (c2 / city :wiki "Hong_Kong" :name (n2 / name :op1 "Hong" :op2 "Kong"))))))
+
+# ::id bolt12_10510_8171.1 ::date 2012-12-14T19:57:26 ::annotator SDL-AMR-09 ::preferred
+# ::snt I believe that our building industry here has not yet reached this level.
+# ::save-date Fri Dec 14, 2012 ::file bolt12_10510_8171_1.txt
+(b / believe-01
+      :ARG0 (i / i)
+      :ARG1 (r / reach-01
+            :ARG0 (i2 / industry
+                  :mod (b2 / build-01)
+                  :poss (w / we)
+                  :location (h / here))
+            :ARG1 (l / level
+                  :mod (t / this))
+            :time (y / yet :polarity -)))
+
+# ::id bolt12_10510_8171.2 ::date 2012-12-14T19:59:11 ::annotator SDL-AMR-09 ::preferred
+# ::snt Not only has the law not yet reached this level, but the average person's understanding has generally not reached this level.
+# ::save-date Thu Jul 23, 2015 ::file bolt12_10510_8171_2.txt
+(a2 / and
+      :op1 (r / reach-01 :polarity -
+            :ARG0 (l2 / law)
+            :ARG1 (l / level
+                  :mod (t / this))
+            :time (y / yet))
+      :op2 (r2 / reach-01 :polarity -
+            :ARG0 (u / understand-01
+                  :ARG0 (p / person
+                        :ARG1-of (a / average-03)))
+            :ARG1 l
+            :ARG1-of (g / general-02)))
+
+# ::id bolt12_10510_8171.3 ::date 2012-12-14T20:05:47 ::annotator SDL-AMR-09 ::preferred
+# ::snt Some officials, out of local economic considerations, by accident or design are frequently too lenient in dealing with property agents.
+# ::save-date Sun Jul 26, 2015 ::file bolt12_10510_8171_3.txt
+(l / lenient
+      :degree (t / too)
+      :ARG1-of (f / frequent-02)
+      :manner (o2 / or
+            :op1 (a / accident)
+            :op2 (d / design-02
+                  :ARG0 p2))
+      :domain (d2 / deal-01
+            :ARG0 (p2 / person
+                  :quant (s / some)
+                  :ARG0-of (h / have-org-role-91
+                        :ARG2 (o / official)))
+            :ARG2 (a2 / agent
+                  :mod (p / property)))
+      :ARG1-of (c2 / cause-01
+            :ARG0 (c / consider-01
+                  :ARG1 (e / economy
+                        :ARG1-of (l2 / local-02)))))
+
+# ::id bolt12_10510_8171.4 ::date 2012-12-14T20:12:18 ::annotator SDL-AMR-09 ::preferred
+# ::snt We all saw the damage wreaked by the Wenchuan Earthquake.
+# ::save-date Wed Nov 6, 2013 ::file bolt12_10510_8171_4.txt
+(s / see-01
+      :ARG0 (w / we
+            :mod (a / all))
+      :ARG1 (d / damage-01
+            :ARG0 e
+            :ARG1-of (w2 / wreak-01
+                  :ARG0 (e / earthquake :wiki "2008_Sichuan_earthquake"
+                        :name (n / name :op1 "Wenchuan" :op2 "Earthquake")))))
+
+# ::id bolt12_10510_8171.5 ::date 2012-12-14T20:14:59 ::annotator SDL-AMR-09 ::preferred
+# ::snt As to how much of this was a result of natural disaster, and how much was man-made calamity, a verdict will be drawn in the end.
+# ::save-date Thu Dec 17, 2015 ::file bolt12_10510_8171_5.txt
+(d / draw-02
+      :ARG1 (v / verdict)
+      :time (e / end-01)
+      :topic (a / and
+            :op1 (t / thing
+                  :quant-of (t4 / thing
+                        :ARG1-of (i / include-91
+                              :ARG2 (t3 / this))
+                        :ARG2-of (r3 / result-01
+                              :ARG1 (d2 / disaster
+                                    :ARG1-of (n / natural-03)))))
+            :op2 (t2 / thing
+                  :quant-of (t5 / thing
+                        :ARG1-of (i2 / include-91
+                              :ARG2 t3)
+                        :ARG2-of (r4 / result-01
+                              :ARG1 (c / calamity
+                                    :ARG1-of (m / make-01
+                                          :ARG0 (m2 / man))))))))
+
+# ::id bolt12_10510_8171.6 ::date 2012-12-14T20:32:13 ::annotator SDL-AMR-09 ::preferred
+# ::snt Apparently, quality checks in the space industry are extremely rigorous, each part undergoes several inspection processes, every effort is made to ensure absolute safety.
+# ::save-date Thu Jan 21, 2016 ::file bolt12_10510_8171_6.txt
+(a / appear-02
+      :ARG1 (a2 / and
+            :op1 (r / rigorous
+                  :domain (c / check-01
+                        :ARG1 (q / quality)
+                        :prep-in (i / industry
+                              :mod (s / space)))
+                  :degree (e / extreme))
+            :op2 (u / undergo-28
+                  :ARG1 (p / part
+                        :mod (e2 / each))
+                  :ARG2 (p2 / process-02
+                        :ARG1 (i2 / inspect-01)
+                        :quant (s2 / several)))
+            :op3 (e4 / effort-01
+                  :ARG1 (e5 / ensure-01
+                        :ARG1 (s3 / safe-01
+                              :degree (a3 / absolute)))
+                  :mod (e3 / every))))
+
+# ::id bolt12_10510_8171.7 ::date 2012-12-14T20:44:48 ::annotator SDL-AMR-09 ::preferred
+# ::snt But space ship accidents still happen from time to time.
+# ::save-date Thu Nov 7, 2013 ::file bolt12_10510_8171_7.txt
+(c / contrast-01
+  :ARG2 (a / accident
+          :mod (s / ship
+                 :mod (s2 / space))
+          :frequency (o / occasional)
+          :time (s3 / still)))
+
+# ::id bolt12_10510_8171.8 ::date 2012-12-14T20:46:56 ::annotator SDL-AMR-09 ::preferred
+# ::snt Even such technologically advanced nations as the US have experienced several instances of space flight launch or return failures.
+# ::save-date Tue Jun 30, 2015 ::file bolt12_10510_8171_8.txt
+(e / experience-01
+      :ARG0 (n / nation
+            :ARG1-of (a / advanced-02
+                  :ARG2 (t / technology))
+            :example (c / country :wiki "United_States" :name (n2 / name :op1 "US"))
+            :mod (e2 / even)
+            :mod (s3 / such))
+      :ARG1 (i / instance
+            :mod (f / fail-01
+                  :ARG1 (o / or
+                        :op1 (l / launch-01
+                              :ARG1 (f2 / fly-01
+                                    :location (s2 / space)))
+                        :op2 (r / return-01
+                              :ARG1 f2)))
+            :quant (s / several)))
+
+# ::id bolt12_10510_8171.9 ::date 2012-12-15T06:15:45 ::annotator SDL-AMR-09 ::preferred
+# ::snt Since things can still go wrong even when they are subjected to incredibly rigorous inspections as in the space industry, then, with our current "dark" and corrupt property industry the way it is, people's lives are even harder to place guarantees on.
+# ::save-date Wed Nov 4, 2015 ::file bolt12_10510_8171_9.txt
+(h / hard-02
+      :ARG1 (g / guarantee-01
+            :ARG1 (l / life
+                  :poss (p / person)))
+      :degree (m / more
+            :mod (e / even))
+      :ARG1-of (c3 / cause-01
+            :ARG0 (p3 / possible-01
+                  :ARG1 (g2 / go-08
+                        :ARG1 (t2 / thing
+                              :example (t / thing
+                                    :prep-in (i3 / industry
+                                          :mod (s2 / space))))
+                        :ARG2 (w / wrong-02
+                              :ARG1 t2)
+                        :mod (s3 / still)
+                        :concession (e3 / even-when
+                              :op1 (s / subject-01
+                                    :ARG1 t2
+                                    :ARG2 (i2 / inspect-01
+                                          :mod (r / rigorous
+                                                :degree (i4 / incredible)))
+                                    :mod (e2 / even))))))
+      :ARG1-of (c4 / cause-01
+            :ARG0 (a / and
+                  :op1 (d / dark-03
+                        :ARG1 (i / industry
+                              :time (c2 / current)
+                              :poss (w2 / we)
+                              :mod (p2 / property)))
+                  :op2 (c / corrupt-01
+                        :ARG1 i))))
+
+# ::id bolt12_10510_8171.10 ::date 2012-12-15T06:45:01 ::annotator SDL-AMR-09 ::preferred
+# ::snt Once a powerful earthquake strikes, the people's lives really do become as tiny as those of ants.
+# ::save-date Thu Oct 8, 2015 ::file bolt12_10510_8171_10.txt
+(b / become-01
+      :ARG1 (t2 / tiny
+            :domain (l / life
+                  :poss (p / person))
+            :degree (e / equal)
+            :compared-to (l2 / life
+                  :poss (a / ant)))
+      :time (s / strike-01
+            :ARG2 (e4 / earthquake
+                  :ARG1-of (p2 / powerful-02)))
+      :ARG1-of (r / real-04))
+
+# ::id bolt12_10510_8171.11 ::date 2012-12-15T08:23:39 ::annotator SDL-AMR-09 ::preferred
+# ::snt It makes one tremble even without fear.
+# ::save-date Fri Nov 8, 2013 ::file bolt12_10510_8171_11.txt
+(m / make-02
+      :ARG0 (i / it)
+      :ARG1 (t / tremble-01
+            :ARG1 (o / one)
+            :manner (f / fear-01 :polarity -
+                  :ARG0 o
+                  :mod (e / even))))
