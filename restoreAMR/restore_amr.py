@@ -15,6 +15,7 @@ Sample output:
 
 
 import sys, re, os, json, random, argparse
+sys.path.insert(1, os.path.join(sys.path[0], '..'))
 from amr_utils import *
 from trans import translate, restore
 from best_amr_permutation import filter_colons, get_keep_string, get_add_string
@@ -41,6 +42,7 @@ def create_arg_parser():
 	parser.add_argument("-o", required = True, type=str, help="Output file")
 	parser.add_argument("-index", action = 'store_true', help="File has indexed paths")
 	parser.add_argument("-abs", action = 'store_true', help="File has absolute paths")
+	parser.add_argument("-ref", default = 'restoreAMR/ref_dict', type = str,  help="Ref dict file")
 	args = parser.parse_args()
 	
 	return args
@@ -53,7 +55,7 @@ def preprocess(line, absolute):
 	return line	
 
 
-def initial_check(index, absolute):
+def initial_check(index, absolute, ref_file):
 	'''Do initial checks and prints, load dicts as well'''
 	
 	if index and absolute:
@@ -75,7 +77,7 @@ def initial_check(index, absolute):
 		index_dict = dict.fromkeys(replace_types, 0)
 		print '\nRestoring with normal method'	
 	
-	ref_dict = load_dict('restoreAMR/ref_dict')	#dictionary with frequency information
+	ref_dict = load_dict(ref_file)	#dictionary with frequency information
 	
 	return ref_dict, index_dict, replace_types
 
@@ -663,7 +665,7 @@ def most_frequent_var(concept_dict, ref_dict):
 
 if __name__ == '__main__':
 	args = create_arg_parser()
-	ref_dict, index_dict, replace_types = initial_check(args.index, args.abs)
+	ref_dict, index_dict, replace_types = initial_check(args.index, args.abs, args.ref)
 	restored_lines = []
 	
 	global ggg
