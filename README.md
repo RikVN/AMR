@@ -53,7 +53,7 @@ By using the option -double, both the best aligned and original AMR are added in
 It is also possible to put the files in character-level format. There are options to keep POS-tags (-pos) or relations (-s) (:ARG1, :mod, etc) as single characters. If you used the Absolute Paths or Indexing method in a previous step, please indicate this by using -c.
 
 ```
-python char_level_amr.py -f sample_alignment_input/sample.txt.tf
+python char_level_AMR.py -f sample_alignment_input/sample.tf
 ```
 
 ### Post-processing
