@@ -12,6 +12,8 @@ The scripts can do the following things:
 * Restore variables and Wiki-links in the output
 * Restore the co-referring nodes
 * Remove duplicate output
+* Doing Smatch in parallel and printing nice,ordered output to screen
+* Save parallel Smatch results in dictionary
 
 ## Getting Started
 
@@ -93,7 +95,7 @@ It is possible to only see a certain output type (e.g. restore, coref, wiki) by 
 Usage:
 
 ```
-python evaluate_AMRs.py -g \[gold_folder\] -p \[output_folder\] -type wiki -res_dict \[res_dict_file\]
+python evaluate_AMRs.py -g [gold_folder] -p [output_folder] -type wiki -res_dict [res_dict_file]
 ```
 
 
