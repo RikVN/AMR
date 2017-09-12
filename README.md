@@ -79,16 +79,16 @@ The script *evaluate_AMRs.py* is specifically made to do the (Smatch) evaluation
 For example, if you have results of the 2 last epochs, for 4 different files and for output extensions .restore, .coref and .wiki, the output looks like this (numbers made up):
 
 ```
-                       dev1   dev2
-19 epochs (.restore)   0.54   0.52
-19 epochs (.coref)     0.57   0.55
-19 epochs (.wiki)      0.55   0.51
-20 epochs (.restore)   0.59   0.58
-20 epochs (.coref)     0.62   0.59
-20 epochs (.wiki)      0.60   0.61
+                       file1  file2  file3  file4
+19 epochs (.restore)   0.54   0.52   0.44   0.61
+19 epochs (.coref)     0.57   0.55   0.47   0.63
+19 epochs (.wiki)      0.55   0.51   0.48   0.62   
+20 epochs (.restore)   0.59   0.58   0.45   0.62
+20 epochs (.coref)     0.62   0.59   0.49   0.65
+20 epochs (.wiki)      0.60   0.61   0.50   0.66
 ```
 
-Note that the epoch number must be recognizable in either the file or folder name, by using e.g. epoch19 or ep19. 
+Note that the epoch number must be recognizable in either the file or folder name, by using e.g. epoch19 or ep19. Also, output files and sentences files are matched base on their identifier before the extension and after a dash, e.g. files should look like ```/home/user/folder/experiment/epoch12/dataset-identifier.seq.amr.restore```. What will be extracted are *12* and *identifier*.
 
 It is possible to only see a certain output type (e.g. restore, coref, wiki) by using the ```-type``` argument. Results are saved in a dictionary that is read again on next use as to not process the same file twice. 
 
