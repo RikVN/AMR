@@ -74,7 +74,7 @@ Here -f is the file to be processed and -s is the sentence file (needed for Wiki
 
 ### Evaluation
 
-The script *evaluate_AMRs.py* is specifically made to do the (Smatch) evaluation in parallel for multiple epochs, files and types of post-processing. It prints nice, ordered output to the screen.
+The script **evaluate_AMRs.py** is specifically made to do the (Smatch) evaluation in parallel for multiple epochs, files and types of post-processing. It prints nice, ordered output to the screen.
 
 For example, if you have results of the 2 last epochs, for 4 different files and for output extensions .restore, .coref and .wiki, the output looks like this (numbers made up):
 
@@ -88,7 +88,7 @@ For example, if you have results of the 2 last epochs, for 4 different files and
 20 epochs (.wiki)      0.60   0.61   0.50   0.66
 ```
 
-Note that the epoch number must be recognizable in either the file or folder name, by using e.g. epoch19 or ep19. Also, output files and sentences files are matched base on their identifier before the extension and after a dash, e.g. files should look like ```/home/user/folder/experiment/epoch12/dataset-identifier.seq.amr.restore```. What will be extracted are *12* and *identifier*.
+Note that the epoch number must be recognizable in either the file or folder name, by using e.g. epoch19 or ep19. Also, output files and sentences files are matched base on their identifier before the extension and after a dash, e.g. files should look like ```/home/user/folder/experiment/epoch12/dataset-identifier.seq.amr.restore```. What will be extracted are **12** and **identifier**.
 
 It is possible to only see a certain output type (e.g. restore, coref, wiki) by using the ```-type``` argument. Results are saved in a dictionary that is read again on next use as to not process the same file twice. 
 
