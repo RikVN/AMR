@@ -70,12 +70,13 @@ python postprocess_AMRs.py -f sample_alignment_input/sample.char.tf -s sample_al
 
 Here -f is the file to be processed and -s is the sentence file (needed for Wikification) It is possible to use -no_wiki to skip the Wikification step. These options can also be used to process a whole folder (use -fol) in parallel, to speed up the process. Check the script for details.
 
-### Evaluation ###
+### Evaluation
 
 The script *evaluate_AMRs.py* is specifically made to do the (Smatch) evaluation in parallel for multiple epochs, files and types of post-processing. It prints nice, ordered output to the screen.
 
 For example, if you have results of the 2 last epochs, for 4 different files and for output extensions .restore, .coref and .wiki, the output looks like this (numbers made up):
 
+```
                        dev1   dev2
 19 epochs (.restore)   0.54   0.52
 19 epochs (.coref)     0.57   0.55
@@ -83,6 +84,7 @@ For example, if you have results of the 2 last epochs, for 4 different files and
 20 epochs (.restore)   0.59   0.58
 20 epochs (.coref)     0.62   0.59
 20 epochs (.wiki)      0.60   0.61
+```
 
 Note that the epoch number must be recognizable in either the file or folder name, by using e.g. epoch19 or ep19. 
 
