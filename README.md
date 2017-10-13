@@ -107,15 +107,15 @@ python evaluate_AMRs.py -g [gold_folder] -p [output_folder] -type wiki -res_dict
 
 ## Silver data ##
 
-The silver data that I used in the experiments for the CLIN paper can be downloaded [here](http://www.let.rug.nl/rikvannoord/AMR/silver_data/). The silver data was obtained by parsing all sentences in the [Groningen Meaning Bank](http://gmb.let.rug.nl/) with the parsers [CAMR](https://github.com/c-amr/camr) and [JAMR](https://github.com/jflanigan/jamr). The data folder contains seven files: all CAMR and JAMR parses (1.25 million, aligned with each other) and sets of AMRs (20k, 50k, 75k, 100k, 500k) that were used in our experiments (CAMR only). For more details please see our [CLIN paper](https://arxiv.org/pdf/1705.09980.pdf).
+The silver data that I used in the experiments for the CLIN paper can be downloaded [here](http://www.let.rug.nl/rikvannoord/AMR/silver_data/). The silver data was obtained by parsing all sentences in the [Groningen Meaning Bank](http://gmb.let.rug.nl/) with the parsers [CAMR](https://github.com/c-amr/camr) and [JAMR](https://github.com/jflanigan/jamr). The data folder contains seven files: all CAMR and JAMR parses (1.25 million, aligned with each other) and sets of AMRs (20k, 50k, 75k, 100k, 500k) that were used in our experiments (CAMR only). For more details please see our [CLIN paper](http://www.clinjournal.org/sites/clinjournal.org/files/07.neural-semantic-parsing.pdf).
 
-Note that since the Groningen Meaning Bank is public domain, you can freely use these silver data sets in your own experiments. If you do, please cite our [CLIN paper](https://arxiv.org/pdf/1705.09980.pdf) and the [GMB paper](http://www.lrec-conf.org/proceedings/lrec2012/pdf/534_Paper.pdf).
+Note that since the Groningen Meaning Bank is public domain, you can freely use these silver data sets in your own experiments. If you do, please cite our [CLIN paper](http://www.clinjournal.org/sites/clinjournal.org/files/07.neural-semantic-parsing.pdf) and the [GMB paper](http://www.lrec-conf.org/proceedings/lrec2012/pdf/534_Paper.pdf).
 
 ## Papers ##
 
 Please see the following papers for details. For general AMR parsing methods:
 
-* *Neural Semantic Parsing by Character-based Translation: Experiments with Abstract Meaning Representations*, Rik van Noord & Johan Bos, Accepted in CLiN 2017 Journal. [[PDF]](https://arxiv.org/pdf/1705.09980.pdf)
+* *Neural Semantic Parsing by Character-based Translation: Experiments with Abstract Meaning Representations*, Rik van Noord & Johan Bos, CLiN 2017 Journal. [[PDF]](http://www.clinjournal.org/sites/clinjournal.org/files/07.neural-semantic-parsing.pdf)
 
 For coreference-specific information:
 
