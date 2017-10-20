@@ -119,7 +119,7 @@ Please see the following papers for details. For general AMR parsing methods:
 
 For coreference-specific information:
 
-* *Dealing with Co-reference in Neural Semantic Parsing*, Rik van Noord & Johan Bos, To appear in IWCS Workshop SemDeep-2, Montpellier, 2017.
+* *Dealing with Co-reference in Neural Semantic Parsing*, Rik van Noord & Johan Bos, Proceedings of the 2nd Workshop on Semantic Deep Learning (SemDeep-2), Montpellier, 2017. [[PDF]](http://aclweb.org/anthology/W/W17/W17-7306.pdf)
 
 ## About the Author
 
