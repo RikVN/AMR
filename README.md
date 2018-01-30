@@ -111,6 +111,16 @@ The silver data that I used in the experiments for the CLIN paper can be downloa
 
 Note that since the Groningen Meaning Bank is public domain, you can freely use these silver data sets in your own experiments. If you do, please cite our [CLIN paper](http://www.clinjournal.org/sites/clinjournal.org/files/07.neural-semantic-parsing.pdf) and the [GMB paper](http://www.lrec-conf.org/proceedings/lrec2012/pdf/534_Paper.pdf).
 
+## Running my best model ##
+
+I made the best model in the CLIN paper publicly available [here](http://www.let.rug.nl/rikvannoord/AMR/best_model/). If you download it and have [OpenNMT](http://opennmt.net/) installed, you should be able to run it. Note that the input (SOURCE_FILE) must be POS-tagged and in character-level format. I also made my vocabulary files available, make sure you arrive at (more or less) the same vocabulary for your input! You can run it like this:
+
+```
+th translate.lua -src SOURCE_FILE -output OUTPUT_FILE -model MODEL_FILE -beam_size 5 -max_sent_length 500 -replace_unk -n_best 1 -gpuid 1 -log_file LOG_FILE -fallback_to_cpu
+```
+
+The output can be post-processed applying the script described above. If there are any issues, please let me know!
+
 ## Papers ##
 
 Please see the following papers for details. For general AMR parsing methods:
