@@ -10,206 +10,193 @@ import sys
 import re
 import argparse
 import os
-from amr_utils import *
-import wikify_file
 from multiprocessing import Pool
+from amr_utils import get_default_amr, valid_amr
+import wikify_file
 
 
 def create_arg_parser():
-	### If using -fol, -f and -s are directories. In that case the filenames of the sentence file and output file should match (except extension)
-	### If not using -fol, -f and -s are directories ###
-	
-	parser = argparse.ArgumentParser()
-	parser.add_argument('-f', required = True ,help="File or folder to be post-processed")
-	parser.add_argument('-s', default = '' ,help="Sentence file or folder, necessary for Wikification")
-	
-	parser.add_argument('-fol', action = 'store_true' ,help="Whether -f is a folder")
-	parser.add_argument('-sent_ext', default = '.sent' ,help="Sentence file, necessary for Wikification - only needed when doing single file")
-	parser.add_argument('-out_ext', default = '.seq.amr' ,help="Output directory when doing a file")
-	parser.add_argument('-t', default = 16, type = int ,help="Maximum number of parallel threads")
-	
-	parser.add_argument('-c', default = 'dupl', action='store', choices=['dupl','index','abs'], help='How to handle coreference - input was either duplicated/indexed/absolute path')
-	parser.add_argument('-no_wiki', action='store_true', help='Not doing Wikification, since it takes a long time')
-	args = parser.parse_args() 
-
-	return args	
+    ''' If using -fol, -f and -s are directories. In that case the filenames of the sentence file and output file should match (except extension)
+        If not using -fol, -f and -s are directories'''
+    parser = argparse.ArgumentParser()
+    parser.add_argument('-f', '--input_file', required=True, help="File or folder to be post-processed")
+    parser.add_argument('-s', '--sentence_file', default='', help="Sentence file or folder, only necessary for Wikification")
+    parser.add_argument('-fol', '--folder', action='store_true', help="Whether -f is a folder")
+    parser.add_argument('-se', '--sent_ext', default='.sent', help="Sentence extension - only necessary when doing folder (default .sent)")
+    parser.add_argument('-o', '--out_ext', default='.seq.amr', help="Output extension - only necessary when doing folder (default .seq.amr)")
+    parser.add_argument('-t', '--threads', default=16, type=int, help="Maximum number of parallel threads")
+    parser.add_argument('-c', '--coreference', default='dupl', choices=['dupl', 'index', 'abs'], help='How to handle coreference - input was either duplicated/indexed/absolute path (default dupl)')
+    parser.add_argument('-n', '--no_wiki', action='store_true', help='Not doing Wikification, since it takes a long time sometimes we want to skip it')
+    parser.add_argument('-fo', '--force', action='store_true', help='For reprocessing of file even if file already exists')
+    args = parser.parse_args()
+    return args
 
 
 def check_valid(restore_file, rewrite):
-	'''Checks whether the AMRS in a file are valid, possibly rewrites to default AMR'''
-	
-	idx = 0
-	warnings = 0
-	all_amrs = []
-	for line in open(restore_file,'r'):
-		idx += 1
-		if not valid_amr(line):
-			print 'Error or warning in line {0}, write default\n'.format(idx)
-			warnings += 1
-			default_amr = get_default_amr()
-			all_amrs.append(default_amr)		## add default when error
-		else:
-			all_amrs.append(line)	
-	
-	if warnings == 0:
-		print 'No badly formed AMRs!\n'
-	elif rewrite:
-		print 'Rewriting {0} AMRs with error to default AMR\n'.format(warnings)
-		
-		with open(restore_file,'w') as out_f:
-			for line in all_amrs:
-				out_f.write(line.strip()+'\n')
-		out_f.close()		
-	else:
-		print '{0} AMRs with warning - no rewriting to default\n'.format(warnings)	
-	
+    '''Checks whether the AMRS in a file are valid, possibly rewrites to default AMR'''
+    idx = 0
+    warnings = 0
+    all_amrs = []
 
-def add_wikification(in_file, sent_file):
-	'''Function that adds wiki-links to produced AMRs'''
-	
-	wiki_file = in_file + '.wiki'
-	
-	print 'Doing Wikification...'
-	
-	if not os.path.isfile(wiki_file):	#check if wiki file doesn't exist already
-		wikify_file.wikify_file(in_file, sent_file)
-		
-		if len([x for x in open(sent_file,'r')]) != len([x for x in open(wiki_file,'r')]):
-			print 'Wikification failed for some reason (length {0} instead of {1})\n\tSave file as backup with wrong extension, no validating\n'
-			os.system('mv {0} {1}'.format(wiki_file, wiki_file.replace('.wiki','.failed_wiki')))
-			return wiki_file, False
-		
-		else:
-			print 'Validating Wikified AMRs...\n'
-			check_valid(wiki_file, True)
-		
-			return wiki_file, True
-	else:
-		print 'Wiki file already exists, skipping...'
-		return wiki_file, True
+    # For each AMR, check if it is valid, and write default when invalid
+    for line in open(restore_file, 'r'):
+        idx += 1
+        if not valid_amr(line):
+            print(('Error or warning in line {0}, write default\n'.format(idx)))
+            warnings += 1
+            default_amr = get_default_amr()
+            all_amrs.append(default_amr)        ## add default when error
+        else:
+            all_amrs.append(line)
+
+    # Write new AMRs to file if there are warnings
+    print(('There are {0} AMRs with error'.format(warnings)))
+    if rewrite and warnings > 0:
+        with open(restore_file, 'w') as out_f:
+            for line in all_amrs:
+                out_f.write(line.strip() + '\n')
+        out_f.close()
 
 
-def add_coreference(in_file, ext):
-	'''Function that adds coreference back for each concept that occurs more than once'''
-	
-	print 'Adding coreference...\n'
-	coref_file = in_file + ext
-	
-	if not os.path.isfile(coref_file):
-		os.system('python restore_duplicate_coref.py -f {0} -output_ext {1}'.format(in_file, ext))
-	else:
-		print 'Coref file already exists, skipping...'	
-		
-	return coref_file
-	
+def add_wikification(in_file, sent_file, force):
+    '''Function that adds wiki-links to produced AMRs'''
+    wiki_file = in_file + '.wiki'
 
-def do_pruning(in_file):
-	'''Function that prunes duplicate output'''
-	
-	print 'Pruning...\n'
-	prune_file = in_file + '.pruned'
-	
-	if not os.path.isfile(prune_file):
-		os.system('python prune_amrs.py -f {0}'.format(in_file))
-		print 'Validating pruned AMRs...\n'
-		check_valid(prune_file, True)
-	else:
-		print 'Prune file already exists, skipping'	
-		
-	return prune_file
+    # Check if wiki file doesn't exist already, if exists, skip
+    if not os.path.isfile(wiki_file) or force:
+        # Do wikification here
+        wikify_file.wikify_file(in_file, sent_file)
+        # Sanity check
+        if len([x for x in open(sent_file, 'r')]) != len([x for x in open(wiki_file, 'r')]):
+            print('Wikification failed for some reason (different lengths)\n\tSave file as backup with failed_wiki extension, no validating\n')
+            os.system('mv {0} {1}'.format(wiki_file, wiki_file.replace('.wiki', '.failed_wiki')))
+            return wiki_file, False
+        else:
+            check_valid(wiki_file, True)
+            return wiki_file, True
+    else:
+        return wiki_file, True
 
 
-def restore_amr(in_file, out_file, coref_type):
-	'''Function that restores variables in output AMR'''
-	
-	print 'Restoring variables...'
-	
-	if not os.path.isfile(out_file):
-		if coref_type == 'index':
-			restore_call = 'python restoreAMR/restore_amr.py -f {0} -o {1} -index'.format(in_file, out_file)
-		elif coref_type == 'abs':
-			restore_call = 'python restoreAMR/restore_amr.py -f {0} -o {1} -abs'.format(in_file, out_file)
-		else:	
-			restore_call = 'python restoreAMR/restore_amr.py -f {0} -o {1}'.format(in_file, out_file)
-		os.system(restore_call)
-		
-		print 'Validating restored AMRs...\n'					
-		check_valid(out_file, True)
-	else:
-		print 'Restore file already exists, skipping...'	
-	
-	return out_file
+def add_coreference(in_file, ext, force):
+    '''Function that adds coreference back for each concept that occurs more than once
+       Only works for -c dupl'''
+    coref_file = in_file + ext
+
+    # Only do if file doesn't exist yet
+    if not os.path.isfile(coref_file) or force:
+        os.system('python3 restore_duplicate_coref.py -f {0} --output_ext {1}'.format(in_file, ext))
+    return coref_file
+
+
+def do_pruning(in_file, force):
+    '''Function that prunes duplicate output'''
+    prune_file = in_file + '.pruned'
+
+    # Only prune if output file doesn't already exist
+    if not os.path.isfile(prune_file) or force:
+        # Do pruning here
+        os.system('python3 prune_amrs.py -f {0}'.format(in_file))
+        # Check if they're still all valid
+        check_valid(prune_file, True)
+    return prune_file
+
+
+def restore_amr(in_file, out_file, coref_type, force):
+    '''Function that restores variables in output AMR
+       Also restores coreference for index/absolute paths methods'''
+    if not os.path.isfile(out_file) or force:
+        restore_call = 'python3 restoreAMR/restore_amr.py -f {0} -o {1} -c {2}'.format(in_file, out_file, coref_type)
+        os.system(restore_call)
+        check_valid(out_file, True)
+    return out_file
 
 
 def process_file(input_list):
-	'''Postprocessing AMR file'''
-	f = input_list[0]
-	sent_file = input_list[1]
-	
-	if not os.path.isfile(sent_file) or not os.path.isfile(f):
-		print 'Something is wrong, sent-file or amr-file does not exist'
-		sys.exit(0)
-	
-	if os.path.getsize(f) > 0: #check if file has content			
-		restore_file 		= f + '.restore'
-		restore_file 		= restore_amr(f, restore_file, args.c)
-		prune_file 			= do_pruning(restore_file)
-		
-		if args.c == 'dupl':	#coreference by duplication is done in separate script
-			coref_file 		= add_coreference(restore_file, '.coref')
-		
-		if not args.no_wiki:	#sometimes we don't want to do Wikification because it takes time
-			wiki_file, success 	= add_wikification(restore_file, sent_file)
-			
-			#then add all postprocessing steps together, starting at the pruning
-		
-			print 'Do all postprocessing steps...\n'
-			 
-			wiki_file_pruned, success = add_wikification(prune_file, sent_file)
-			
-			if success:
-				if args.c == 'dupl':
-					coref_file_wiki_pruned 	  = add_coreference(wiki_file_pruned, '.coref.all')
-				else:	#we already did coreference in restore file, still call the output-file .coref.all to not get confused in evaluation, just copy previous file
-					os.system("cp {0} {1}".format(wiki_file_pruned, wiki_file_pruned + '.coref.all'))	
-			else:
-				print 'Wikification failed earlier, not trying again here\n'	
-		print 'Done processing!'			
+    '''Postproces AMR file'''
+    # Unpack arguments
+    input_file, sent_file, no_wiki, coreference, force = input_list
+
+    # Sanity check first
+    if (not os.path.isfile(sent_file) and not no_wiki) or not os.path.isfile(input_file) or not os.path.getsize(input_file):
+        raise ValueError('Something is wrong, sent-file or amr-file does not exist or has no content')
+
+    # Restore AMR first (variables)
+    restore_file = input_file + '.restore'
+    restore_file = restore_amr(input_file, restore_file, coreference, force)
+
+    # Then do all postprocessing steps separately so we can see the individual impact of them
+    # We always do pruning
+    prune_file = do_pruning(restore_file, force)
+
+    # Coreference restoring we only do for duplicating
+    if coreference == 'dupl':
+        _ = add_coreference(restore_file, '.coref', force)
+
+    # We don't always want to do Wikification because it takes time
+    if not no_wiki:
+        _, success = add_wikification(restore_file, sent_file, force)
+
+    # To get the final output file, we add all postprocessing steps together as well
+    # We can already start from the prune file
+    # Start with Wikification (if we want)
+    if not no_wiki:
+        next_file, success = add_wikification(prune_file, sent_file, force)
+    else:
+        next_file = prune_file
+        success = True
+
+    # Only continue if Wikification worked (or we skipped it)
+    if success:
+        # Then only do coreference for the duplicated coreference
+        if coreference == 'dupl':
+            final_file = add_coreference(next_file, '.coref.all', force)
+        else:
+            final_file = next_file
+
+        # Write the final file to file that's always called the same
+        os.system("cp {0} {1}.final".format(final_file, restore_file))
+    else:
+        raise ValueError('Wikification failed, consider using --no_wiki')
 
 
-def match_files_by_name(amr_files, sent_files):
-	'''Input is a list of both amr and sentence files, return matching pairs to test in parallel in the main function'''
-	
-	matches = []
-	
-	for amr in amr_files:
-		match_amr = amr.split('/')[-1].split('.')[0]	#return filename when given file /home/user/folder/folder2/filename.txt
-		for sent in sent_files:
-			match_sent = sent.split('/')[-1].split('.')[0]
-			if match_sent == match_amr:		#matching sentence and AMR file, we can process those
-				matches.append([amr, sent])
-				break
-	
-	return matches
-	
-				
+def match_files_by_name(amr_files, sent_files, no_wiki, coreference, force):
+    '''Input is a list of both amr and sentence files, return matching pairs to test in parallel in the main function'''
+    matches = []
+    for amr in amr_files:
+        # Return filename when given file /home/user/folder/folder2/filename.txt
+        match_amr = amr.split('/')[-1].split('.')[0]
+        for sent in sent_files:
+            match_sent = sent.split('/')[-1].split('.')[0]
+            # Matching sentence and AMR file, we can process those, so save them
+            if match_sent == match_amr:
+                matches.append([amr, sent, no_wiki, coreference, force])
+                break
+    return matches
+
+
+def get_files(folder, ext):
+    keep_files = []
+    for root, _, files in os.walk(folder):
+        for f in files:
+            if f.endswith(ext) and '.char' not in f:
+                keep_files.append(os.path.join(root, f))
+    return sorted(keep_files)
+
+
 if __name__ == "__main__":
-	args = create_arg_parser()
-	
-	if not args.fol:
-		print 'Process single file\n'
-		process_file([args.f, args.s])
-	else:
-		sent_files = get_files_by_ext(args.s, args.sent_ext)
-		amr_files  = get_files_by_ext(args.f, args.out_ext)
-		matching_files = match_files_by_name(amr_files, sent_files)
-		
-		#Process file in parallel here
-		
-		print 'Processing {0} files, doing max {1} in parallel'.format(len(matching_files), args.t)
-		
-		pool = Pool(processes=args.t)						
-		pool.map(process_file, matching_files)	
-	
-	
+    args = create_arg_parser()
+    if not args.folder:
+        print('Process single file\n')
+        process_file([args.input_file, args.sentence_file, args.no_wiki, args.coreference, args.force])
+    else:
+        # Get AMR and sent files and match them
+        sent_files = get_files(args.sentence_file, args.sent_ext)
+        amr_files = get_files(args.input_file, args.out_ext)
+        matching_files = match_files_by_name(amr_files, sent_files, args.no_wiki, args.coreference, args.force)
+        print(('Processing {0} files, doing max {1} in parallel'.format(len(matching_files), args.threads)))
+        pool = Pool(processes=args.threads)
+        pool.map(process_file, matching_files)
+
+
 
