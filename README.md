@@ -17,19 +17,19 @@ The scripts can do the following things:
 
 Simply clone the repository to your system to get started. All python programs are in **Python 3**. Also put Smatch in this folder.
 
-``
+```
 git clone https://github.com/RikVN/AMR
 cd AMR
 git clone https://github.com/snowblink14/smatch
-``
+```
 
 ### Prerequisites
 
 All requirements can be installed using pip:
 
-``
+```
 pip install -r requirements.txt
-``
+```
 
 ## Running the scripts
 
@@ -37,9 +37,9 @@ There are two main components of this repository: pre-processing the input and p
 
 I will explain everything in more detail below, but if you want to test if everything works, please run:
 
-``
+```
 ./test_pipeline.sh
-``
+```
 
 This assumes that smatch is present in the main AMR folder.
 
@@ -106,7 +106,7 @@ Note that since the Groningen Meaning Bank is public domain, you can freely use 
 I made the best model in the CLIN paper publicly available [here](http://www.let.rug.nl/rikvannoord/AMR/best_model/). If you download it and have [OpenNMT](http://opennmt.net/) installed, you should be able to run it. Note that the input (SOURCE_FILE) must be POS-tagged and in character-level format. I also made my vocabulary files available, make sure you arrive at (more or less) the same vocabulary for your input! You can run it like this:
 
 ```
-th translate.lua -src $SOURCE_FILE -output $OUTPUT_FILE -model $MODEL_FILE -beam_size 5 -max_sent_length 500 -replace_unk -n_best 1 -gpuid 1 -log_file LOG_FILE -fallback_to_cpu
+th translate.lua -src $SOURCE_FILE -output $OUTPUT_FILE -model $MODEL_FILE -beam_size 5 -max_sent_length 500 -replace_unk -n_best 1 -gpuid 1 -log_file $LOG_FILE -fallback_to_cpu
 ```
 
 The output can be post-processed applying the scripts described above. If there are any issues, please let me know!
