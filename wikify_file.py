@@ -78,8 +78,9 @@ def wikify_file(in_file, in_sents):
                             #Old servers here
                             #spotlight = requests.post("http://spotlight.sztaki.hu:2222/rest/annotate", data = {'text':sentence, 'confidence':0.3})
                             #spotlight = requests.post("http://model.dbpedia-spotlight.org:2222/rest/annotate", data = {'text':sentence, 'confidence':0.3})
+                            #spotlight = requests.post("http://model.dbpedia-spotlight.org/en/annotate", data={'text':sentence, 'confidence':0.3})
 
-                            spotlight = requests.post("http://model.dbpedia-spotlight.org/en/annotate", data={'text':sentence, 'confidence':0.3})
+                            spotlight = requests.post("https://api.dbpedia-spotlight.org/en/annotate", data={'text':sentence, 'confidence':0.3})
                             spotlight.encoding = 'utf-8'
                         except requests.exceptions.ConnectionError:
                             print ('sleeping a bit (spotlight overload) - if this keeps happening server is down or changed')
